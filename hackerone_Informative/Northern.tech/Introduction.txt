@@ -1,0 +1,126 @@
+Introduction
+Welcome to our bug bounty program. Northern.tech is happy to have you helping secure the world's connected devices.
+Program highlights
+Fast Payment
+Ensures payment within 1 month of receiving a vulnerability report. 
+Gold Standard
+Adheres to Gold Standard Safe Harbor. 
+Platform Standards
+Fully compliant with Platform Standards. 
+Top Response Efficiency
+This program's response efficiency is above 90%. 
+2 days, 2 hours
+Average time to first response
+2 days, 4 hours
+Average time to triage
+1 day, 5 hours
+Average time to bounty
+3 days, 9 hours
+Average time from submission to bounty
+2 days, 12 hours
+Average time to resolution
+Rewards summary
+Last updated on October 7, 2025. View changes 
+Each severity lists the 90-day average bounty and the percentage of total resolved reports, if applicable.
+Avg. bounty n/a
+71.43% submissions
+
+Avg. bounty $500
+14.29% submissions
+
+Avg. bounty n/a
+14.29% submissions
+
+Avg. bounty n/a
+0% submissions
+
+
+
+
+
+$200
+$500
+$1,000
+$3,000
+Our rewards are based on severity per CVSS (the Common Vulnerability Scoring Standard). Please note these are general guidelines, and reward decisions are up to the discretion of Northern.tech.
+Mender is an over-the-air update solution. It is a Saas solution, publicly available online, with self-signup and multi-tenancy. We are very interested in vulnerabilities which allow authentication bypass, account takeover, access control bypass, or taking over the server (remote code execution).
+Scope exclusions
+Core Ineligible Findings are out of scope. 
+Learn more 
+Functionality disabled in the UI, but accessible via the API
+Depending on the user's role and plan, some features might be disabled in the UI, but still usable via the API. Generally, we don't consider this a security vulnerability on its own, unless there is a clear, real-world security impact demonstrated (for example a read-only user making changes).
+All users are able to add new pending devices
+All users, including lower privilege ones, are able to access the tenant token and add new devices with the status "pending". We might consider changing this in the future, but for now we consider this working as intended.
+REST APIs provide more information than strictly necessary to low-privilege users
+We are aware of the /iot-manager/integrations and /useradm/roles APIs showing more information than might be desirable or strictly necessary to low-privilege users. We will improve this in the future, but for now, there is no need to report this as an issue.
+Missing rate limits
+We've received some reports that we don't implement rate limits - This is not accurate, we do have rate limits in place, but they are higher than you might be expecting or testing for. This is intentional and we are not interested in reports claiming that we don't have rate limits.
+Username / email enumeration
+Some APIs might have error messages which reveal information about whether a user / email exists in the system or not. We are aware of this and don't consider it a security vulnerability. (Google is an example of a well known company which does the same on their login page, for usability's sake).
+Comments and non-product code
+Issues in comments, markdown files, documentation, tests, and CI related files are generally not considered eligible for a bounty. If you find and report something particularly concerning, we'll have to review those on a case by case basis.
+Subscription model bypass
+Issues which enable you to have more users / devices, or access to features you haven't paid for are not considered exploitable security vulnerabilities. We are considering methods to monitor for this, but in the meantime, there is no need to report issues like this.
+Old / deprecated functionality
+Old versions of protocols which are known to be insecure and disabled by default are not eligible for bounty.
+Package manager dependency / typo squatting
+There are many package managers (apt, brew, yum, pip, npm, cargo, etc.) and many of them allow anyone to create packages. We do not consider it a vulnerability that you can create a package with a name that looks like we created it.
+Email verification not enforced
+We currently do not enforce email verification for all users (but do enforce it before using specific features). This was a conscious decision in the past to make it fast and easy to get started, but we will change it in the future. There is no need to report this as a vulnerability.
+Overview
+Last updated on November 17, 2025. View changes 
+
+Northern.tech makes software products to secure the world's connected devices. We are interested in real and exploitable vulnerabilities which could damage us and our customers.
+For examples of previously discovered, accepted and fixed security vulnerabilities, see our websites:
+mender.io/blog/tag/cve
+cfengine.com/tags/cve/
+Area of focus
+We are interested in security bugs with real world impact, such as:
+Bypassing authentication / login screen and taking over someone's account.
+Bypassing access control to gain access to resources you should not have access to.
+Privilege escalation.
+Taking over the Mender Server or CFEngine Hub from a device / host.
+Bypassing the signature check for verifying signed artifacts in Mender.
+Disclosure policy
+As this is a private program, please do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization.
+Follow HackerOne's disclosure guidelines.
+Program rules
+Please provide detailed reports with reproducible steps. If the report is not detailed enough to reproduce the issue, the issue will not be eligible for a reward.
+Submit one vulnerability per report unless you need to chain vulnerabilities to provide impact.
+When duplicates occur, we only award the first report that was received (provided that it can be fully reproduced).
+Ask the program team before submitting vulnerabilities on unscoped subdomains
+Only interact with accounts you own or with the explicit permission of the account holder.
+Test plan - Hosted Mender (Saas)
+Users are able to sign up for a free account through our website; staging.hosted.mender.io
+Please use your hacker email alias when testing (h1username@wearehackerone.com)
+Do not test on the production instance
+Do not perform testing which generates excessive network traffic (such as password brute-forcing, DoS, DDoS)
+Researchers should add headers to requests such as: “X-HackerOne-Research: [H1 username]”
+
+Gold Standard Safe Harbor
+Gold Standard Safe Harbor supports the protection of organizations and hackers engaged in Good Faith Security Research. "Good Faith Security Research" is accessing a computer solely for purposes of good-faith testing, investigation, and/or correction of a security flaw or vulnerability, where such activity is carried out in a manner designed to avoid any harm to individuals or the public, and where the information derived from the activity is used primarily to promote the security or safety of the class of devices, machines, or online services to which the accessed computer belongs, or those who use such devices, machines, or online services.
+
+We consider Good Faith Security Research to be authorized activity that is protected from adversarial legal action by us. We waive any relevant restriction in our Terms of Service ("TOS") and/or Acceptable Use Policies ("AUP") that conflicts with the standard for Good Faith Security Research outlined here.
+
+This means that, for activity conducted while this program is active, we:
+- Will not bring legal action against you or report you for Good Faith Security Research, including for bypassing technological measures we use to protect the applications in scope; and,
+- Will take steps to make known that you conducted Good Faith Security Research if someone else brings legal action against you.
+
+You should contact us for clarification before engaging in conduct that you think may be inconsistent with Good Faith Security Research or unaddressed by our policy.
+Keep in mind that we are not able to authorize security research on third-party infrastructure, and a third party is not bound by this safe harbor statement.
+
+UPDATE: 2025-11-17
+Program is now PUBLIC. CFEngine Community (Open Source) and Enterprise are now IN SCOPE.
+
+Test plan - Open Source repositories
+We have open source repositories where you can read the source code to find issues:
+Mender Server
+Mender Client
+CFEngine Community
+Test plan - CFEngine Enterprise
+CFEngine Enterprise can be downloaded from our website and run locally or on a cloud VM:
+https://cfengine.com/downloads/cfengine-enterprise/
+Instructions for getting started are available in our documentation:
+https://docs.cfengine.com/docs/3.24/getting-started.html
+
+Thank you for helping keep Northern.tech and our users safe!
