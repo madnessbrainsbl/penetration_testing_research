@@ -1,0 +1,44 @@
+{
+  "cartId": 851483754,
+  "selectedDeliveryServiceId": 1,
+  "bonusPoints": 0,
+  "sid": "6bd223b4-5040-4faa-ba85-6a85c1ec2d50",
+  "domain": "zooplus.de",
+  "siteId": 1,
+  "currency": "EUR",
+  "locale": "de_DE",
+  "customerId": 53260509,
+  "articles": [
+    {
+      "id": 2966095,
+      "name": "Belcando Adult Dinner",
+      "variantName": "Sparpaket: 2 x 12,5 kg",
+      "price": { "value": 97.49, "label": "97,49 €" },
+      "quantity": 1,
+      "subTotal": 97.49
+    },
+    {
+      "id": 2966422,
+      "name": "Belcando Adult Dinner",
+      "variantName": "12,5 kg",
+      "price": { "value": 52.99, "label": "52,99 €" },
+      "quantity": 1,
+      "subTotal": 52.99
+    },
+    {
+      "id": 2966421,
+      "name": "Belcando Senior Sensitive",
+      "variantName": "12,5 kg",
+      "price": { "value": 56.49, "label": "56,49 €" },
+      "quantity": 1,
+      "subTotal": 56.49
+    }
+  ],
+  "summary": {
+    "grandTotal": 206.97,
+    "formattedGrandTotal": "206,97 €",
+    "subTotal": 206.97,
+    "formattedSubtotal": "206,97 €",
+    "articleCount": 3
+  }
+}

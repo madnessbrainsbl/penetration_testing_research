@@ -1,0 +1,211 @@
+
+Security page
+Program guidelines
+Scope
+Hacktivity
+Thanks
+Updates
+Collaborators
+Safe harbor
+Program highlights
+Gold Standard
+Adheres to Gold Standard Safe Harbor. 
+Platform Standards
+Fully compliant with Platform Standards. 
+Top Response Efficiency
+This program's response efficiency is above 90%. 
+16 hours
+Average time to first response
+1 day, 15 hours
+Average time to triage
+1 day, 4 hours
+Average time to bounty
+2 days, 19 hours
+Average time from submission to bounty
+1 month, 5 days
+Average time to resolution
+Rewards summary
+Last updated on February 18, 2024. View changes 
+Each severity lists the 90-day average bounty and the percentage of total resolved reports, if applicable.
+Avg. bounty $502
+47.44% submissions
+
+Avg. bounty $1,046
+46.15% submissions
+
+Avg. bounty n/a
+6.41% submissions
+
+Avg. bounty n/a
+0% submissions
+
+
+
+
+
+$150–$600
+$600–$1,500
+$1,500–$5,000
+$5,000–$10,000
+Web2 Assets
+Our rewards of web2 assets are based on severity per CVSS (the Common Vulnerability Scoring Standard). Please note these are general guidelines, and reward decisions are up to the discretion of ByBit FinTech Ltd.
+Severity	Bounty Range
+Critical	$5,000-$10,000
+High	$1,500-$5,000
+Medium	$600-$1,500
+Low	$150-$600
+Web3 Assets
+Our rewards for web3 assets are determined based on the severity described in the following guidelines (will keep updating). Please note these are general guidelines, and reward decisions are up to the discretion of ByBit FinTech Ltd.
+Severity	Sample Issues	Bounty
+Critical	Any governance/admin rights manipulation; diirect theft of any user funds, whether at-rest or in-motion, other than unclaimed yield; permanent freezing of funds; Protocol Insolvency.	$100,000
+High	Theft of unclaimed yield; permanent freezing of unclaimed yield.	$10,000
+Medium	Smart contract unable to operate due to lack of token funds; block stuffing for profit; Grieving (e.g. no profit motive for an attacker, but damage to the users or the protocol); theft of gas; unbounded gas consumption.	$2,000
+Low	Contract fails to deliver promised returns, but doesn't lose value.	$150
+Scope exclusions
+Core Ineligible Findings are out of scope. 
+Learn more 
+Overview
+Last updated on April 18, 2024. View changes 
+Introduction
+Bybit is a cryptocurrency exchange established in March 2018 to offer a professional platform where crypto traders can find an ultra-fast matching engine, excellent customer service and multilingual community support. The company provides innovative online spot and derivatives trading services, mining and staking products, as well as API support, to retail and institutional clients around the world, and strives to be the most reliable exchange for the emerging digital asset class.
+No technology is perfect and Bybit believes that working with skilled security researchers across the globe is crucial in identifying weaknesses in any technology. Bybit looks forward to working with the security community to find vulnerabilities in order to keep our businesses and customers safe.
+Response Targets
+Bybit Fintech Ltd will make a best effort to meet the following SLAs for hackers participating in our program:
+Type of Response	SLA in business days
+First Response	2 days
+Time to Triage	2 days
+Time to Bounty	14 days
+Time to Resolution	depends on severity and complexity
+We’ll try to keep you informed about our progress throughout the process.
+Disclosure Policy
+Please do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization.
+Follow HackerOne's disclosure guidelines.
+Program Rules
+Please provide detailed reports with reproducible steps. If the report is not detailed enough to reproduce the issue, the issue will not be eligible for a reward.
+Submit one vulnerability per report, unless you need to chain vulnerabilities to provide impact.
+When duplicates occur, we only award the first report that was received (provided that it can be fully reproduced).
+Multiple vulnerabilities caused by one underlying issue will be awarded one bounty.
+Social engineering (e.g. phishing, vishing, smishing) is prohibited.
+Make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our service. Only interact with accounts you own or with explicit permission of the account holder.
+Avoid employing automated scanning tools, as submissions identified through such means cannot be accepted.
+Avoid negatively impacting or disruptive actions that may affect the availability of our services (e.g. DoS/DDoS)
+Test Plan
+If you are interested in testing our asset-related features, but lack the necessary assets to conduct testing, you can register accounts and apply test tokens in the asset dashboard via https://testnet.bybit.com. (*Please note that Testnet utilizes test coins that hold no real value. To ensure our users enjoy an optimal experience with our products, we've opted not to impose stringent 2FA restrictions. Consequently, reports of bypassing 2FA on the Testnet will not be accepted).
+Web3-related assets, please refer to https://www.bybit.com/en/web3/home.
+Sign Up using your HackerOne email alias
+Need to contact Bybit? Feel free to contact us at security@bybit.com
+Out of scope vulnerabilities
+When reporting vulnerabilities, please consider (1) attack scenario / exploitability, and (2) security impact of the bug. The following issues are considered out of scope:
+Any activity that could lead to the disruption of our service (DoS, DDoS).
+Social engineering of our employees or contractors, unless explicitly authorized.
+Attacks against our physical facilities, unless explicitly authorized.
+Attacks requiring physical access to a users’ device, unless the device is in-scope and explicitly hardened against physical access.
+Attacks requiring disabling Man In The Middle (MITM) protections.
+Attacks only affecting obsolete browsers or operating systems.
+Missing best practices (SSL/TLS configuration, Content Security Policies, cookie flags, tabnabbing, autocomplete attribute, email SPF/DKIM/DMARC records), unless a significant impact can be demonstrated.
+Clickjacking or Cross-Site Request Forgery (CSRF) on unauthenticated pages / forms with no sensitive actions.
+Open redirects, unless a significant impact can be demonstrated.
+Self-exploitation (self XSS, self denial-of-service, etc.), unless a method to attack a different user can be demonstrated.
+Content spoofing, text injection and CSV injection, unless a significant impact can be demonstrated.
+Software version disclosure / Banner identification issues / Descriptive error messages or stack traces.
+Issues that require unlikely user interaction by the victim.
+Any attack that requires a user to interact with contract from an attacker controlled website
+Chain specific vulnerabilities are excluded, (e.g. EVM or Solana runtime issues)
+Integrated Dapp vulnerabilities are excluded (e.g. Uniswap、Curve、GMX、1inch)
+Safe Harbor
+Gold Standard SAafe Harbor applies to this program
+Thank you for helping keep Bybit Fintech Ltd and our users safe!
+Top hackers
+See all hackers 
+1
+firs0v
+firs0v
+Reputation: 310
+2
+sctz
+sctz
+Reputation: 146
+3
+yxw21
+yxw21
+Reputation: 128
+4
+krynos
+krynos
+Reputation: 114
+5
+azvect
+azvect
+Reputation: 98
+6
+inhibitor181
+inhibitor181
+Reputation: 96
+7
+ly3s
+ly3s
+Reputation: 89
+8
+ariel1l
+ariel1l
+Reputation: 86
+9
+renniepak
+renniepak
+Reputation: 64
+10
+khaled_hammad
+khaled_hammad
+Reputation: 57
+11
+nitesh_dhanjani
+nitesh_dhanjani
+Reputation: 57
+12
+youstin
+youstin
+Reputation: 57
+
+bybit_fintech
+Bybit Fintech Ltd
+
+https://www.bybit.com
+@bybit_official
+Be the crypto ark of the world. Buy, sell, trade BTC, altcoins & NFTs. Get access to the spot and futures market or stake your coins securely.
+Bug Bounty Program launched in Nov 2023
+Response efficiency: 97%
+
+Submit without Report Assistant
+Rewards
+Severity
+
+Rewards
+
+
+
+Avg. bounty $502
+47.44% submissions
+
+$150–$600
+Avg. bounty $1,046
+46.15% submissions
+
+$600–$1,500
+Avg. bounty n/a
+6.41% submissions
+
+$1,500–$5,000
+Avg. bounty n/a
+0% submissions
+
+$5,000–$10,000
+Stats
+Total bounties paid	$71,967
+Average bounty range	$505 - $576
+Top bounty range	$1,376 - $4,000
+Bounties paid | 90 days	$7,590
+Reports received | 90 days	299
+Last report resolved	13 days ago
+Reports resolved	78
+Hackers thanked	90
+Assets In Scope	9

@@ -1,0 +1,114 @@
+[
+  {
+    "header": "Content-Security-Policy",
+    "status": "MISSING",
+    "impact": "No protection against XSS and data injection attacks",
+    "severity": "MEDIUM",
+    "recommendation": "Add CSP header with restrictive policy"
+  },
+  {
+    "header": "X-Frame-Options",
+    "status": "MISSING",
+    "impact": "Site vulnerable to clickjacking attacks",
+    "severity": "MEDIUM",
+    "recommendation": "Add: X-Frame-Options: DENY or SAMEORIGIN"
+  },
+  {
+    "header": "X-Content-Type-Options",
+    "status": "MISSING",
+    "impact": "Browser may MIME-sniff responses, leading to XSS",
+    "severity": "LOW",
+    "recommendation": "Add: X-Content-Type-Options: nosniff"
+  },
+  {
+    "header": "Referrer-Policy",
+    "status": "MISSING",
+    "impact": "Referrer may leak sensitive URLs to third parties",
+    "severity": "LOW",
+    "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+  },
+  {
+    "header": "Permissions-Policy",
+    "status": "MISSING",
+    "impact": "No control over browser features (camera, microphone, etc.)",
+    "severity": "INFO",
+    "recommendation": "Add: Permissions-Policy with appropriate restrictions"
+  },
+  {
+    "header": "Content-Security-Policy",
+    "status": "MISSING",
+    "impact": "No protection against XSS and data injection attacks",
+    "severity": "MEDIUM",
+    "recommendation": "Add CSP header with restrictive policy"
+  },
+  {
+    "header": "X-Frame-Options",
+    "status": "MISSING",
+    "impact": "Site vulnerable to clickjacking attacks",
+    "severity": "MEDIUM",
+    "recommendation": "Add: X-Frame-Options: DENY or SAMEORIGIN"
+  },
+  {
+    "header": "X-Content-Type-Options",
+    "status": "MISSING",
+    "impact": "Browser may MIME-sniff responses, leading to XSS",
+    "severity": "LOW",
+    "recommendation": "Add: X-Content-Type-Options: nosniff"
+  },
+  {
+    "header": "Referrer-Policy",
+    "status": "MISSING",
+    "impact": "Referrer may leak sensitive URLs to third parties",
+    "severity": "LOW",
+    "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+  },
+  {
+    "header": "Permissions-Policy",
+    "status": "MISSING",
+    "impact": "No control over browser features (camera, microphone, etc.)",
+    "severity": "INFO",
+    "recommendation": "Add: Permissions-Policy with appropriate restrictions"
+  },
+  {
+    "header": "Content-Security-Policy",
+    "status": "MISSING",
+    "impact": "No protection against XSS and data injection attacks",
+    "severity": "MEDIUM",
+    "recommendation": "Add CSP header with restrictive policy"
+  },
+  {
+    "header": "X-Frame-Options",
+    "status": "MISSING",
+    "impact": "Site vulnerable to clickjacking attacks",
+    "severity": "MEDIUM",
+    "recommendation": "Add: X-Frame-Options: DENY or SAMEORIGIN"
+  },
+  {
+    "header": "X-Content-Type-Options",
+    "status": "MISSING",
+    "impact": "Browser may MIME-sniff responses, leading to XSS",
+    "severity": "LOW",
+    "recommendation": "Add: X-Content-Type-Options: nosniff"
+  },
+  {
+    "header": "Referrer-Policy",
+    "status": "MISSING",
+    "impact": "Referrer may leak sensitive URLs to third parties",
+    "severity": "LOW",
+    "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+  },
+  {
+    "header": "Permissions-Policy",
+    "status": "MISSING",
+    "impact": "No control over browser features (camera, microphone, etc.)",
+    "severity": "INFO",
+    "recommendation": "Add: Permissions-Policy with appropriate restrictions"
+  },
+  {
+    "type": "Possible Mixed Content",
+    "issue": "HTTP resources may be loaded in HTTPS page",
+    "impact": "Weakens HTTPS protection",
+    "severity": "LOW",
+    "note": "Manual verification required"
+  }
+]

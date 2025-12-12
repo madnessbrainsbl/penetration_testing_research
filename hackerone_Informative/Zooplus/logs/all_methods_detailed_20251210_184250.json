@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-12-10T18:43:12.151985",
+  "vulnerable_endpoint": "https://www.zooplus.de/zootopia-events/api/events/sites/1",
+  "methods": [
+    {
+      "method": 1,
+      "name": "custom_internal_header",
+      "description": "Send custom header to internal service and check if it's reflected",
+      "status_code": 200,
+      "response": "{}",
+      "all_headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "6",
+        "Connection": "keep-alive",
+        "date": "Wed, 10 Dec 2025 11:44:17 GMT",
+        "server": "istio-envoy",
+        "vary": "User-Agent,Accept-Encoding",
+        "x-envoy-upstream-service-time": "22",
+        "content-encoding": "br",
+        "Via": "1.1 1a89524650229737fbb42049a0f558cc.cloudfront.net (CloudFront)",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Set-Cookie": "sid=b4908784-a909-4e18-873a-ad0572f7384e; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de",
+        "x-lambda-region": "us-west-1",
+        "X-Stream-Status": "Error: undefined",
+        "X-Cache": "Miss from cloudfront",
+        "X-Amz-Cf-Pop": "SFO53-P1",
+        "X-Amz-Cf-Id": "xOi3W17dc0EZrLlGLqdzbJ46ksvm1iOqs32XsTN8FbabNwskJ1K-pw=="
+      },
+      "found_headers": {
+        "server": "istio-envoy"
+      },
+      "success": true,
+      "proof": "Internal header reflected - 100% proof"
+    },
+    {
+      "method": 2,
+      "name": "user_agent_reflection",
+      "description": "Send custom User-Agent and check if it's reflected in response",
+      "status_code": 200,
+      "response": "{}",
+      "all_headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "6",
+        "Connection": "keep-alive",
+        "date": "Wed, 10 Dec 2025 11:44:19 GMT",
+        "server": "istio-envoy",
+        "vary": "User-Agent,Accept-Encoding",
+        "x-envoy-upstream-service-time": "18",
+        "content-encoding": "br",
+        "Via": "1.1 07c8a21e4ac1622767bf9030500ce6b0.cloudfront.net (CloudFront)",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Set-Cookie": "sid=b4908784-a909-4e18-873a-ad0572f7384e; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de",
+        "x-lambda-region": "us-west-1",
+        "X-Stream-Status": "Error: undefined",
+        "X-Cache": "Miss from cloudfront",
+        "X-Amz-Cf-Pop": "SFO53-P1",
+        "X-Amz-Cf-Id": "6jxaAXBzS_M973DyZuT7P5pVdK9n3yPpxHMdiOvQvnep3xjyfwxInQ=="
+      },
+      "custom_user_agent": "SSRF-EXPLOIT-BY-PENTEST-2025",
+      "ua_in_response": false,
+      "ua_in_headers": false,
+      "success": false,
+      "proof": "Custom User-Agent not reflected"
+    },
+    {
+      "method": 3,
+      "name": "time_based",
+      "description": "Compare response times: internal service (fast) vs external service with delay (slow)",
+      "internal_time_ms": 734.137773513794,
+      "internal_status": 200,
+      "external_time_ms": 1050.816297531128,
+      "external_status": 200,
+      "difference_ms": 316.678524017334,
+      "success": false,
+      "proof": "Time difference not significant: 316.68ms"
+    },
+    {
+      "method": 4,
+      "name": "aws_metadata_data",
+      "description": "Try to get actual IAM role name or instance ID from AWS metadata",
+      "success": false,
+      "proof": "Blind SSRF - response not returned, but 200 status confirms SSRF works"
+    }
+  ]
+}

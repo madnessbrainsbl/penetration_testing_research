@@ -1,0 +1,26 @@
+# robots txt for zooplus
+# created 07.10.2019
+#
+Sitemap: https://www.zooplus.de/sitemap.xml
+
+User-agent: *
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+
+User-agent: bingbot
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+Crawl-delay: 5
+
+User-agent: msnbot
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+Crawl-delay: 5
+
+User-agent: msnbot-media
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+Crawl-delay: 5
+
+User-agent: ia_archiver
+Disallow: /

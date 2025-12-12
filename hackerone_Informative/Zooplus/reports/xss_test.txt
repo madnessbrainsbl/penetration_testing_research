@@ -1,0 +1,20 @@
+[*] Testing reflected XSS...
+
+[*] Testing parameter: test
+
+[*] Testing parameter: q
+
+[*] Testing parameter: search
+
+[*] Testing parameter: query
+
+[*] Testing parameter: redirect
+
+[*] Testing parameter: url
+
+[*] Testing parameter: return
+
+[*] Testing parameter: next
+
+[*] Testing search endpoint...
+

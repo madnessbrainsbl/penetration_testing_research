@@ -1,0 +1,115 @@
+{
+  "open_ports": [
+    [
+      22,
+      "SSH",
+      352.42215792338055
+    ],
+    [
+      80,
+      "HTTP",
+      124.31979179382324
+    ],
+    [
+      443,
+      "HTTPS",
+      117.8736686706543
+    ],
+    [
+      3306,
+      "MySQL",
+      119.06949679056804
+    ],
+    [
+      5432,
+      "PostgreSQL",
+      121.03406588236491
+    ],
+    [
+      6379,
+      "Redis",
+      197.69509633382162
+    ],
+    [
+      8080,
+      "HTTP-Alt",
+      117.77432759602864
+    ],
+    [
+      9090,
+      "Prometheus",
+      172.3798910776774
+    ],
+    [
+      9200,
+      "Elasticsearch",
+      278.48267555236816
+    ],
+    [
+      27017,
+      "MongoDB",
+      141.71497027079263
+    ]
+  ],
+  "discovered_services": [
+    [
+      "kubernetes.default.svc.cluster.local",
+      191.2555694580078
+    ],
+    [
+      "kube-dns.kube-system.svc.cluster.local",
+      195.76597213745117
+    ],
+    [
+      "metrics-server.kube-system.svc.cluster.local",
+      176.01919174194336
+    ],
+    [
+      "dashboard.kubernetes-dashboard.svc.cluster.local",
+      183.25209617614746
+    ],
+    [
+      "prometheus.monitoring.svc.cluster.local",
+      221.8647003173828
+    ],
+    [
+      "grafana.monitoring.svc.cluster.local",
+      182.89875984191895
+    ],
+    [
+      "elasticsearch.logging.svc.cluster.local",
+      190.934419631958
+    ],
+    [
+      "kibana.logging.svc.cluster.local",
+      184.4947338104248
+    ]
+  ],
+  "resource_status": {
+    "/api/v1/namespaces/default": 200,
+    "/api/v1/namespaces/kube-system": 200,
+    "/api/v1/namespaces/kube-public": 200,
+    "/api/v1/namespaces/production": 200,
+    "/api/v1/namespaces/staging": 200,
+    "/api/v1/namespaces/zooplus": 200
+  },
+  "content_lengths": {
+    "https://kubernetes.default.svc/api/v1/namespaces": {
+      "content_length": "6",
+      "upstream_time": "16"
+    },
+    "https://kubernetes.default.svc/api/v1/namespaces/default": {
+      "content_length": "N/A",
+      "upstream_time": "27"
+    },
+    "https://kubernetes.default.svc/api/v1/namespaces/default/pods": {
+      "content_length": "6",
+      "upstream_time": "15"
+    },
+    "https://kubernetes.default.svc/api/v1/namespaces/default/secrets": {
+      "content_length": "6",
+      "upstream_time": "20"
+    }
+  },
+  "timestamp": "2025-12-11T00:58:58.319393"
+}

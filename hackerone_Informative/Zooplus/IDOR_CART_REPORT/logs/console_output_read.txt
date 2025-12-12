@@ -1,0 +1,17 @@
+IDOR Read Test - Console Output
+================================
+
+[*] ========================================
+[*] IDOR READ: Accessing Account A's Cart
+[*] ========================================
+[+] Target Cart UUID: 6bd223b4-5040-4faa-ba85-6a85c1ec2d50
+[+] Account B (Attacker) accessing Account A's (Victim) cart
+
+[!!!] SUCCESS - Unauthorized access confirmed!
+[+] Cart Owner (customerId): 53260509
+[+] Cart Total: 206.97 EUR
+[+] Items: 3
+[+] Articles: Belcando Adult Dinner (1x), Belcando Adult Dinner (1x), Belcando Senior Sensitive (1x)
+
+Key Finding: Account B (customerId: 53260633) successfully accessed Account A's (customerId: 53260509) cart.
+

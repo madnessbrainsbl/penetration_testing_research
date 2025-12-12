@@ -1,0 +1,21 @@
+{
+  "target": "www.zooplus.de",
+  "scan_date": "2025-12-10T12:25:55.645825",
+  "total_findings": 1,
+  "findings_by_severity": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "findings": [
+    {
+      "severity": "HIGH",
+      "title": "Metadata Endpoint Accessible: /latest/meta-data",
+      "description": "Cloud metadata endpoint may be accessible (potential SSRF vector).",
+      "endpoint": "https://www.zooplus.de/latest/meta-data",
+      "evidence": null,
+      "timestamp": "2025-12-10T12:25:23.573896"
+    }
+  ]
+}

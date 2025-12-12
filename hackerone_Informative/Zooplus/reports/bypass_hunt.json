@@ -1,0 +1,40 @@
+{
+  "target": "www.zooplus.de",
+  "scan_date": "2025-12-10T13:01:00.564691",
+  "findings": [
+    {
+      "severity": "CRITICAL",
+      "type": "envoy_admin_bypass",
+      "path": "/stats/..",
+      "status": 200
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "method_bypass",
+      "path": "/stats",
+      "method": "OPTIONS",
+      "status": 200
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "method_bypass",
+      "path": "/api/config",
+      "method": "OPTIONS",
+      "status": 200
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "method_bypass",
+      "path": "/admin",
+      "method": "OPTIONS",
+      "status": 200
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "method_bypass",
+      "path": "/api/upload",
+      "method": "OPTIONS",
+      "status": 200
+    }
+  ]
+}

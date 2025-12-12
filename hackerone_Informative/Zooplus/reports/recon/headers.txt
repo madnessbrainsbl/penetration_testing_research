@@ -1,0 +1,22 @@
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+date: Mon, 08 Dec 2025 17:26:31 GMT
+server: istio-envoy
+x-powered-by: Next.js
+access-control-allow-origin: *
+link: </_next/static/css/424b8c6efd6c830e.css>; rel=preload; as="style", </_next/static/css/fc9379c918154326.css>; rel=preload; as="style", </_next/static/css/e505de20d0111c07.css>; rel=preload; as="style", </_next/static/css/d75563bad09c2207.css>; rel=preload; as="style", </_next/static/css/c4b62e8a03dd27d8.css>; rel=preload; as="style", </_next/static/css/09c2d4f8be0a27cc.css>; rel=preload; as="style", </_next/static/css/df14d19aa2d5fd79.css>; rel=preload; as="style", </_next/static/css/674529d8a935d40b.css>; rel=preload; as="style", </_next/static/css/a05e3a668c80c2a4.css>; rel=preload; as="style", </_next/static/css/92dce656828e550d.css>; rel=preload; as="style", </_next/static/css/325f7ce41203a1a1.css>; rel=preload; as="style", </_next/static/css/9e8b22bf19459c86.css>; rel=preload; as="style"
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+x-envoy-upstream-service-time: 254
+vary: RSC,Next-Router-Prefetch,Next-Router-Segment-Prefetch,Accept-Encoding
+via: 1.1 816b7f4e336674d9d7828ef4700482e8.cloudfront.net (CloudFront)
+alt-svc: h3=":443"; ma=86400
+age: 608
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+cross-origin-opener-policy: same-origin-allow-popups
+set-cookie: sid=41754c77-b570-4047-b4e2-e41bd9013e04; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+x-lambda-region: eu-central-1
+x-stream-status: Log
+x-cache: Hit from cloudfront
+x-amz-cf-pop: FRA60-P4
+x-amz-cf-id: z9dVX3zY-kje_osg2DijrgviBCmHLA4KGG6vKVhy3FS8uQuUjf48Ww==
+

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-12-11T05:21:36.011559",
+  "methods_tested": [
+    {
+      "method": "WebSocket SSRF",
+      "probability": "5-10%",
+      "findings": [
+        "[!] WebSocket: Different status code 403 for AWS Metadata via ws://",
+        "[!!!] WebSocket: Non-empty response for AWS Metadata via ws://: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd",
+        "[!] WebSocket: Different response length 2 vs 919 for K8s API via wss://",
+        "[!] WebSocket: Different status code 403 for Istio Envoy via ws://",
+        "[!!!] WebSocket: Non-empty response for Istio Envoy via ws://: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd"
+      ],
+      "verdict": "SUCCESS"
+    },
+    {
+      "method": "Redirect Chain SSRF",
+      "probability": "3-5%",
+      "findings": [
+        "[!!!] Redirect: Non-empty response: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd"
+      ],
+      "verdict": "SUCCESS"
+    },
+    {
+      "method": "HTTP/2 Request Smuggling",
+      "probability": "1-2%",
+      "findings": [
+        "[!] CRLF: Different status 403",
+        "[!!!] CRLF: Non-empty response: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd"
+      ],
+      "verdict": "SUCCESS"
+    }
+  ],
+  "success": true,
+  "findings": [
+    "[!] WebSocket: Different status code 403 for AWS Metadata via ws://",
+    "[!!!] WebSocket: Non-empty response for AWS Metadata via ws://: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd",
+    "[!] WebSocket: Different response length 2 vs 919 for K8s API via wss://",
+    "[!] WebSocket: Different status code 403 for Istio Envoy via ws://",
+    "[!!!] WebSocket: Non-empty response for Istio Envoy via ws://: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd",
+    "[!!!] Redirect: Non-empty response: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd",
+    "[!] CRLF: Different status 403",
+    "[!!!] CRLF: Non-empty response: <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd"
+  ]
+}

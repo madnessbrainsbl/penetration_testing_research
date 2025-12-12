@@ -1,0 +1,10 @@
+{
+  "endpoints": [
+    "/checkout/api",
+    "/checkout/cart",
+    "/checkout/overview",
+    "/checkout/preview",
+    "/hopps-suggest/api/v1/sites/1/de-DE/suggestions\\",
+    "/subscribe/api/register/"
+  ]
+}

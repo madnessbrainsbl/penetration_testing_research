@@ -1,0 +1,12 @@
+[*] Testing SQL injection...
+
+[*] Testing endpoint: /?id=
+
+[*] Testing endpoint: /product?id=
+
+[*] Testing endpoint: /search?id=
+
+[*] Testing endpoint: /api/product?id=
+
+[*] Testing endpoint: /api/order?id=
+

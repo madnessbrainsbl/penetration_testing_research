@@ -1,0 +1,13 @@
+{
+  "target": "www.zooplus.de",
+  "scan_date": "2025-12-10T12:27:48.663073",
+  "total_vectors": 0,
+  "vectors_by_severity": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "vectors_by_type": {},
+  "vectors": []
+}

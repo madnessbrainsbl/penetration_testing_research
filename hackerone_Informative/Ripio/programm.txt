@@ -1,0 +1,141 @@
+http://ripio.com
+@ripioapp
+Latam leading cryptocurrencies company. Discover the future of the digital economy!
+Bug Bounty Program launched in Aug 2025
+
+Introduction
+Welcome to Ripio’s HackerOne Program! 🎉 We’re thrilled to have you join us on this exciting journey to make Ripio even safer and stronger together! 💪 Your skills, creativity, and dedication are truly valued, and we can’t wait to see what you’ll uncover. Let’s collaborate and make a difference! 🚀
+Happy Hunting! 👾👾
+
+Rewards summary
+Last updated on November 18, 2025. View changes 
+Each severity lists the 90-day average bounty and the percentage of total resolved reports, if applicable.
+Asset
+Avg. bounty $133
+54% submissions
+
+Avg. bounty $500
+24% submissions
+
+Avg. bounty n/a
+8% submissions
+
+Avg. bounty $3,000
+14% submissions
+
+
+
+
+
+sandbox-b2b.ripio.com
+$200
+$500
+$2,500
+$5,000
+com.ripio.ios
+$150
+$250
+$750
+$2,000
+http://auth.ripio.com
+$200
+$500
+$2,500
+$5,000
+com.ripio.android
+$150
+$250
+$750
+$2,000
+All assets
+$150
+$250
+$1,000
+$3,000
+Scope exclusions
+Core Ineligible Findings are out of scope. 
+Learn more 
+Overview
+Last updated on September 3, 2025. View changes 
+ATO Challenge	Information
+User:	ripiotestuser1@gmail.com
+Password	Sup3rs3cr3t!
+To obtain the special bounty, you must demonstrate the ability to obtain a user session with the data provided and perform a critical action in the platform. Brute force attacks are strictly prohibited.
+Especial bounty reward: $6.000
+NOTE: the email (@gmail.com) is out of scope. Do not try to login in the google account.
+Disclosure Policy
+As this is a private program, please do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization.
+Follow HackerOne's disclosure guidelines.
+Let us know as soon as possible upon discovery of a potential security issue, and we'll make every effort to resolve the issue quickly.
+Provide us a reasonable amount of time to resolve the issue before any disclosure to the public or a third party.
+Test Plan
+Include the following HTTP header in any outgoing HTTP requests: X-H1-traffic: <username>
+Use your @wearehackerone.com email alias to register for accounts.
+Program Rules
+Please provide detailed reports with reproducible steps. If the report is not detailed enough to reproduce the issue, the issue will not be eligible for a reward.
+Submit one vulnerability per report, no chain vulnerabilities.
+When duplicates occur, we only award the first report that was received (provided that it can be fully reproduced).
+Multiple vulnerabilities caused by one underlying issue will be awarded one bounty.
+Social engineering (e.g. phishing, vishing, smishing) is prohibited.
+Make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our service. Only interact with accounts you own or with the explicit permission of the account holder.
+Any vulnerability reports on Ripio integration with third parties will not be applicable for reward.
+E-mail: redteam@ripio.com
+Risk Acceptance
+While Ripio strives to address all reported vulnerabilities, we recognize that not all issues can be fixed immediately or may be considered acceptable risks due to their low impact on our security posture. In such cases:
+We will transparently communicate our risk acceptance decision, including the rationale behind not addressing the vulnerability at this time.
+We encourage researchers to provide as much detail as possible about the potential impact to help us accurately assess the risk.
+Accepted risks will be periodically reviewed to ensure our security posture remains aligned with our business objectives and the evolving threat landscape.
+We value your contributions and aim to collaborate closely with researchers to effectively understand and mitigate security risks.
+Qualifying Vulnerabilities
+Examples of vulnerabilities Ripio is interested in receiving:
+Authentication flaws.
+KYC Bypass.
+Cross-site scripting (Stored, DOM).
+SQL Injection.
+Cross-site request forgery.
+Server Side Request Forgery.
+Server-side code execution.
+Privilege Escalation.
+Business logic abuse with clear impact.
+IDOR.
+XML External Entity injection.
+Remote File Inclusion.
+Unvalidated Redirects and Forwards.
+Restrictions
+Massive automatic scanning is not allowed. Please do creative testing.
+If you significantly degrade our service, you risk a program ban.
+No DoS - Our cloud providers prohibit this activity.
+Participation in this program is prohibited for internal employees.
+Non-Qualifying Vulnerabilities
+When reporting vulnerabilities, please consider (1) the attack scenario/exploitability, and (2) the security impact of the bug. The following issues are considered out of scope:
+Reflected-XSS and issues exploitable only through Self-XSS.
+Subdomain take over or Git take over.
+Broken links / Social media take over.
+Clickjacking.
+Social engineering attacks.
+Issues related to credentials or information disclosure in public sources such as Trello, GitHub, Wayback, etc.
+Attacks requiring MITM, physical access or privileged access to a user device
+Missing best practices in SSL/TLS configuration.
+Any activity that could lead to the disruption of our service (DoS).
+Spamming.
+Vulnerabilities in 3rd party or vulnerabilities in ripio's providers
+Unauthenticated/logout CSRF.
+Brute force issues
+Cross-Origin Resource Sharing (CORS).
+User enumeration vulnerabilities.
+Password complexity requirements.
+Reports from automated tools or scans (without accompanying demonstration of exploitability).
+HTML injection issues.
+Cookies Flags and security headers(e.g.: missing the Secure or HttpOnly flags).
+Descriptive error messages or headers (e.g. Stack Traces, application or server errors, banner grabbing).
+Lack of rate-limiting.
+Disclosure of known public files or directories, (e.g: robots.txt,readme.html, WordPress, etc).
+Obfuscated Code on native apps.
+Issues relating to the user session or the lifetime of the user session.
+Exposed third-party keys.
+Exposed keys whose impact cannot be demonstrated.
+Safe Harbor
+Any activities conducted in a manner consistent with this policy will be considered authorized conduct and we will not initiate legal action against you. Suppose legal action is initiated by a third party against you in connection with activities conducted under this policy. In that case, we will take steps to make it known that your actions were conducted in compliance with this policy.
+Thank you for helping keep Ripio and our users safe!
+
+

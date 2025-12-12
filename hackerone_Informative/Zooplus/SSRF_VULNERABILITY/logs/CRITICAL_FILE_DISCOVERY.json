@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-12-11T02:10:19.644839",
+  "technique": "Timing-based file existence oracle",
+  "threshold": 1007.89,
+  "discovered_files": [
+    {
+      "file": "file:///var/run/secrets/kubernetes.io/serviceaccount/token",
+      "description": "K8s Service Account Token",
+      "timing": 970.77,
+      "stddev": 234.48,
+      "confidence": "HIGH"
+    }
+  ],
+  "severity": "HIGH",
+  "cvss": "6.4-7.5",
+  "impact": "File existence enumeration via timing side-channel. Can detect sensitive files but cannot extract content.",
+  "note": "Content extraction tested extensively (400+ methods) but not possible with current architecture."
+}

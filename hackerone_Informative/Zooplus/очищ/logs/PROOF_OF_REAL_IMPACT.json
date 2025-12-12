@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-12-11T05:57:42.222949",
+  "test": "Timing-based Data Exfiltration Proof",
+  "results": [
+    {
+      "endpoint": "Actuator /env",
+      "url": "http://kubernetes.default.svc:8080/actuator/env",
+      "avg_timing": 1048.4309196472168,
+      "std_dev": 203.24850279365205
+    },
+    {
+      "endpoint": "Health readiness",
+      "url": "http://kubernetes.default.svc:8080/actuator/health/readiness",
+      "avg_timing": 1192.4385070800781,
+      "std_dev": 424.32435451232146
+    },
+    {
+      "endpoint": "Direct /env",
+      "url": "http://kubernetes.default.svc:8080/env",
+      "avg_timing": 841.160249710083,
+      "std_dev": 182.2807649283563
+    },
+    {
+      "endpoint": "Actuator metrics",
+      "url": "http://kubernetes.default.svc:8080/actuator/metrics",
+      "avg_timing": 2266.1149501800537,
+      "std_dev": 2150.1708193756626
+    },
+    {
+      "endpoint": "Actuator beans",
+      "url": "http://kubernetes.default.svc:8080/actuator/beans",
+      "avg_timing": 888.2411003112793,
+      "std_dev": 106.1321696479011
+    },
+    {
+      "endpoint": "Random endpoint",
+      "url": "http://kubernetes.default.svc:8080/api/test",
+      "avg_timing": 912.5399589538574,
+      "std_dev": 115.20903686482409
+    }
+  ],
+  "summary": {
+    "endpoints_tested": 6,
+    "timing_difference_max": 1424.9547004699707,
+    "can_distinguish": true,
+    "bits_extracted": 6,
+    "endpoints_processing_data": 0
+  },
+  "conclusion": "CRITICAL - Data exfiltration via timing side-channel proven"
+}

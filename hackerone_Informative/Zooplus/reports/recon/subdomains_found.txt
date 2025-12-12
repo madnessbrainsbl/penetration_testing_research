@@ -1,0 +1,5 @@
+[0;32m[+] www.zooplus.de - Status: 200[0m
+[0;32m[+] m.zooplus.de - Status: 301[0m
+[0;32m[+] login.zooplus.de - Status: 403[0m
+[0;32m[+] support.zooplus.de - Status: 302[0m
+[0;32m[+] mailing.zooplus.de - Status: 200[0m

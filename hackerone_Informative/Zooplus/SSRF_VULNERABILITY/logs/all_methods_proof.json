@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-12-10T18:34:13.585097",
+  "proofs": [
+    {
+      "method": 1,
+      "type": "header_reflection",
+      "headers": {
+        "server": "istio-envoy"
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "method": 2,
+      "type": "user_agent_reflection",
+      "status": "NO_REFLECTION"
+    },
+    {
+      "method": 3,
+      "type": "time_based",
+      "internal_ms": 762.9408836364746,
+      "external_ms": 758.033275604248,
+      "status": "PARTIAL"
+    },
+    {
+      "method": 4,
+      "type": "aws_metadata_data",
+      "status": "BLIND_SSRF"
+    }
+  ]
+}

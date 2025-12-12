@@ -1,0 +1,6 @@
+{
+  "note": "Cart state BEFORE modification (via PUT set-article-quantity)",
+  "cartTotal": 330.15,
+  "items": 5,
+  "timestamp": "2025-12-09T10:12:00Z"
+}

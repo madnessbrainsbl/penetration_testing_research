@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-12-10T18:29:55.907812",
+  "method": "custom_internal_header",
+  "vulnerable_endpoint": "https://www.zooplus.de/zootopia-events/api/events/sites/1",
+  "status_code": 200,
+  "found_headers": {
+    "server": "istio-envoy"
+  },
+  "all_headers": {
+    "Content-Type": "application/json",
+    "Content-Length": "6",
+    "Connection": "keep-alive",
+    "date": "Wed, 10 Dec 2025 11:31:00 GMT",
+    "server": "istio-envoy",
+    "vary": "User-Agent,Accept-Encoding",
+    "x-envoy-upstream-service-time": "22",
+    "content-encoding": "br",
+    "Via": "1.1 2a03d2711471724998d148d52c90bedc.cloudfront.net (CloudFront)",
+    "Alt-Svc": "h3=\":443\"; ma=86400",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+    "Set-Cookie": "sid=0fd9627c-7103-462f-936f-2bd594c4c184; Max-Age=34560000; SameSite=Lax; HttpOnly; Secure; Path=/; Domain=.zooplus.de",
+    "x-lambda-region": "us-west-1",
+    "X-Stream-Status": "Error: undefined",
+    "X-Cache": "Miss from cloudfront",
+    "X-Amz-Cf-Pop": "LAX53-P5",
+    "X-Amz-Cf-Id": "J4GXjrdjkvKFSv7P3Wpx5lbNpCnzdUjQ1dNklEaHd2o3nqxBnpL3fw=="
+  },
+  "response": "{}",
+  "proof_type": "SSRF_HEADER_REFLECTION"
+}

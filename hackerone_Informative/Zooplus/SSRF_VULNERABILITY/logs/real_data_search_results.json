@@ -1,0 +1,104 @@
+{
+  "timestamp": "2025-12-11T01:22:08.827581",
+  "total_tests": 100,
+  "real_data_found": 19,
+  "findings": [
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/api/events/sites/1",
+      "data": "{\"message\": \"The method is not allowed for the requested URL.\"}\n"
+    },
+    {
+      "method": "PUT",
+      "endpoint": "/zootopia-events/api/events/sites/1",
+      "data": "{\"message\": \"The method is not allowed for the requested URL.\"}\n"
+    },
+    {
+      "method": "DELETE",
+      "endpoint": "/zootopia-events/api/events/sites/1",
+      "data": "{\"message\": \"The method is not allowed for the requested URL.\"}\n"
+    },
+    {
+      "method": "PATCH",
+      "endpoint": "/zootopia-events/api/events/sites/1",
+      "data": "{\"message\": \"The method is not allowed for the requested URL.\"}\n"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/events",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/sites",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/users",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/config",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/status",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/health",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/api/version",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/api/events",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/api/sites",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/api/config",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/health",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/status",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/api/events/sites/1",
+      "params": "url in query",
+      "data": "{\"message\": \"The method is not allowed for the requested URL.\"}\n"
+    },
+    {
+      "method": "GET",
+      "endpoint": "/zootopia-events/api/events",
+      "params": "url in query",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    },
+    {
+      "method": "POST",
+      "endpoint": "/zootopia-events/api/recently-viewed",
+      "data": "<!DOCTYPE html>\n<html>\n<head>\n    <title></title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n    <meta charset=\"utf-8\"/>\n    <meta name=\"robots\" content=\"noindex, follow\"/>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-base.min.css\"/>\n    <link rel=\"stylesheet\"\n          href=\"https://cdn.public.zooplus.net/media/ui-components/v6-latest/css/library-components.min.css\"/>\n\n    <style>\n        @font-face {\n            font-family: 'Nunito';\n            font-style: normal;\n            font-weight: 400;\n            src: url('https://cdn.public.zooplus.net/media/ui-components/v6-latest/fonts/nunito-cyrillic_latin-regular.woff2') format('woff2');\n        }\n\n        @font-face {\n            font-family: 'Nunito';\n            font-style: italic;\n            font-weight: 400;\n            src: url('https://cdn.public.zoopl"
+    }
+  ]
+}

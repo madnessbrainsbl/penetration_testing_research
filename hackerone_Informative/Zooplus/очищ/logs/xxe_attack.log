@@ -1,0 +1,133 @@
+[*] Logging in...
+[+] Logged in
+
+================================================================================
+XXE (XML EXTERNAL ENTITY) ATTACK
+================================================================================
+
+================================================================================
+МЕТОД 1: XXE ЧЕРЕЗ DATA:// URI С XML
+================================================================================
+
+[*] Direct XXE file read
+    URL length: 181
+    Status: 200
+    Length: 2
+
+[*] XXE DNS exfil
+    URL length: 297
+    Status: 200
+    Length: 2
+
+================================================================================
+МЕТОД 2: НАЙТИ XML ENDPOINTS
+================================================================================
+
+[*] Проверяем endpoints на прием XML...
+
+[+] /api/xml: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[+] /api/import: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[+] /api/upload: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[+] /zootopia-events/api/import: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[+] /api/webhook: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[+] /soap: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+[+] /ws: Status 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR
+
+================================================================================
+МЕТОД 3: SSRF С XML CONTENT-TYPE
+================================================================================
+
+[*] Отправляем XML payload напрямую...
+    Status: 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+
+================================================================================
+МЕТОД 4: ВНЕДРИТЬ XXE В URL PARAMETER
+================================================================================
+    Status: 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+Request blocked.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again
+
+================================================================================
+МЕТОД 5: POLYGLOT PAYLOADS (JSON + XML)
+================================================================================
+    Status: 403
+    Length: 919
+    Data: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could 
+
+================================================================================
+РЕЗУЛЬТАТЫ
+================================================================================
+
+[+] Протестировано методов: 5
+[+] Украдено данных: 0
+
+[!] XXE НЕ помог - все равно нет данных
+
+[*] КРИТИЧЕСКАЯ СИТУАЦИЯ:
+    - Все поддомены → `{}`
+    - SSRF chain → `{}`
+    - XXE attempts → `{}`
+    - File:// protocol → `{}`
+    - 200+ разных методов протестировано
+    - ВСЕ возвращают пустые данные
+
+    ВЫВОД: Приложение АРХИТЕКТУРНО не возвращает response bodies
+
+[+] Результаты: logs/xxe_results.json

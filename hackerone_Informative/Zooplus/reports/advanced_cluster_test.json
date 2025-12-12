@@ -1,0 +1,21 @@
+{
+  "target": "www.zooplus.de",
+  "scan_date": "2025-12-10T12:32:01.064250",
+  "total_findings": 1,
+  "findings_by_severity": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 1
+  },
+  "findings": [
+    {
+      "severity": "LOW",
+      "title": "Istio Server Header Disclosure",
+      "description": "Server header reveals Istio usage: istio-envoy",
+      "endpoint": null,
+      "evidence": "istio-envoy",
+      "timestamp": "2025-12-10T12:30:34.893235"
+    }
+  ]
+}

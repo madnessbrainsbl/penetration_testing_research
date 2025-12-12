@@ -1,0 +1,244 @@
+{
+  "swagger": "2.0",
+  "basePath": "/",
+  "paths": {
+    "/events/sites/{site_id}": {
+      "parameters": [
+        {
+          "name": "payload",
+          "required": true,
+          "in": "body",
+          "schema": {
+            "$ref": "#/definitions/EventList"
+          }
+        }
+      ],
+      "post": {
+        "responses": {
+          "401": {
+            "description": "Unauthorized (expired or invalid token)."
+          },
+          "400": {
+            "description": "Invalid request e.g. missing parameter."
+          },
+          "200": {
+            "description": "Success (empty response)."
+          }
+        },
+        "operationId": "post_tracking_events",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "Site ID"
+          }
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "tags": [
+          "tracking"
+        ]
+      }
+    },
+    "/recently-viewed": {
+      "parameters": [
+        {
+          "name": "payload",
+          "required": true,
+          "in": "body",
+          "schema": {
+            "$ref": "#/definitions/RecentlyViewedModel"
+          }
+        }
+      ],
+      "post": {
+        "responses": {
+          "401": {
+            "description": "Unauthorized (expired or invalid token)."
+          },
+          "400": {
+            "description": "Invalid request e.g. missing parameter."
+          },
+          "200": {
+            "description": "Success."
+          }
+        },
+        "operationId": "post_recently_viewed_list",
+        "parameters": [
+          {
+            "name": "site_id",
+            "in": "query",
+            "type": "integer",
+            "required": true,
+            "description": "Site ID"
+          },
+          {
+            "in": "header",
+            "description": "Session ID (can also be sent as a cookie). If missing from the header, it will be taken from the cookies.",
+            "type": "string",
+            "name": "sid"
+          },
+          {
+            "in": "header",
+            "description": "Alternative spelling of 'sid'. Can also be sent as a cookie.",
+            "type": "string",
+            "name": "Sid"
+          }
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "tags": [
+          "recently-viewed"
+        ]
+      }
+    },
+    "/settings/sites/{site_domain}/gdpr": {
+      "parameters": [
+        {
+          "name": "site_domain",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        },
+        "operationId": "get_gdpr_setting_resource",
+        "tags": [
+          "settings"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Tracking API",
+    "version": "1.0",
+    "description": "API documentation for zootopia-tracking",
+    "contact": {
+      "name": "Team Dev Mad Dragons",
+      "email": "Team_Dev_MadDragons@zooplus.com",
+      "url": null
+    }
+  },
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "BearerAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "tags": [
+    {
+      "name": "recently-viewed",
+      "description": "APIs for tracking customer recently viewed products."
+    },
+    {
+      "name": "settings",
+      "description": "API for accessing global settings."
+    },
+    {
+      "name": "tracking",
+      "description": "API for tracking events"
+    }
+  ],
+  "definitions": {
+    "RecentlyViewedModel": {
+      "properties": {
+        "customer_id": {
+          "type": "integer",
+          "description": "Customer (authenticated user) identifier.",
+          "example": 2292647987
+        },
+        "product_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RecentlyViewedProduct"
+          }
+        }
+      },
+      "type": "object"
+    },
+    "RecentlyViewedProduct": {
+      "properties": {
+        "product_id": {
+          "type": "integer",
+          "description": "Product identifier.",
+          "example": 1
+        },
+        "site_id": {
+          "type": "integer",
+          "description": "Site identifier.",
+          "example": 1
+        },
+        "viewed_time": {
+          "type": "integer",
+          "description": "UTC timestamp in milliseconds.",
+          "example": 1583837475466
+        }
+      },
+      "type": "object"
+    },
+    "EventList": {
+      "properties": {
+        "customer_id": {
+          "type": "integer",
+          "example": 2292647
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Event"
+          }
+        }
+      },
+      "type": "object"
+    },
+    "Event": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "reco_clicked"
+        },
+        "user_id": {
+          "type": "string",
+          "example": "unique_user_id"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "tracking_id": {
+          "type": "string",
+          "example": "initial/1/mobile_saved_products/container_1/fallback/1-12/0/3187/f1468c7b"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "responses": {
+    "ParseError": {
+      "description": "When a mask can't be parsed"
+    },
+    "MaskError": {
+      "description": "When any error occurs on mask"
+    }
+  }
+}

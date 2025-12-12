@@ -1,0 +1,17 @@
+{
+  "endpoints_found": [
+    "/checkout/api/cart-api/v2/cart/{cartUuid}",
+    "/myaccount/api/customer-config/v1/customerconfiguration/{customerId}",
+    "/myaccount/api/order-details/v3/customer/lastOrders",
+    "/protected/api/loyalty-management/bonus-points/customer/balance",
+    "/protected/api/loyalty-management/memberships/migration-info",
+    "/protected/api/loyalty-management/memberships/offer",
+    "/protected/api/loyalty-management/memberships/customer/overview",
+    "/checkout/api/shop-api/v1/sid",
+    "/checkout/api/state-api/cart-version",
+    "/newsletter/api/v1/private/newsletter/box-predefined-values",
+    "/myaccount/api/order-details/v3/feature-flags"
+  ],
+  "note": "Found through browser Network tab after login"
+}
+
