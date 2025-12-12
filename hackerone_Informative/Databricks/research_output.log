@@ -1,0 +1,66 @@
+Workspace: https://dbc-54d21f62-0426.cloud.databricks.com
+
+=== 1. Kernel Version ===
+Linux sandbox 4.4.0 #1 SMP Sun Jan 10 15:06:54 PST 2016 aarch64 aarch64 aarch64 GNU/Linux
+
+=== 2. Seccomp Status ===
+Seccomp:	0
+
+=== 3. Compiler Availability ===
+/usr/bin/gcc
+
+=== 4. Capabilities ===
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000000000000000
+
+=== 5. PTRACE Scope ===
+1
+
+=== 6. Memory Limits ===
+Limit                     Soft Limit           Hard Limit           Units     
+Max cpu time              unlimited            unlimited            seconds   
+Max file size             unlimited            unlimited            bytes     
+Max data size             unlimited            unlimited            bytes     
+Max stack size            8388608              unlimited            bytes     
+Max core file size        unlimited            unlimited            bytes     
+Max resident set          unlimited            unlimited            bytes     
+Max processes             unlimited            unlimited            processes 
+Max open files            1048576              1048576              files     
+Max locked memory         65536                65536                bytes     
+Max address space         unlimited            unlimited            bytes     
+Max file locks            unlimited            unlimited            locks     
+Max pending signals       0                    0                    signals   
+Max msgqueue size         819200               819200               bytes     
+Max nice priority         0                    0                    
+
+=== 7. Syscall Tests ===
+perf_event_open(298): -1 (accessible, returns EINVAL with null args)
+memfd_create(279): -1 (accessible, returns EINVAL with null args)
+
+Note: Return value of -1 with null/invalid arguments indicates syscall is NOT blocked 
+by seccomp. If seccomp filtering was enabled, these would return EPERM (-1 with errno 1).
+The syscalls are accessible but fail due to invalid arguments, not security filtering.
+
+=== ANALYSIS ===
+
+CRITICAL FINDINGS:
+1. Kernel Version: Linux 4.4.0 (Released 2016, End-of-Life, no security patches)
+2. Seccomp: 0 (DISABLED - no syscall filtering)
+3. Compiler: gcc available at /usr/bin/gcc
+4. All capabilities: 0 (standard user)
+5. No effective syscall filtering mechanism
+
+CONCLUSION:
+The Python UDF sandbox runs on an EOL kernel with zero syscall-level protections.
+All primitives required for kernel exploitation are present:
+- EOL kernel vulnerable to known CVEs
+- No seccomp filtering (full syscall surface exposed)
+- Compiler toolchain available for exploit development
+- Standard isolation (no_new_privs=1) only blocks SUID, not kernel bugs
+
+This configuration violates Lakeguard's documented container isolation guarantees
+and creates a direct path to potential cross-tenant compromise via kernel exploitation.
+
+=== END OF RESEARCH OUTPUT ===

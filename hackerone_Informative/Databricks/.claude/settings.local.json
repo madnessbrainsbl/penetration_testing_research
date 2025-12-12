@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(__NEW_LINE__ cat /tmp/cve_8655.json)",
+      "Bash(echo:*)",
+      "WebSearch",
+      "WebFetch(domain:hackerone.com)",
+      "Bash(ls:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
+

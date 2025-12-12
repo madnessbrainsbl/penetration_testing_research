@@ -1,0 +1,191 @@
+Introduction
+
+https://databricks.com/
+Databricks combines the best of data warehouses and data lakes to offer an open and unified platform for data and AI.
+Bug Bounty Program launched in Feb 2022
+
+The Databricks team is thrilled to invite the security research community to test the resilience of our unified data and AI platform. As fellow hackers and builders, we deeply respect the grit and ingenuity required to find impactful vulnerabilities. We are committed to treating every researcher with professional respect while valuing your time and effort! The Databricks Platform is inherently complex, so we encourage you to roll up your sleeves and dig deep!
+In addition to our Program Highlights, we commit to:
+Treating every researcher with professional respect, valuing your time and effort, and communicating openly.
+Providing Testimonials for reports that are Critical, High, or exceptionally creative.
+Offering retests for reports where retesting makes sense.
+Please don't hesitate to contact us if you have any questions getting started or along the way: bugbounty@databricks.com. We look forward to rewarding your good findings soon!
+Program highlights
+Contact
+bugbounty@databricks.com
+Open Scope
+Rewards reports for all owned assets based on impact, even if not listed in scope. 
+Fast Payment
+Ensures payment within 1 month of receiving a vulnerability report. 
+Gold Standard
+Adheres to Gold Standard Safe Harbor. 
+Platform Standards
+Fully compliant with Platform Standards. 
+Top Response Efficiency
+This program's response efficiency is above 90%. 
+10 hours
+Average time to first response
+3 days, 9 hours
+Average time to triage
+3 days, 22 hours
+Average time to bounty
+1 week, 7 hours
+Average time from submission to bounty
+1 year, 9 months
+Average time to resolution
+Rewards summary
+Last updated on November 12, 2025. View changes 
+Each severity lists the 90-day average bounty and the percentage of total resolved reports, if applicable.
+Asset
+Avg. bounty n/a
+26.54% submissions
+
+Avg. bounty $467
+52.10% submissions
+
+Avg. bounty $3,000
+13.92% submissions
+
+Avg. bounty $7,000
+7.44% submissions
+
+
+
+
+
+Other In-Scope Assets
+$100
+$200
+$650
+$1,000
+https://community.cloud.databricks.com/
+$100
+$400
+$3,000
+$10,000
+accounts.cloud.databricks.com
+$100
+$400
+$3,000
+$10,000
+https://dbc-9a3f8ed1-7608.cloud.databricks.com
+$100
+$400
+$3,000
+$10,000
+GENERAL GUIDELINES
+Reward amounts are based on Severity and overall impact and will be determined based on the table below.
+Databricks will determine, in its sole discretion, whether a bounty will be awarded. Reward amounts will differ based on vulnerability severity, as well as the quality of the report.
+Severity	Control Plane Factors	Data Plane Factors
+Critical	Control plane - Shell; RCE - Unauthenticated user on internet or Attack from Community Edition.	Internet to Data Plane Access without Auth
+Cross Tenant Account Takeover or Data Leak from unauthenticated user on internet or Attack from Community Edition	Cross tenant access, data leak or contamination
+Cross Tenant Contamination of Data or Access	
+Control plane - Shell; RCE - No mitigation to impact	
+Extraction of secrets from Control Plane	
+Internet to Control Plane Access without Auth	
+High	Databricks Security Feature unusable, or has bypass for core security assertion (e.g. UC, CMK, PL, etc)	Cross Workspace Access within tenant
+Control plane - Shell; RCE - With mitigating factors limiting impact	Container breakout limited to Tenant Environment
+Authorization bypass in Control Plane	Core Security promise of a Major Lakehouse feature compromised
+Medium	Use CVSS score [4.0+]	Use CVSS score [4.0+]
+Low	Use CVSS score [0 - 3.9]	Use CVSS score [0 - 3.9]
+Scope exclusions
+Core Ineligible Findings are out of scope. 
+Learn more 
+Category
+Exclusion details
+Automated Reports
+Sending vulnerability reports using automated tools without validation
+Open Source Vulnerabilties
+Vulnerabilities in open source projects such as those present on the DBR are not eligible for bounty
+Subdomain Takeover
+Subdomain takeovers that lack demonstrable impact are out of scope
+Exemplary Standards
+This program has committed to awarding the submissions below.
+Bounty Awards for Discovered Leaked Credentials
+Check here for the full Exemplary Standards page list.
+Overview
+Last updated on November 27, 2025. View changes 
+As part of Databricks’ commitment to security, we reward security researchers who find and report to us critical security vulnerabilities and help us keep our business and customers safe. By participating in this program, you are agreeing to the Databricks terms and conditions.
+Creating your Databricks Accounts
+Please request credentials from the HackerOne Request Credential feature.
+For information on using Databricks, please visit https://docs.databricks.com/.
+Databricks Architecture Overview: https://docs.databricks.com/en/getting-started/overview.html
+Databricks Product Walkthroughs for Researchers - Databricks_Overview_-_HackerOne_V1.pdf (F3696045)
+General Program Rules
+Make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our service.
+Only interact with accounts you own or with express written permission of the account holder. Our security team is here to support your research and collaborate with you.
+Use your best judgment to avoid unintentional access to customer information. As part of your research, do not modify any files or user or customer data, including permissions, and do not intentionally view or access any data beyond what is needed to prove the vulnerability.
+Contact us immediately if you inadvertently encounter user or customer data, and immediately and securely purge any data belonging to anyone other than you that you acquire upon reporting the vulnerability to Databricks.
+Do not disclose your report or the vulnerability without prior express written permission from Databricks.
+Report and Reward Guidelines
+When reporting, submit only one vulnerability per report, unless you need to chain vulnerabilities to provide impact or demonstrate the issue.
+If an issue requires the execution of multiple exploits, the chain and the report must include both compiled and source versions, everything needed to execute the chain, and a sample non-destructive payload, if needed.
+Technical Details
+Databricks is a Remote Code Execution environment, thus most instances of RCE are considered to be part of the product, and not vulnerabilities. Please do not report remote code execution unless you believe it is either unintended, or violates the security guarantees of the platform.
+Notebooks execute as root and all cluster access is root - this is expected. There are no security boundaries within a cluster.
+Please be aware the Databricks product allows launching of Spark clusters on Azure, and these clusters cost us money to run. Please be mindful of this and do not create excessive clusters.
+Open source projects
+Project	Details
+Apache Spark	Apache Software Foundation is the Official Owner / Maintainer of Apache Spark. Please follow their security guidelines for vulnerabilities involving Apache Spark.
+MLFlow	Databricks Managed MLFlow differs from its open-source cousin. Please report issues with Databricks Managed MLFlow to this program and issues with open source MLFlow via their security page.
+Redash	Redash is an open source project owned by the community. Please refer to their security policy to report issues with Redash.
+Terms and Conditions
+Applicable Laws. You must comply with all applicable laws, including local laws of the country or region in which you reside or in which you access or use Databricks services.
+Bounty. Databricks bug bounties are granted solely at Databricks’ discretion.
+Data. Your testing must not violate any law, or disrupt, compromise or damage data or property that is not your own. This includes attacking any devices or accounts other than your own (or those for which you have express written permission) and using social engineering (e.g., phishing, vishing, smishing) techniques. However, finding technical flaws that can be used for social engineering, such as spoofing or tampering, is allowed.
+Finances. You are responsible for any tax implications depending on your country of residency and citizenship. There may be additional restrictions on your ability to participate depending upon your local law.
+General Eligibility & Sanctions. We are unable to issue rewards to individuals who are employed by Databricks, Inc.; are an immediate family member of a person employed by Databricks, Inc.; or have less than 18 years of age. We are also unable to issue rewards to individuals who are in any U.S. embargoed countries or on the U.S. Department’s list of Specially Designated Nationals or the U.S. Department of Commerce Denied Persons List or Entity List or any other restricted party lists.
+Research. Immediately both stop your research and notify Databricks using the reporting process before any of the following occur:
+You access any accounts or data other than your own (or those for which you have express written permission from their owners)
+You disrupt any Databricks service
+You access a non-customer facing Databricks system.
+If you have already accessed data other than your own, and acquired it, contact us immediately, and securely purge any data you have acquired upon reporting the vulnerability to Databricks.
+
+
+обновления
+
+2025-12-04
+December 4th, 2025 (17 hours ago)
+Hey everyone! You may have been receiving a lot of change notifications from our program. (Sorry about the spam!). We think it’s high time to update you on what’s happening at Databricks. TLDR: We're refining our program to better support you, our bug hunters, because we truly appreciate your skills!
+Over the past month, we have focused on making our program clearer, faster, and more open. We have implemented the following changes to achieve this goal:
+Open Scope: We have now implemented Open Scope, providing you with greater flexibility in your testing. Faster Payments: We are firmly committed to fast payment processing—a practice we've always valued, and now publicly declare.
+Gold Standard Safe Harbor: We've adopted gold standard safe harbor practices to protect our researchers.
+Recognition for Excellence: To acknowledge your hard work, we are now providing Testimonials for reports that are accepted as Critical, High, or particularly impressive.
+Retesting Opportunities: We will offer retests for reports where retesting is warranted to ensure comprehensive closure.
+Clarity and Simplicity: The program's text sections have been significantly cleaned up for clarity and simplicity, making it easier to navigate the rules and guidelines.
+We hope you find these changes compelling! We are excited to see what you find!
+2024-10-21
+October 21st, 2024 (a year ago)
+In honor of Cybersecurity Awareness Month, we're thrilled to unveil a detailed Databricks product walkthrough crafted especially for you, our HackerOne researchers! This guide aims to enhance your understanding of our product and highlight important features that may pique your interest.
+The walkthrough document is available on our Program Page .
+We're excited to see what new impactful vulnerabilities you'll uncover.
+Happy hunting!
+Regards,
+Databricks Bug Bounty Team
+2024-04-08
+April 8th, 2024 (2 years ago)
+We have created a new workspace that includes the latest product features from Databricks. Please use the HackerOne credentials request tool to obtain a login to the new workspace.
+
+Thank you for helping us secure Databricks!
+2023-10-17
+October 17th, 2023 (2 years ago)
+Greetings Databricks Researchers,
+In celebration of Cybersecurity Awareness Month and as part of our ongoing commitment to your invaluable contributions, we're thrilled to announce some exciting updates to our bug bounty program:
+Updated Policy: We've revised our policy to provide clearer guidelines, ensuring you have all the information you need.
+Increased Rewards for product specific findings: We're increasing our rewards to $10,000 for critical vulnerabilities and $3,000 for high-severity ones, recognizing your exceptional efforts.
+Quality Bonus for product specific findings: For critical reports that meet our high-quality criteria, we're introducing a $1,000 bonus, valuing both your findings and report clarity.
+Expanded Scope: We've broadened our program's scope with 5 new assets, creating more opportunities for you to discover vulnerabilities and earn rewards.
+These changes are part of our Cybersecurity Awareness Month initiative to promote and celebrate the incredible work of our researchers. Your dedication and expertise are pivotal to our success in maintaining a secure environment.
+Thank you for your continued support in making the digital world safer. We can't wait to see what you'll discover next.
+Regards,
+Databricks Bug Bounty Team
+
+
+Gold Standard Safe Harbor
+Gold Standard Safe Harbor supports the protection of organizations and hackers engaged in Good Faith Security Research. “Good Faith Security Research” is accessing a computer solely for purposes of good-faith testing, investigation, and/or correction of a security flaw or vulnerability, where such activity is carried out in a manner designed to avoid any harm to individuals or the public, and where the information derived from the activity is used primarily to promote the security or safety of the class of devices, machines, or online services to which the accessed computer belongs, or those who use such devices, machines, or online services.
+We consider Good Faith Security Research to be authorized activity that is protected from adversarial legal action by us. We waive any relevant restriction in our Terms of Service (“TOS”) and/or Acceptable Use Policies (“AUP”) that conflicts with the standard for Good Faith Security Research outlined here.
+This means that, for activity conducted while this program is active, we:
+Will not bring legal action against you or report you for Good Faith Security Research, including for bypassing technological measures we use to protect the applications in scope; and,
+Will take steps to make known that you conducted Good Faith Security Research if someone else brings legal action against you.
+You should contact us for clarification before engaging in conduct that you think may be inconsistent with Good Faith Security Research or unaddressed by our policy.
+Keep in mind that we are not able to authorize security research on third-party infrastructure, and a third party is not bound by this safe harbor statement.
